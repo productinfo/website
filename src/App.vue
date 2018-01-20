@@ -3,6 +3,7 @@
         <v-content>
             <router-link :to="{ path: '/'}"><img src="./assets/logo.png"></router-link>
             <router-link :to="{ path: '/category/backend'}"><v-btn outline color="deep-purple">🤖 Backend</v-btn></router-link>
+            <router-link :to="{ path: '/category/devops'}"><v-btn outline color="deep-purple">🔨 DevOps</v-btn></router-link>
             <router-link :to="{ path: '/category/frontend'}"><v-btn outline color="deep-purple">🖥 Frontend</v-btn></router-link>
             <router-link :to="{ path: '/category/marketing'}"><v-btn outline color="deep-purple">🎰 Marketing</v-btn></router-link>
 
