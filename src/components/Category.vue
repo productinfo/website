@@ -80,7 +80,7 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://raw.githubusercontent.com/amobconf/awesome-mobile-conferences/master/contents.json')
+      axios.get('https://raw.githubusercontent.com/aweconf/awesome-mobile-conferences/master/contents.json')
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
