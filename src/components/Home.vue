@@ -16,8 +16,7 @@
         <br/><br/>
 
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
-        <h3>{{ latestMsg }}</h3>
-        <br/>
+        <p>{{ latestMsg }}</p>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
             <li v-for="conference in conferences" :key="conference.id">
@@ -47,7 +46,7 @@ export default {
   data () {
     return {
       welcomeMsg: 'Find the 👍 conferences around the 🌍!',
-      introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings.',
+      introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
       instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       instructionMsg3: 'And... if you know any interesting conference not listed yet, use the button that you can find in all the pages on the bottom.',
