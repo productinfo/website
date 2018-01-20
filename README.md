@@ -1,6 +1,6 @@
-# cnfr.es
+# AweConf.com
 
-> Best Conferences
+> Awesome Conferences
 
 ## Build Setup
 
