@@ -92,21 +92,12 @@
                         </v-menu>
 
                         <v-text-field
-                                label="End date"
-                                v-model="enddate"
-                                @input="$v.enddate.$touch()"
-                                @blur="$v.enddate.$touch()"
-                                required
-                                color="deep-purple"
-                        ></v-text-field>
-                        <v-text-field
                                 label="Twitter handler"
                                 v-model="twitter"
                                 :error-messages="twitterErrors"
                                 :counter="50"
                                 @input="$v.twitter.$touch()"
                                 @blur="$v.twitter.$touch()"
-                                required
                                 color="deep-purple"
                         ></v-text-field>
                         <v-text-field
@@ -169,6 +160,14 @@
                 <br/>
                 <v-btn @click="submit" color="deep-purple" dark>submit</v-btn>
 
+                <v-alert v-if="submitsuccess" outline color="success" icon="check_circle" :value="true">
+                    Conference submitted.
+                </v-alert>
+
+                <v-alert v-if="submitfail" outline color="error" icon="warning" :value="true">
+                    There was an error, try again or contact using <a href="https://github.com/aweconf/awesome-conferences-database">Github</a>.
+                </v-alert>
+
             </v-flex>
 
         </v-layout>
@@ -180,13 +179,14 @@
 
 import { validationMixin } from 'vuelidate'
 import { required, maxLength } from 'vuelidate/lib/validators'
+import axios from 'axios'
 
 export default {
   mixins: [validationMixin],
   validations: {
     name: { required, maxLength: maxLength(80) },
     url: { required, maxLength: maxLength(100) },
-    twitter: { required, maxLength: maxLength(50) },
+    twitter: { maxLength: maxLength(50) },
     where: { required, maxLength: maxLength(150) }
   },
   data: () => ({
@@ -197,14 +197,16 @@ export default {
     modal: false,
     ux: false,
     frontend: false,
-    backend: false, // this.$route.params.category === 'frontend',
+    backend: false,
     marketing: false,
     mobile: false,
     ui: false,
     where: '',
     twitter: '',
     url: '',
-    name: ''
+    name: '',
+    submitsuccess: false,
+    submitfail: false
   }),
   mounted: function () {
     this.backend = (this.$route.params.category === 'backend')
@@ -216,7 +218,54 @@ export default {
   },
   methods: {
     submit () {
-      this.$v.$touch()
+      const categories = []
+
+      if (this.backend) {
+        categories.push('backend')
+      }
+      if (this.frontend) {
+        categories.push('frontend')
+      }
+      if (this.marketing) {
+        categories.push('marketing')
+      }
+      if (this.mobile) {
+        categories.push('mobile')
+      }
+      if (this.ui) {
+        categories.push('ui')
+      }
+      if (this.ux) {
+        categories.push('ux')
+      }
+
+      const content = {
+        name: this.name,
+        url: this.url,
+        twitter: this.twitter,
+        where: this.where,
+        startdate: this.startdate,
+        enddate: this.enddate,
+        category: categories
+      }
+
+      axios(
+        {
+          method: 'post',
+          url: 'https://formspree.io/awc@boostco.de',
+          responseType: 'json',
+          data: {
+            title: 'A new conference ' + this.name,
+            message: JSON.stringify(content)
+          }
+        })
+        .then(function (response) {
+          console.log(response)
+          this.submitsuccess = true
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
     }
   },
   computed: {
