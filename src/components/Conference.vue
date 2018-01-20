@@ -85,14 +85,14 @@ export default {
         return a.id === id
       })
     },
-    sortForCountry (conf, country) {
+    sortForCountry: function (conf, country) {
       return conf.filter(function (a) {
         return new Date(a.startdate) > new Date()
       }).filter(function (b) {
         return b.country === country
       }).sort(function (a, b) {
         return new Date(a.startdate) > new Date(b.startdate)
-      })
+      }).splice(0, 10)
     },
     gmapsUrl (where) {
       return 'https://www.google.com/maps/search/?api=1&query=' + where
