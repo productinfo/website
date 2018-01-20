@@ -3,6 +3,7 @@
         <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p>{{ introMsg }}</p>
+
         <template v-if="firstRun">
             <em>{{ instructionMsg1 }}<br/><br/></em>
             <router-link :to="{ path: '/category/backend'}"><v-btn outline color="deep-purple">🤖 Backend</v-btn></router-link>
@@ -20,7 +21,7 @@
         <h3>{{ latestMsg }}</h3>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
-            <li v-for="conference in sortAndFilter(conferences)" :key="conference.id">
+            <li v-for="conference in conferences" :key="conference.id">
                 <span v-for="category in conference.category" :key="category">
                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
                 </span>
@@ -74,15 +75,12 @@ export default {
     fetchData () {
       axios.get('https://raw.githubusercontent.com/aweconf/awesome-mobile-conferences/master/contents.json')
         .then((resp) => {
-          this.conferences = resp.data.conferences
+          this.conferences = resp.data.conferences.reverse().slice(0, 10)
           this.showSpinner = false
         })
         .catch((err) => {
           console.log(err)
         })
-    },
-    sortAndFilter (conf) {
-      return conf.reverse().slice(0, 10)
     }
   }
 }
