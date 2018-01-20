@@ -92,7 +92,7 @@ export default {
         return b.country === country
       }).sort(function (a, b) {
         return new Date(a.startdate) > new Date(b.startdate)
-      }).splice(0, 10)
+      }).splice(0, 5)
     },
     gmapsUrl (where) {
       return 'https://www.google.com/maps/search/?api=1&query=' + where
