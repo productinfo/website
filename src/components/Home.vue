@@ -17,8 +17,18 @@
             <br/>
         </template>
 
+        <em v-if="firstRun">{{ instructionMsg4 }}<br/></em>
+        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+            <img src="../assets/appstore.png" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+            <img src="../assets/google-play-badge.png" />
+        </a>
+        <br/><br/>
+
         <em v-if="firstRun">{{ instructionMsg2 }}<br/></em>
         <h3>{{ latestMsg }}</h3>
+        <br/>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
             <li v-for="conference in conferences" :key="conference.id">
@@ -35,6 +45,7 @@
             <v-btn round color="deep-purple" dark>📩 Submit a new Conference</v-btn>
         </router-link>
         <br/><br/>
+
     </div>
 </template>
 
@@ -51,6 +62,7 @@ export default {
       instructionMsg1: 'Navigate conferences by category.',
       instructionMsg2: 'Or have a quick look at the last conference added so far.',
       instructionMsg3: 'And... if you know any interesting conference not listed yet, use the button that you can find in all the pages on the bottom.',
+      instructionMsg4: 'Finally we have two nice mobile apps to stay always update!',
       latestMsg: 'Discover the last conferences added:',
       conferences: [],
       showSpinner: true,
