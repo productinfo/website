@@ -48,13 +48,9 @@ export default {
   created () {
     this.fetchData()
     // first run show instructions
-    console.log(this.firstRun)
-    console.log(this.$cookie.get('firstrun'))
     this.firstRun = (this.$cookie.get('firstrun') !== '1')
-    console.log(this.firstRun)
     if (this.$cookie.get('firstrun') !== '1') {
       this.$cookie.set('firstrun', 1, 0)
-      console.log('cookie set')
     }
   },
 
