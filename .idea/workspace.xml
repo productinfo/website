@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.vue" afterPath="$PROJECT_DIR$/src/components/Home.vue" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.49d7dd6882b2f85eba6db474afdcab4c.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.49d7dd6882b2f85eba6db474afdcab4c.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.a2b61d22e34a001fac58.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.a2b61d22e34a001fac58.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.0408168d5a38173081ce.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.0408168d5a38173081ce.js.map" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -170,12 +176,12 @@
       <workItem from="1516435559379" duration="9315000" />
       <workItem from="1516457767151" duration="1274000" />
       <workItem from="1516467295965" duration="490000" />
-      <workItem from="1516468436007" duration="507000" />
+      <workItem from="1516468436007" duration="573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11586000" />
+    <option name="totallyTimeSpent" value="11652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
