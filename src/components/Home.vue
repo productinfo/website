@@ -3,7 +3,19 @@
         <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p>{{ introMsg }}</p>
-        <em v-if="firstRun">{{ instructionMsg1 }}<br/><br/></em>
+        <template v-if="firstRun">
+            <em>{{ instructionMsg1 }}<br/><br/></em>
+            <router-link :to="{ path: '/category/backend'}"><v-btn outline color="deep-purple">🤖 Backend</v-btn></router-link>
+            <router-link :to="{ path: '/category/frontend'}"><v-btn outline color="deep-purple">🖥 Frontend</v-btn></router-link>
+            <router-link :to="{ path: '/category/marketing'}"><v-btn outline color="deep-purple">🎰 Marketing</v-btn></router-link>
+
+            <router-link :to="{ path: '/category/mobile'}"><v-btn outline color="deep-purple">📱 Mobile</v-btn></router-link>
+            <router-link :to="{ path: '/category/ui'}"><v-btn outline color="deep-purple">🎨 UI</v-btn></router-link>
+            <router-link :to="{ path: '/category/ux'}"><v-btn outline color="deep-purple">🥤 UX</v-btn></router-link>
+            <br/>
+            <br/>
+        </template>
+
         <em v-if="firstRun">{{ instructionMsg2 }}<br/></em>
         <h3>{{ latestMsg }}</h3>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>

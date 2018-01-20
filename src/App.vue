@@ -2,12 +2,13 @@
     <v-app>
         <v-content>
             <router-link :to="{ path: '/'}"><img src="./assets/logo.png"></router-link>
-            <router-link :to="{ path: '/category/backend'}">🤖 Backend</router-link> /
-            <router-link :to="{ path: '/category/frontend'}">🖥 Frontend</router-link> /
-            <router-link :to="{ path: '/category/marketing'}">🎰 Marketing</router-link> /
-            <router-link :to="{ path: '/category/mobile'}">📱 Mobile</router-link> /
-            <router-link :to="{ path: '/category/ui'}">🎨 UI</router-link> /
-            <router-link :to="{ path: '/category/ux'}">🥤 UX</router-link>
+            <router-link :to="{ path: '/category/backend'}"><v-btn outline color="deep-purple">🤖 Backend</v-btn></router-link>
+            <router-link :to="{ path: '/category/frontend'}"><v-btn outline color="deep-purple">🖥 Frontend</v-btn></router-link>
+            <router-link :to="{ path: '/category/marketing'}"><v-btn outline color="deep-purple">🎰 Marketing</v-btn></router-link>
+
+            <router-link :to="{ path: '/category/mobile'}"><v-btn outline color="deep-purple">📱 Mobile</v-btn></router-link>
+            <router-link :to="{ path: '/category/ui'}"><v-btn outline color="deep-purple">🎨 UI</v-btn></router-link>
+            <router-link :to="{ path: '/category/ux'}"><v-btn outline color="deep-purple">🥤 UX</v-btn></router-link>
             <router-view>
                 <v-container fluid></v-container>
             </router-view>
