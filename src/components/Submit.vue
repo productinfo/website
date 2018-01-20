@@ -160,11 +160,11 @@
                 <br/>
                 <v-btn @click="submit" color="deep-purple" dark>submit</v-btn>
 
-                <v-alert v-if="submitsuccess" outline color="success" icon="check_circle" :value="true">
+                <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
                     Conference submitted.
                 </v-alert>
 
-                <v-alert v-if="submitfail" outline color="error" icon="warning" :value="true">
+                <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
                     There was an error, try again or contact using <a href="https://github.com/aweconf/awesome-conferences-database">Github</a>.
                 </v-alert>
 
@@ -205,8 +205,8 @@ export default {
     twitter: '',
     url: '',
     name: '',
-    submitsuccess: false,
-    submitfail: false
+    submitSuccess: false,
+    submitFail: false
   }),
   mounted: function () {
     this.backend = (this.$route.params.category === 'backend')
@@ -249,22 +249,13 @@ export default {
         category: categories
       }
 
-      axios(
-        {
-          method: 'post',
-          url: 'https://formspree.io/awc@boostco.de',
-          responseType: 'json',
-          data: {
-            title: 'A new conference ' + this.name,
-            message: JSON.stringify(content)
-          }
+      axios.post('https://formspree.io/awc@boostco.de', { title: 'A new conference ' + this.name, message: JSON.stringify(content) })
+        .then((resp) => {
+          this.submitSuccess = true
         })
-        .then(function (response) {
-          console.log(response)
-          this.submitsuccess = true
-        })
-        .catch(function (error) {
-          console.log(error)
+        .catch((err) => {
+          this.submitFail = true
+          console.log(err)
         })
     }
   },
