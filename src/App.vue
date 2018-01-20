@@ -8,7 +8,6 @@
                     <router-link :to="`/category/${category.tag}`"><v-btn outline color="deep-purple">{{ category.emoji }} {{ category.tag }}</v-btn></router-link>
                 </li>
             </ul>
-
             <router-view>
                 <v-container fluid></v-container>
             </router-view>

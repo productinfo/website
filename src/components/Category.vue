@@ -1,7 +1,6 @@
 <template>
     <div class="category">
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
