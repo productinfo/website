@@ -1,11 +1,12 @@
 <template>
     <div class="home">
+        <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
         <br/>
         <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p>{{ introMsg }}</p>
 
-        <em v-if="firstRun">{{ instructionMsg4 }}<br/></em>
+        <p class="hint" v-if="firstRun">{{ instructionMsg4 }}<br/></p>
         <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
             <img src="../assets/appstore.png" />
         </a>
@@ -14,7 +15,7 @@
         </a>
         <br/><br/>
 
-        <em v-if="firstRun">{{ instructionMsg2 }}<br/></em>
+        <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
         <h3>{{ latestMsg }}</h3>
         <br/>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
@@ -28,7 +29,7 @@
         </ul>
         <br />
         <br />
-        <em v-if="firstRun">{{ instructionMsg3 }}<br/></em>
+        <p class="hint" v-if="firstRun">{{ instructionMsg3 }}<br/></p>
         <router-link :to="`/submit`">
             <v-btn round color="deep-purple" dark>📩 Submit a new Conference</v-btn>
         </router-link>
@@ -47,11 +48,11 @@ export default {
     return {
       welcomeMsg: 'Find the 👍 conferences around the 🌍!',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings.',
-      instructionMsg1: 'Navigate conferences by category.',
-      instructionMsg2: 'Or have a quick look at the last conference added so far.',
+      instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
+      instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       instructionMsg3: 'And... if you know any interesting conference not listed yet, use the button that you can find in all the pages on the bottom.',
-      instructionMsg4: 'Finally we have two nice mobile apps to stay always update!',
-      latestMsg: 'Discover the last conferences added:',
+      instructionMsg4: 'We have two nice mobile 📱 apps to stay always update:',
+      latestMsg: '🔎 Discover the last conferences added:',
       conferences: [],
       showSpinner: true,
       firstRun: false
@@ -101,5 +102,8 @@ li {
 }
 a {
   color: #5719B8;
+}
+.hint {
+  color: darkgray;
 }
 </style>
