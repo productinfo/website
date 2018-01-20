@@ -1,22 +1,9 @@
 <template>
     <div class="home">
+        <br/>
         <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p>{{ introMsg }}</p>
-
-        <template v-if="firstRun">
-            <em>{{ instructionMsg1 }}<br/><br/></em>
-            <router-link :to="{ path: '/category/backend'}"><v-btn outline color="deep-purple">🤖 Backend</v-btn></router-link>
-            <router-link :to="{ path: '/category/devops'}"><v-btn outline color="deep-purple">🔨 DevOps</v-btn></router-link>
-            <router-link :to="{ path: '/category/frontend'}"><v-btn outline color="deep-purple">🖥 Frontend</v-btn></router-link>
-            <router-link :to="{ path: '/category/marketing'}"><v-btn outline color="deep-purple">🎰 Marketing</v-btn></router-link>
-
-            <router-link :to="{ path: '/category/mobile'}"><v-btn outline color="deep-purple">📱 Mobile</v-btn></router-link>
-            <router-link :to="{ path: '/category/ui'}"><v-btn outline color="deep-purple">🎨 UI</v-btn></router-link>
-            <router-link :to="{ path: '/category/ux'}"><v-btn outline color="deep-purple">🥤 UX</v-btn></router-link>
-            <br/>
-            <br/>
-        </template>
 
         <em v-if="firstRun">{{ instructionMsg4 }}<br/></em>
         <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">

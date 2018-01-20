@@ -2,14 +2,13 @@
     <v-app>
         <v-content>
             <router-link :to="{ path: '/'}"><img src="./assets/logo.png"></router-link>
-            <router-link :to="{ path: '/category/backend'}"><v-btn outline color="deep-purple">🤖 Backend</v-btn></router-link>
-            <router-link :to="{ path: '/category/devops'}"><v-btn outline color="deep-purple">🔨 DevOps</v-btn></router-link>
-            <router-link :to="{ path: '/category/frontend'}"><v-btn outline color="deep-purple">🖥 Frontend</v-btn></router-link>
-            <router-link :to="{ path: '/category/marketing'}"><v-btn outline color="deep-purple">🎰 Marketing</v-btn></router-link>
+            <br/>
+            <ul>
+                <li class="inline" v-for="category in categories" v-bind:key="category.tag">
+                    <router-link :to="`/category/${category.tag}`"><v-btn outline color="deep-purple">{{ category.title }}</v-btn></router-link>
+                </li>
+            </ul>
 
-            <router-link :to="{ path: '/category/mobile'}"><v-btn outline color="deep-purple">📱 Mobile</v-btn></router-link>
-            <router-link :to="{ path: '/category/ui'}"><v-btn outline color="deep-purple">🎨 UI</v-btn></router-link>
-            <router-link :to="{ path: '/category/ux'}"><v-btn outline color="deep-purple">🥤 UX</v-btn></router-link>
             <router-view>
                 <v-container fluid></v-container>
             </router-view>
@@ -24,7 +23,39 @@
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      categories: [
+        {
+          title: '🤖 Backend',
+          tag: 'backend'
+        },
+        {
+          title: '🔨 DevOps',
+          tag: 'devops'
+        },
+        {
+          title: '🖥 Frontend',
+          tag: 'frontend'
+        },
+        {
+          title: '🎰 Marketing',
+          tag: 'marketing'
+        },
+        {
+          title: '📱 Mobile',
+          tag: 'mobile'
+        }, {
+          title: '🎨 UI',
+          tag: 'ui'
+        }, {
+          title: '🥤 UX',
+          tag: 'ux'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -41,9 +72,17 @@ a {
 }
 .router-link-active {
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 45px;
 }
 img {
     vertical-align: middle;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li.inline {
+    margin: 0 10px;
+    display: inline-flex;
 }
 </style>
