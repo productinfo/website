@@ -3,8 +3,8 @@
         <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p>{{ introMsg }}</p>
-        <em>{{ instructionMsg1 }}<br/><br/></em>
-        <em>{{ instructionMsg2 }}<br/></em>
+        <em v-if="firstRun">{{ instructionMsg1 }}<br/><br/></em>
+        <em v-if="firstRun">{{ instructionMsg2 }}<br/></em>
         <h3>{{ latestMsg }}</h3>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
@@ -17,12 +17,12 @@
         </ul>
         <br />
         <br />
-        <em>{{ instructionMsg3 }}<br/></em>
+        <em v-if="firstRun">{{ instructionMsg3 }}<br/></em>
         <router-link :to="`/submit`">
             <v-btn round color="deep-purple" dark>📩 Submit a new Conference</v-btn>
         </router-link>
-        <br/>
-  </div>
+        <br/><br/>
+    </div>
 </template>
 
 <script>
@@ -40,12 +40,22 @@ export default {
       instructionMsg3: 'And... if you know any interesting conference not listed yet, use the button that you can find in all the pages on the bottom.',
       latestMsg: 'Discover the last conferences added:',
       conferences: [],
-      showSpinner: true
+      showSpinner: true,
+      firstRun: false
     }
   },
 
   created () {
     this.fetchData()
+    // first run show instructions
+    console.log(this.firstRun)
+    console.log(this.$cookie.get('firstrun'))
+    this.firstRun = (this.$cookie.get('firstrun') !== '1')
+    console.log(this.firstRun)
+    if (this.$cookie.get('firstrun') !== '1') {
+      this.$cookie.set('firstrun', 1, 0)
+      console.log('cookie set')
+    }
   },
 
   watch: {
