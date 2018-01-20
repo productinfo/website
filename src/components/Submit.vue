@@ -240,12 +240,12 @@ export default {
       }
 
       const content = {
-        name: this.name,
-        url: this.url,
+        title: this.name,
+        homepage: this.url,
         twitter: this.twitter,
         where: this.where,
-        startdate: this.startdate,
-        enddate: this.enddate,
+        startdate: this.startdate.replace('-', '/'),
+        enddate: this.enddate.replace('-', '/'),
         category: categories
       }
 
