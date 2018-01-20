@@ -1,8 +1,10 @@
 <template>
     <div class="home">
+        <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p>{{ introMsg }}</p>
-        <br/>
+        <em>{{ instructionMsg1 }}<br/><br/></em>
+        <em>{{ instructionMsg2 }}<br/></em>
         <h3>{{ latestMsg }}</h3>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
@@ -15,9 +17,11 @@
         </ul>
         <br />
         <br />
+        <em>{{ instructionMsg3 }}<br/></em>
         <router-link :to="`/submit`">
             <v-btn round color="deep-purple" dark>📩 Submit a new Conference</v-btn>
         </router-link>
+        <br/>
   </div>
 </template>
 
@@ -29,7 +33,11 @@ export default {
 
   data () {
     return {
-      introMsg: 'Awesome Conferences is a fully open sourced and collaborative project about conference listings, browse the categories or submit a new one.',
+      welcomeMsg: 'Find the 👍 conferences around the 🌍!',
+      introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings.',
+      instructionMsg1: 'Navigate conferences by category.',
+      instructionMsg2: 'Or have a quick look at the last conference added so far.',
+      instructionMsg3: 'And... if you know any interesting conference not listed yet, use the button that you can find in all the pages on the bottom.',
       latestMsg: 'Discover the last conferences added:',
       conferences: [],
       showSpinner: true
