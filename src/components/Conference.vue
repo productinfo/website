@@ -28,10 +28,10 @@
 
                     </v-card>
                     <br/>
-                    <div v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference.id">
-                        <p>Discover other conferences in {{ conference.emojiflag }} {{ conference.country }}:</p>
+                    <div v-for="conf in sortAndFilter(conferences, $route.params.id)" :key="conf.id">
+                        <p>Discover other conferences in {{ conf.emojiflag }} {{ conf.country }}:</p>
                         <ul>
-                            <li v-for="confz in sortForCountry(conferences, conference.country)" :key="confz.id">
+                            <li v-for="confz in sortForCountry(conferences, conf.country, $route.params.id)" :key="confz.id">
                                 <span v-for="category in confz.category" :key="category">
                                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
                                 </span>
@@ -83,15 +83,17 @@ export default {
     sortAndFilter (conf, id) {
       return conf.filter(function (a) {
         return a.id === id
-      })
+      }).splice(0, 1)
     },
-    sortForCountry: function (conf, country) {
+    sortForCountry: function (conf, country, id) {
       return conf.filter(function (a) {
         return new Date(a.startdate) > new Date()
       }).filter(function (b) {
         return b.country === country
       }).sort(function (a, b) {
         return new Date(a.startdate) > new Date(b.startdate)
+      }).filter(function (c) {
+        return c.id !== id
       }).splice(0, 5)
     },
     commaSeparated: function (categories) {
