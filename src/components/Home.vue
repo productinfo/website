@@ -15,7 +15,7 @@
             </li>
         </ul>
         <br/>
-        <router-link :to="{ path: '/conferences'}">{{ discoverMore }}</router-link>
+        <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
 
         <div class="mobileapps">
             <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>

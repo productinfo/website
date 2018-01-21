@@ -89,11 +89,16 @@ export default {
         })
     },
     sortAndFilter (conf, category) {
-      return conf.filter(function (a) {
+      var confs = conf.filter(function (a) {
         return new Date(a.startdate) > new Date()
-      }).filter(function (b) {
-        return b.category.indexOf(category) !== -1
-      }).sort(function (a, b) {
+      })
+
+      if (category !== 'all') {
+        confs = confs.filter(function (b) {
+          return b.category.indexOf(category) !== -1
+        })
+      }
+      return confs.sort(function (a, b) {
         return new Date(a.startdate) > new Date(b.startdate)
       })
     }
