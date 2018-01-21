@@ -11,20 +11,15 @@
                         <v-text-field
                                 label="Name"
                                 v-model="name"
-                                :error-messages="nameErrors"
                                 :counter="80"
-                                @input="$v.name.$touch()"
-                                @blur="$v.name.$touch()"
                                 required
                                 color="deep-purple"
                         ></v-text-field>
+
                         <v-text-field
                                 label="Url"
                                 v-model="url"
-                                :error-messages="urlErrors"
                                 :counter="100"
-                                @input="$v.url.$touch()"
-                                @blur="$v.url.$touch()"
                                 required
                                 color="deep-purple"
                         ></v-text-field>
@@ -92,65 +87,75 @@
                         </v-menu>
 
                         <v-text-field
-                                label="Twitter handler"
-                                v-model="twitter"
-                                :error-messages="twitterErrors"
-                                :counter="50"
-                                @input="$v.twitter.$touch()"
-                                @blur="$v.twitter.$touch()"
-                                color="deep-purple"
-                        ></v-text-field>
-                        <v-text-field
-                                label="Where"
+                                label="Address"
                                 v-model="where"
-                                :error-messages="whereErrors"
                                 :counter="150"
-                                @input="$v.where.$touch()"
-                                @blur="$v.where.$touch()"
                                 required
                                 color="deep-purple"
                         ></v-text-field>
+
+                        <v-text-field
+                                label="City"
+                                v-model="city"
+                                :counter="100"
+                                required
+                                color="deep-purple"
+                        ></v-text-field>
+
+                        <v-text-field
+                                label="Country"
+                                v-model="country"
+                                :counter="100"
+                                required
+                                color="deep-purple"
+                        ></v-text-field>
+
+                        <v-checkbox
+                                label="Is Call for Paper open?"
+                                v-model="callforpaper"
+                        ></v-checkbox>
+
+                        <v-text-field
+                                label="Twitter handler"
+                                v-model="twitter"
+                                :counter="50"
+                                color="deep-purple"
+                        ></v-text-field>
+
                         <p>Categories</p>
                         <v-checkbox
                                 label="Backend"
                                 v-model="backend"
-                                @change="$v.backend.$touch()"
-                                @blur="$v.backend.$touch()"
                                 color="deep-purple"
                         ></v-checkbox>
+
                         <v-checkbox
                                 label="Frontend"
                                 v-model="frontend"
-                                @change="$v.frontend.$touch()"
-                                @blur="$v.frontend.$touch()"
                                 color="deep-purple"
                         ></v-checkbox>
+
                         <v-checkbox
                                 label="Marketing"
                                 v-model="marketing"
-                                @change="$v.marketing.$touch()"
-                                @blur="$v.marketing.$touch()"
                                 color="deep-purple"
                         ></v-checkbox>
+
                         <v-checkbox
                                 label="Mobile"
                                 v-model="mobile"
-                                @change="$v.mobile.$touch()"
-                                @blur="$v.mobile.$touch()"
                                 color="deep-purple"
                         ></v-checkbox>
+
                         <v-checkbox
                                 label="UI"
                                 v-model="ui"
-                                @change="$v.ui.$touch()"
-                                @blur="$v.ui.$touch()"
                                 color="deep-purple"
                         ></v-checkbox>
+
                         <v-checkbox
                                 label="UX"
                                 v-model="ux"
-                                @change="$v.ux.$touch()"
-                                @blur="$v.ux.$touch()"
                                 color="deep-purple"
                         ></v-checkbox>
 
@@ -177,18 +182,9 @@
 
 <script>
 
-import { validationMixin } from 'vuelidate'
-import { required, maxLength } from 'vuelidate/lib/validators'
 import axios from 'axios'
 
 export default {
-  mixins: [validationMixin],
-  validations: {
-    name: { required, maxLength: maxLength(80) },
-    url: { required, maxLength: maxLength(100) },
-    twitter: { maxLength: maxLength(50) },
-    where: { required, maxLength: maxLength(150) }
-  },
   data: () => ({
     startdate: null,
     enddate: null,
@@ -201,10 +197,13 @@ export default {
     marketing: false,
     mobile: false,
     ui: false,
+    callforpaper: false,
     where: '',
+    city: '',
     twitter: '',
     url: '',
     name: '',
+    country: '',
     submitSuccess: false,
     submitFail: false
   }),
@@ -244,49 +243,28 @@ export default {
         homepage: this.url,
         twitter: this.twitter,
         where: this.where,
-        startdate: this.startdate.replace('-', '/'),
-        enddate: this.enddate.replace('-', '/'),
+        city: this.city,
+        country: this.country,
+        startdate: this.startdate,
+        enddate: this.enddate,
+        callforpaper: this.callforpaper,
         category: categories
       }
 
-      axios.post('https://formspree.io/awc@boostco.de', { title: 'A new conference ' + this.name, message: JSON.stringify(content) })
+      axios.post('https://formspree.io/awc@boostco.de', { title: 'A new conference ' + this.name })
         .then((resp) => {
-          this.submitSuccess = true
+          axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
+            .then((resp) => {
+              this.submitSuccess = true
+            }).catch((err) => {
+              this.submitFail = true
+              console.log(err)
+            })
         })
         .catch((err) => {
           this.submitFail = true
           console.log(err)
         })
-    }
-  },
-  computed: {
-    whereErrors () {
-      const errors = []
-      if (!this.$v.where.$dirty) return errors
-      !this.$v.where.maxLength && errors.push('Where must be at most 10 characters long')
-      !this.$v.where.required && errors.push('Where is required.')
-      return errors
-    },
-    nameErrors () {
-      const errors = []
-      if (!this.$v.name.$dirty) return errors
-      !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
-      !this.$v.name.required && errors.push('Name is required.')
-      return errors
-    },
-    urlErrors () {
-      const errors = []
-      if (!this.$v.url.$dirty) return errors
-      !this.$v.url.maxLength && errors.push('Url must be at most 10 characters long')
-      !this.$v.url.required && errors.push('Url is required.')
-      return errors
-    },
-    twitterErrors () {
-      const errors = []
-      if (!this.$v.twitter.$dirty) return errors
-      !this.$v.twitter.maxLength && errors.push('Twitter must be at most 10 characters long')
-      !this.$v.twitter.required && errors.push('Twitter is required.')
-      return errors
     }
   }
 }
