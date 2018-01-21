@@ -58,9 +58,13 @@ export default {
   created () {
     this.fetchData()
     // first run show instructions
-    this.firstRun = (this.$cookie.get('firstrun') !== '1')
-    if (this.$cookie.get('firstrun') !== '1') {
-      this.$cookie.set('firstrun', 1, 0)
+    console.log(parseInt(this.$cookie.get('firstrun')))
+    const run = parseInt(this.$cookie.get('firstrun')) || 0
+    this.firstRun = (run < 3)
+    console.log(this.firstRun)
+    if (this.firstRun) {
+      var visit = run + 1
+      this.$cookie.set('firstrun', visit, 0)
     }
   },
 
