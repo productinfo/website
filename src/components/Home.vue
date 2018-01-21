@@ -5,7 +5,6 @@
         <h1>{{ welcomeMsg }}</h1>
         <br/>
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
-        <p>{{ latestMsg }}</p>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
             <li v-for="conference in conferences" :key="conference.id">
@@ -17,9 +16,7 @@
         </ul>
         <br />
         <br />
-        <p>{{ introMsg }}</p>
-
-        <p class="hint" v-if="firstRun">{{ instructionMsg4 }}<br/></p>
+        <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
         <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
             <img src="../assets/download-on-the-app-store.png" />
         </a>
@@ -28,7 +25,8 @@
         </a>
         <br/>
         <br/>
-        <p class="hint" v-if="firstRun">{{ instructionMsg3 }}<br/></p>
+        <br/>
+        <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
         <router-link :to="`/submit`">
             <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
         </router-link>
@@ -45,13 +43,12 @@ export default {
 
   data () {
     return {
-      welcomeMsg: 'Find the 👍 conferences around the 🌍!',
+      welcomeMsg: '🔎 Find the 👍 conferences around the 🌍!',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
       instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
-      instructionMsg3: 'And... if you know any interesting conference not listed yet, use the button that you can find in all the pages on the bottom.',
-      instructionMsg4: 'We have two nice mobile 📱 apps to stay always update:',
-      latestMsg: '🔎 Discover the last conferences added:',
+      mobileMsg: 'Stay always updated using our 📱 dedicated application:',
+      submitMsg: 'Support the project sending interesting conference:',
       conferences: [],
       showSpinner: true,
       firstRun: false
