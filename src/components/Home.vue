@@ -8,7 +8,7 @@
 
         <p class="hint" v-if="firstRun">{{ instructionMsg4 }}<br/></p>
         <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-            <img src="../assets/appstore.png" />
+            <img src="../assets/download-on-the-app-store.png" />
         </a>
         <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
             <img src="../assets/google-play-badge.png" />
