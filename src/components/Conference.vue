@@ -13,7 +13,7 @@
                             </v-card-text>
 
                             <v-card-text>
-                                    is a conference about <b v-for="category in conference.category" :key="category">{{category}}, </b>
+                                    is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
                                 </v-card-text>
                                 <v-card-text>
                                     It will be between 🗓 <em>{{ conference.startdate }}</em> and <em>{{ conference.enddate }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
@@ -31,11 +31,11 @@
                     <div v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference.id">
                         <p>Discover other conferences in {{ conference.emojiflag }} {{ conference.country }}:</p>
                         <ul>
-                            <li v-for="conf in sortForCountry(conferences, conference.country)" :key="conf.id">
-                                <span v-for="category in conf.category" :key="category">
+                            <li v-for="confz in sortForCountry(conferences, conference.country)" :key="confz.id">
+                                <span v-for="category in confz.category" :key="category">
                                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
                                 </span>
-                                <router-link :to="`/conference/${conf.id}`">{{ conf.title }}</router-link>
+                                <router-link :to="`/conference/${confz.id}`">{{ confz.title }}</router-link>
                             </li>
                         </ul>
                     </div>
@@ -93,6 +93,13 @@ export default {
       }).sort(function (a, b) {
         return new Date(a.startdate) > new Date(b.startdate)
       }).splice(0, 5)
+    },
+    commaSeparated: function (categories) {
+      var cats = ''
+      categories.forEach(function (category) {
+        cats += category + ', '
+      })
+      return cats.substr(0, cats.length - 2)
     },
     gmapsUrl (where) {
       return 'https://www.google.com/maps/search/?api=1&query=' + where
