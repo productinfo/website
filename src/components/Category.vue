@@ -37,7 +37,7 @@
 
         <br/>
         <router-link :to="`/submit/${$route.params.category}`">
-            <v-btn round color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.category }} category</v-btn>
+            <v-btn block color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.category }} category</v-btn>
         </router-link>
     </div>
 </template>

@@ -30,7 +30,7 @@
         <br />
         <p class="hint" v-if="firstRun">{{ instructionMsg3 }}<br/></p>
         <router-link :to="`/submit`">
-            <v-btn round color="deep-purple" dark>📩 Submit a new Conference</v-btn>
+            <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
         </router-link>
         <br/><br/>
 
