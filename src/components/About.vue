@@ -12,7 +12,7 @@
         </ul>
         <div class="developer">
             <h2>About the developer</h2>
-            <p>It has been developed using <a href="https://vuejs.org" target="_blank">Vue.js</a>, <a href="https://swift.org" target="_blank">Swift</a> and <a href="https://kotlinlang.org" target="_blank">Kotlin</a> by <a href="https://matteocrippa.it" target="_blank">Matteo Crippa</a>.</p>
+            <p>It has been developed using <a href="https://vuejs.org" target="_blank">Vue.js</a>, <a href="http://expressjs.com" target="_blank">Expressjs</a>, <a href="https://swift.org" target="_blank">Swift</a> and <a href="https://kotlinlang.org" target="_blank">Kotlin</a> by <a href="https://matteocrippa.it" target="_blank">Matteo Crippa</a>.</p>
         </div>
     </div>
 </template>
