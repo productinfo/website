@@ -4,17 +4,6 @@
         <br/>
         <h1>{{ welcomeMsg }}</h1>
         <br/>
-        <p>{{ introMsg }}</p>
-
-        <p class="hint" v-if="firstRun">{{ instructionMsg4 }}<br/></p>
-        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-            <img src="../assets/download-on-the-app-store.png" />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
-            <img src="../assets/google-play-badge.png" />
-        </a>
-        <br/><br/>
-
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
         <p>{{ latestMsg }}</p>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
@@ -28,6 +17,17 @@
         </ul>
         <br />
         <br />
+        <p>{{ introMsg }}</p>
+
+        <p class="hint" v-if="firstRun">{{ instructionMsg4 }}<br/></p>
+        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+            <img src="../assets/download-on-the-app-store.png" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+            <img src="../assets/google-play-badge.png" />
+        </a>
+        <br/>
+        <br/>
         <p class="hint" v-if="firstRun">{{ instructionMsg3 }}<br/></p>
         <router-link :to="`/submit`">
             <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>

@@ -6,6 +6,7 @@ import Home from '@/components/Home'
 import Category from '@/components/Category'
 import Conference from '@/components/Conference'
 import Submit from '@/components/Submit'
+import About from '@/components/About'
 
 Vue.use(Router)
 Vue.use(Vuetify)
@@ -37,6 +38,11 @@ export default new Router({
       path: '/submit',
       name: 'Submit',
       component: Submit
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
     }
   ]
 })
