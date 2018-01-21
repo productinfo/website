@@ -6,7 +6,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-                    <v-card v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference.id">
+                    <v-card v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference._id">
 
                             <v-card-text>
                                 <h1>{{ conference.title }} {{ conference.emojiflag }}</h1>
@@ -16,7 +16,7 @@
                                     is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
                                 </v-card-text>
                                 <v-card-text>
-                                    It will be between 🗓 <em>{{ conference.startdate }}</em> and <em>{{ conference.enddate }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
+                                    It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{ formatDate(conference.enddate) }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
                                 </v-card-text>
                                 <v-card-text>For further details: 🔗 <a :href="conference.homepage" target="_blank">{{ conference.homepage }}</a> </v-card-text>
                                 <template v-if="conference.callforpaper">
@@ -35,7 +35,7 @@
                                 <span v-for="category in confz.category" :key="category">
                                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
                                 </span>
-                                <router-link :to="`/conference/${confz.id}`">{{ confz.title }}</router-link>
+                                <router-link :to="`/conference/${confz._id}`">{{ confz.title }}</router-link>
                             </li>
                         </ul>
                     </div>
@@ -80,9 +80,13 @@ export default {
           console.log(err)
         })
     },
+    formatDate (date) {
+      const currentDate = new Date(date)
+      return currentDate.getDay() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear()
+    },
     sortAndFilter (conf, id) {
       return conf.filter(function (a) {
-        return a.id === id
+        return a._id === id
       }).splice(0, 1)
     },
     sortForCountry: function (conf, country, id) {
@@ -93,7 +97,7 @@ export default {
       }).sort(function (a, b) {
         return new Date(a.startdate) > new Date(b.startdate)
       }).filter(function (c) {
-        return c.id !== id
+        return c._id !== id
       }).splice(0, 5)
     },
     commaSeparated: function (categories) {

@@ -22,7 +22,7 @@
                             hide-actions
                     >
                         <template slot="items" slot-scope="props">
-                            <td><router-link :to="`/conference/${props.item.id}`">{{ props.item.title }}</router-link></td>
+                            <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                             <td>{{ props.item.startdate }}</td>
@@ -79,7 +79,7 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://raw.githubusercontent.com/aweconf/awesome-mobile-conferences/master/contents.json')
+      axios.get('https://aweconf.herokuapp.com/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
