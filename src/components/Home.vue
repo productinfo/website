@@ -14,23 +14,25 @@
                 <router-link :to="`/conference/${conference.id}`">{{ conference.title }}</router-link>
             </li>
         </ul>
-        <br />
-        <br />
-        <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-            <img src="../assets/download-on-the-app-store.png" />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
-            <img src="../assets/google-play-badge.png" />
-        </a>
         <br/>
-        <br/>
-        <br/>
-        <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
-        <router-link :to="`/submit`">
-            <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
-        </router-link>
-        <br/><br/>
+        <router-link :to="{ path: '/conferences'}">{{ discoverMore }}</router-link>
+
+        <div class="mobileapps">
+            <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
+            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+                <img src="../assets/download-on-the-app-store.png" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+                <img src="../assets/google-play-badge.png" />
+            </a>
+        </div>
+
+        <div class="submit">
+            <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
+            <router-link :to="`/submit`">
+                <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
+            </router-link>
+        </div>
 
     </div>
 </template>
@@ -49,6 +51,7 @@ export default {
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mobileMsg: 'Stay always updated using our 📱 dedicated application:',
       submitMsg: 'Support the project sending interesting conference:',
+      discoverMore: 'Discover more...',
       conferences: [],
       showSpinner: true,
       firstRun: false
@@ -105,5 +108,12 @@ a {
 }
 .hint {
   color: darkgray;
+}
+.mobileapps {
+  margin-top: 40px;
+}
+.submit {
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 </style>
