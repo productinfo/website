@@ -7,6 +7,7 @@ import Category from '@/components/Category'
 import Conference from '@/components/Conference'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
+import Unapproved from '@/components/Unapproved'
 
 Vue.use(Router)
 Vue.use(Vuetify)
@@ -43,6 +44,11 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
-    }
+    },
+      {
+          path: '/unapproved',
+          name: 'Unapproved',
+          component: Unapproved
+      }
   ]
 })
