@@ -77,9 +77,9 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://raw.githubusercontent.com/aweconf/awesome-mobile-conferences/master/contents.json')
+      axios.get('https://aweconf.herokuapp.com/api/conference/last/10')
         .then((resp) => {
-          this.conferences = resp.data.conferences.reverse().slice(0, 10)
+          this.conferences = resp.data.conferences
           this.showSpinner = false
         })
         .catch((err) => {
