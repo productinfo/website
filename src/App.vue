@@ -14,7 +14,7 @@
         </v-content>
         <v-footer app>
             <v-spacer></v-spacer>
-            <div><router-link :to="{ path: '/about' }">About</router-link> - © Awesome Conferences {{ new Date().getFullYear() }} - <a href="https://www.iubenda.com/privacy-policy/7904617">Privacy</a> - <a href="https://www.iubenda.com/privacy-policy/7904617/cookie-policy">Cookie</a> Policy</div>
+            <div><router-link :to="{ path: '/about' }" active-class="noneclass">About</router-link> - © Awesome Conferences {{ new Date().getFullYear() }} - <a href="https://www.iubenda.com/privacy-policy/7904617">Privacy</a> - <a href="https://www.iubenda.com/privacy-policy/7904617/cookie-policy">Cookie</a> Policy</div>
         </v-footer>
     </v-app>
 </template>
