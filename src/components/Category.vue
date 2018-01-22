@@ -25,8 +25,8 @@
                             <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td>{{ props.item.startdate }}</td>
-                            <td>{{ props.item.enddate }}</td>
+                            <td>{{ formatDate(props.item.startdate) }}</td>
+                            <td>{{ formatDate(props.item.enddate) }}</td>
                         </template>
                     </v-data-table>
 
@@ -87,6 +87,10 @@ export default {
         .catch((err) => {
           console.log(err)
         })
+    },
+    formatDate (date) {
+      const currentDate = new Date(date)
+      return currentDate.getDay() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear()
     },
     sortAndFilter (conf, category) {
       var confs = conf.filter(function (a) {
