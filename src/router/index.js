@@ -45,10 +45,10 @@ export default new Router({
       name: 'About',
       component: About
     },
-      {
-          path: '/unapproved',
-          name: 'Unapproved',
-          component: Unapproved
-      }
+    {
+      path: '/unapproved',
+      name: 'Unapproved',
+      component: Unapproved
+    }
   ]
 })
