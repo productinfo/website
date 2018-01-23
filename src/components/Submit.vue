@@ -232,12 +232,11 @@ export default {
     ],
     dateRules: [
       (v) => !!v || 'Start date is required',
-      (v) => new Date(v).getTime() >= new Date().getTime() || 'Start date must be today or in the future'
+      (v) => new Date(v) >= new Date().setHours(0, 0, 0) || 'Start date must be today or in the future'
     ],
     enddateRules: [
       (v) => !!v || 'End date is required',
-      (v) => new Date(v).getTime() >= new Date().getTime() || 'End date must be in the future',
-      (v) => new Date(v).getTime() >= new Date(this.startdate).getTime() || 'End date must be equal or later than start date'
+      (v) => new Date(v) >= new Date().setHours(0, 0, 0) || 'End date must be in the future'
     ],
     twitterRules: [
       (v) => v.indexOf('@') !== -1 || 'Add @ in front of the twitter handler'
@@ -254,6 +253,10 @@ export default {
   methods: {
     submit () {
       this.$refs.form.validate()
+
+      console.log(new Date(this.startdate))
+      console.log(new Date(this.enddate))
+      console.log(new Date(this.enddate) >= new Date(this.startdate))
 
       if (!this.valid) {
         alert('Check all required fields before submitting')
