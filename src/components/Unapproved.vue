@@ -131,7 +131,7 @@ export default {
       axios.put('https://aweconf.herokuapp.com/api/conference/approved/' + id, { password: this.$data.password })
         .then((resp) => {
           if (resp.data.success === true) {
-            alert('Conference approved')
+            this.fetchData()
           } else {
             alert('An error occured')
           }
