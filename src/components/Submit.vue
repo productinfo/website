@@ -171,6 +171,8 @@
                     </v-card-text>
                 </v-card>
                 <br/>
+                <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+
                 <v-btn @click="submit" color="deep-purple" dark>submit</v-btn>
 
                 <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
@@ -194,6 +196,7 @@ import axios from 'axios'
 
 export default {
   data: () => ({
+    showSpinner: false,
     startdate: null,
     enddate: null,
     menustart: false,
@@ -254,14 +257,12 @@ export default {
     submit () {
       this.$refs.form.validate()
 
-      console.log(new Date(this.startdate))
-      console.log(new Date(this.enddate))
-      console.log(new Date(this.enddate) >= new Date(this.startdate))
-
       if (!this.valid) {
         alert('Check all required fields before submitting')
         return
       }
+
+      this.showSpinner = true
 
       const categories = []
 
@@ -302,13 +303,19 @@ export default {
           axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
             .then((resp) => {
               this.submitSuccess = true
+              this.showSpinner = false
+              this.$refs.form.clean()
             }).catch((err) => {
               this.submitFail = true
+              this.showSpinner = false
+
               console.log(err)
             })
         })
         .catch((err) => {
           this.submitFail = true
+          this.showSpinner = false
+
           console.log(err)
         })
     }
