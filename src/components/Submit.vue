@@ -113,6 +113,7 @@
                                 :items="countries"
                                 :rules="[v => !!v || 'Country is required']"
                                 required
+                                autocomplete
                         ></v-select>
 
                         <v-checkbox
