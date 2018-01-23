@@ -18,7 +18,15 @@
                                 <v-card-text>
                                     It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{ formatDate(conference.enddate) }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
                                 </v-card-text>
+
+                                <v-card-text>
+                                    <a :href='gmapsUrl(conference.where)'>
+                                        <img :src='gmapsImage(conference.where)'>
+                                    </a>
+                                </v-card-text>
+
                                 <v-card-text>For further details: 🔗 <a :href="conference.homepage" target="_blank">{{ conference.homepage }}</a> </v-card-text>
+
                                 <template v-if="conference.callforpaper">
                                     <v-card-text>At this very moment 🎤 call for paper is open.</v-card-text>
                                 </template>
@@ -57,6 +65,7 @@ export default {
   data () {
     return {
       conferences: [],
+      googleMapKey: '',
       showSpinner: true
     }
   },
@@ -107,8 +116,11 @@ export default {
       })
       return cats.substr(0, cats.length - 2)
     },
+    gmapsImage (where) {
+      return 'https://maps.googleapis.com/maps/api/staticmap?center=' + where.replace(' ', '+') + '&zoom=15&scale=2&size=400x200&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:small%7Ccolor:0x5719B8%7Clabel:1%7C' + where.replace(' ', '+')
+    },
     gmapsUrl (where) {
-      return 'https://www.google.com/maps/search/?api=1&query=' + where
+      return 'https://www.google.com/maps/search/?api=1&query=' + where.replace(' ', '+')
     }
   }
 }
