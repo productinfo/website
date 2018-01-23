@@ -93,7 +93,7 @@
                         <v-text-field
                                 label="Address"
                                 v-model="where"
-                                :counter="150"
+                                :counter="200"
                                 color="deep-purple"
                         ></v-text-field>
 
@@ -169,16 +169,17 @@
                     </v-card-text>
                 </v-card>
                 <br/>
-                <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
                 <v-btn @click="submit" color="deep-purple" dark>submit</v-btn>
+
+                <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
                 <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
                     Conference submitted.
                 </v-alert>
 
                 <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
-                    There was an error, try again or contact using <a href="https://github.com/aweconf/awesome-conferences-database">Github</a>.
+                    There was an error, try again or contact using twitter <a href="https://twitter.com/aweconf">@aweconf</a>.
                 </v-alert>
 
             </v-flex>
@@ -228,9 +229,6 @@ export default {
     countryRules: [
       (v) => !!v || 'Country is required'
     ],
-    addressRules: [
-      (v) => !!v || 'Address is required'
-    ],
     dateRules: [
       (v) => !!v || 'Start date is required',
       (v) => new Date(v) >= new Date().setHours(0, 0, 0) || 'Start date must be today or in the future'
@@ -260,7 +258,10 @@ export default {
         return
       }
 
+      // reset feedback
       this.showSpinner = true
+      this.submitSuccess = false
+      this.submitFail = true
 
       const categories = []
 
@@ -302,18 +303,16 @@ export default {
             .then((resp) => {
               this.submitSuccess = true
               this.showSpinner = false
-              this.$refs.form.clean()
+              this.$refs.form.reset()
             }).catch((err) => {
               this.submitFail = true
               this.showSpinner = false
-
               console.log(err)
             })
         })
         .catch((err) => {
           this.submitFail = true
           this.showSpinner = false
-
           console.log(err)
         })
     }
