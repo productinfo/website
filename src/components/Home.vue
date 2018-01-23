@@ -1,9 +1,9 @@
 <template>
     <div class="home">
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
-        <br/>
-        <h1>{{ welcomeMsg }}</h1>
-        <br/>
+        <div class="intro">
+            <h1>{{ welcomeMsg }} {{ total }} {{ welcomeMsg2}}</h1>
+        </div>
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
@@ -45,7 +45,8 @@ export default {
 
   data () {
     return {
-      welcomeMsg: '🔎 Find the 👍 conferences around the 🌍!',
+      welcomeMsg: '🔎 more than',
+      welcomeMsg2: 'awesome conferences around the 🌍!',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
       instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
@@ -54,17 +55,16 @@ export default {
       discoverMore: 'Discover more...',
       conferences: [],
       showSpinner: true,
-      firstRun: false
+      firstRun: false,
+      total: ''
     }
   },
 
   created () {
     this.fetchData()
     // first run show instructions
-    console.log(parseInt(this.$cookie.get('firstrun')))
     const run = parseInt(this.$cookie.get('firstrun')) || 0
     this.firstRun = (run < 3)
-    console.log(this.firstRun)
     if (this.firstRun) {
       var visit = run + 1
       this.$cookie.set('firstrun', visit, 0)
@@ -80,6 +80,7 @@ export default {
       axios.get('https://aweconf.herokuapp.com/api/conference/last/10')
         .then((resp) => {
           this.conferences = resp.data.conferences
+          this.total = resp.data.total + '+'
           this.showSpinner = false
         })
         .catch((err) => {
@@ -108,6 +109,10 @@ a {
 }
 .hint {
   color: darkgray;
+}
+.intro {
+    margin-top: 28px;
+    margin-bottom: 32px;
 }
 .mobileapps {
   margin-top: 40px;
