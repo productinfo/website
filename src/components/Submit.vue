@@ -125,7 +125,6 @@
                                 v-model="twitter"
                                 :counter="50"
                                 color="deep-purple"
-                                :rules="twitterRules"
                         ></v-text-field>
 
                         <p>Categories</p>
@@ -236,9 +235,6 @@ export default {
     enddateRules: [
       (v) => !!v || 'End date is required',
       (v) => new Date(v) >= new Date().setHours(0, 0, 0) || 'End date must be in the future'
-    ],
-    twitterRules: [
-      (v) => v.indexOf('@') !== -1 || 'Add @ in front of the twitter handler'
     ]
   }),
   mounted: function () {
