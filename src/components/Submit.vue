@@ -94,9 +94,7 @@
                                 label="Address"
                                 v-model="where"
                                 :counter="150"
-                                required
                                 color="deep-purple"
-                                :rules="addressRules"
                         ></v-text-field>
 
                         <v-text-field
