@@ -67,7 +67,7 @@ body {
   color: #2c3e50;
 }
 a {
-    color: #5719B8 !important;
+    color: #673ab7 !important;
     text-decoration: none;
 }
 .router-link-active {
