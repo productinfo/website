@@ -1,9 +1,10 @@
 <template>
     <v-app>
         <v-content>
-            <router-link :to="{ path: '/'}"><img src="./assets/logo.png"></router-link>
-            <br/>
             <ul>
+                <li class="inline">
+                    <router-link :to="{ path: '/'}"><img src="./assets/logo-small.png"></router-link>
+                </li>
                 <li class="inline" v-for="category in categories" v-bind:key="category.tag">
                     <router-link :to="`/category/${category.tag}`"><v-btn outline color="deep-purple">{{ category.emoji }} {{ category.tag }}</v-btn></router-link>
                 </li>
@@ -74,7 +75,7 @@ a {
     font-size: 45px;
 }
 img {
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 ul {
     list-style-type: none;
