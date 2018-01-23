@@ -257,7 +257,7 @@ export default {
       // reset feedback
       this.showSpinner = true
       this.submitSuccess = false
-      this.submitFail = true
+      this.submitFail = false
 
       const categories = []
 

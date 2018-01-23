@@ -111,8 +111,8 @@ a {
   color: darkgray;
 }
 .intro {
-    margin-top: 28px;
-    margin-bottom: 32px;
+    margin-top: 38px;
+    margin-bottom: 42px;
 }
 .mobileapps {
   margin-top: 40px;
