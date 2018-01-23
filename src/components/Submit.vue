@@ -5,7 +5,7 @@
             <v-flex xs10 offset-xs1>
                 <v-card>
                     <v-card-text>
-                    <v-form v-model="valid">
+                    <v-form v-model="valid" lazy-validation>
                         <p>Complete the form below to ask a new conference to be published:</p>
 
                         <v-text-field
@@ -76,7 +76,7 @@
                                     prepend-icon="event"
                                     required
                                     color="deep-purple"
-                                    :rules="dateRules"
+                                    :rules="enddateRules"
                                     readonly
                             ></v-text-field>
                             <v-date-picker v-model="enddate" no-title scrollable actions>
@@ -232,11 +232,11 @@ export default {
     ],
     dateRules: [
       (v) => !!v || 'Start date is required',
-      (v) => new Date(v) >= new Date() || 'Start date must be today or in the future'
+      (v) => new Date(v).getTime() >= new Date().getTime() || 'Start date must be today or in the future'
     ],
     enddateRules: [
       (v) => !!v || 'End date is required',
-      (v) => new Date(v) > new Date() || 'End date must be in the future',
+      (v) => new Date(v).getTime() > new Date().getTime() || 'End date must be in the future',
       (v) => new Date(v) >= new Date(this.startdate) || 'End date must be equal or later than start date'
     ],
     twitterRules: [
