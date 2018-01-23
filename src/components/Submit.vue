@@ -5,7 +5,7 @@
             <v-flex xs10 offset-xs1>
                 <v-card>
                     <v-card-text>
-                    <form>
+                    <v-form v-model="valid">
                         <p>Complete the form below to ask a new conference to be published:</p>
 
                         <v-text-field
@@ -13,6 +13,7 @@
                                 v-model="name"
                                 :counter="80"
                                 required
+                                :rules="nameRules"
                                 color="deep-purple"
                         ></v-text-field>
 
@@ -21,6 +22,7 @@
                                 v-model="url"
                                 :counter="100"
                                 required
+                                :rules="urlRules"
                                 color="deep-purple"
                         ></v-text-field>
 
@@ -42,6 +44,7 @@
                                     prepend-icon="event"
                                     required
                                     color="deep-purple"
+                                    :rules="dateRules"
                                     readonly
                             ></v-text-field>
                             <v-date-picker v-model="startdate" no-title scrollable actions>
@@ -73,6 +76,7 @@
                                     prepend-icon="event"
                                     required
                                     color="deep-purple"
+                                    :rules="dateRules"
                                     readonly
                             ></v-text-field>
                             <v-date-picker v-model="enddate" no-title scrollable actions>
@@ -92,6 +96,7 @@
                                 :counter="150"
                                 required
                                 color="deep-purple"
+                                :rules="addressRules"
                         ></v-text-field>
 
                         <v-text-field
@@ -100,6 +105,7 @@
                                 :counter="100"
                                 required
                                 color="deep-purple"
+                                :rules="cityRules"
                         ></v-text-field>
 
                         <v-text-field
@@ -108,6 +114,7 @@
                                 :counter="100"
                                 required
                                 color="deep-purple"
+                                :rules="countryRules"
                         ></v-text-field>
 
                         <v-checkbox
@@ -120,6 +127,7 @@
                                 v-model="twitter"
                                 :counter="50"
                                 color="deep-purple"
+                                :rules="twitterRules"
                         ></v-text-field>
 
                         <p>Categories</p>
@@ -159,7 +167,7 @@
                                 color="deep-purple"
                         ></v-checkbox>
 
-                    </form>
+                    </v-form>
                     </v-card-text>
                 </v-card>
                 <br/>
@@ -205,7 +213,35 @@ export default {
     name: '',
     country: '',
     submitSuccess: false,
-    submitFail: false
+    submitFail: false,
+    valid: false,
+    nameRules: [
+      (v) => !!v || 'Name is required'
+    ],
+    urlRules: [
+      (v) => !!v || 'Url is required'
+    ],
+    cityRules: [
+      (v) => !!v || 'City is required'
+    ],
+    countryRules: [
+      (v) => !!v || 'Country is required'
+    ],
+    addressRules: [
+      (v) => !!v || 'Address is required'
+    ],
+    dateRules: [
+      (v) => !!v || 'Start date is required',
+      (v) => new Date(v) >= new Date() || 'Start date must be today or in the future'
+    ],
+    enddateRules: [
+      (v) => !!v || 'End date is required',
+      (v) => new Date(v) > new Date() || 'End date must be in the future',
+      (v) => new Date(v) >= new Date(this.startdate) || 'End date must be equal or later than start date'
+    ],
+    twitterRules: [
+      (v) => v.indexOf('@') !== -1 || 'Add @ in front of the twitter handler'
+    ]
   }),
   mounted: function () {
     this.backend = (this.$route.params.category === 'backend')
@@ -217,6 +253,11 @@ export default {
   },
   methods: {
     submit () {
+      if (!this.valid) {
+        alert('Check all required fields before submitting')
+        return
+      }
+
       const categories = []
 
       if (this.backend) {
