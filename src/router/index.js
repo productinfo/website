@@ -5,6 +5,7 @@ import VueCookie from 'cookie-in-vue'
 import Home from '@/components/Home'
 import Category from '@/components/Category'
 import Conference from '@/components/Conference'
+import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
@@ -49,6 +50,11 @@ export default new Router({
       path: '/unapproved',
       name: 'Unapproved',
       component: Unapproved
+    },
+    {
+      path: '/country/:country',
+      name: 'Country',
+      component: Country
     }
   ]
 })

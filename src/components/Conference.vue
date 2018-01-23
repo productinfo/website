@@ -37,7 +37,7 @@
                     </v-card>
                     <br/>
                     <div v-for="conf in sortAndFilter(conferences, $route.params.id)" :key="conf.id">
-                        <p>Discover other conferences in {{ conf.emojiflag }} {{ conf.country }}:</p>
+                        <p>Discover other conferences in <router-link :to="`/country/${conf.country}`">{{ conf.emojiflag }} {{ conf.country }}</router-link>:</p>
                         <ul>
                             <li v-for="confz in sortForCountry(conferences, conf.country, $route.params.id)" :key="confz.id">
                                 <span v-for="category in confz.category" :key="category">
