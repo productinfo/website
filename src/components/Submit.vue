@@ -5,7 +5,7 @@
             <v-flex xs10 offset-xs1>
                 <v-card>
                     <v-card-text>
-                    <v-form v-model="valid" lazy-validation>
+                    <v-form ref="form" lazy-validation v-model="valid">
                         <p>Complete the form below to ask a new conference to be published:</p>
 
                         <v-text-field
@@ -236,8 +236,8 @@ export default {
     ],
     enddateRules: [
       (v) => !!v || 'End date is required',
-      (v) => new Date(v).getTime() > new Date().getTime() || 'End date must be in the future',
-      (v) => new Date(v) >= new Date(this.startdate) || 'End date must be equal or later than start date'
+      (v) => new Date(v).getTime() >= new Date().getTime() || 'End date must be in the future',
+      (v) => new Date(v).getTime() >= new Date(this.startdate).getTime() || 'End date must be equal or later than start date'
     ],
     twitterRules: [
       (v) => v.indexOf('@') !== -1 || 'Add @ in front of the twitter handler'
@@ -253,6 +253,8 @@ export default {
   },
   methods: {
     submit () {
+      this.$refs.form.validate()
+
       if (!this.valid) {
         alert('Check all required fields before submitting')
         return
