@@ -82,7 +82,7 @@ export default {
     },
     formatDate (date) {
       const currentDate = new Date(date)
-      return currentDate.getDay() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear()
+      return currentDate.toLocaleDateString()
     },
     sortAndFilter (conf, id) {
       return conf.filter(function (a) {

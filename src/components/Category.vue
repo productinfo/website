@@ -90,7 +90,7 @@ export default {
     },
     formatDate (date) {
       const currentDate = new Date(date)
-      return currentDate.getDay() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear()
+      return currentDate.toLocaleDateString()
     },
     sortAndFilter (conf, category) {
       var confs = conf.filter(function (a) {
