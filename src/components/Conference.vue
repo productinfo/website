@@ -104,12 +104,8 @@ export default {
       }).splice(0, 1)
     },
     sortForCountry: function (conf, country, id) {
-      return conf.filter(function (a) {
-        return new Date(a.startdate) > new Date()
-      }).filter(function (b) {
+      return conf.filter(function (b) {
         return b.country === country
-      }).sort(function (a, b) {
-        return new Date(a.startdate) > new Date(b.startdate)
       }).filter(function (c) {
         return c._id !== id
       }).splice(0, 5)

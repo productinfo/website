@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import VueCookie from 'cookie-in-vue'
 import Home from '@/components/Home'
 import Category from '@/components/Category'
+import City from '@/components/City'
 import Conference from '@/components/Conference'
 import Country from '@/components/Country'
 import Submit from '@/components/Submit'
@@ -55,6 +56,11 @@ export default new Router({
       path: '/country/:country',
       name: 'Country',
       component: Country
+    },
+    {
+      path: '/city/:city',
+      name: 'City',
+      component: City
     }
   ]
 })

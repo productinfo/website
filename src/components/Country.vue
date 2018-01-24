@@ -95,18 +95,13 @@ export default {
       return currentDate.toLocaleDateString()
     },
     sortAndFilter (conf, country) {
-      var confs = conf.filter(function (a) {
-        return new Date(a.startdate) > new Date()
-      })
-
       if (country !== 'all') {
-        confs = confs.filter(function (b) {
+        return conf.filter(function (b) {
           return b.country.indexOf(country) !== -1
         })
+      } else {
+        return conf
       }
-      return confs.sort(function (a, b) {
-        return new Date(a.startdate) > new Date(b.startdate)
-      })
     }
   }
 }

@@ -93,18 +93,13 @@ export default {
       return currentDate.toLocaleDateString()
     },
     sortAndFilter (conf, category) {
-      var confs = conf.filter(function (a) {
-        return new Date(a.startdate) > new Date()
-      })
-
       if (category !== 'all') {
-        confs = confs.filter(function (b) {
+        return conf.filter(function (b) {
           return b.category.indexOf(category) !== -1
         })
+      } else {
+        return conf
       }
-      return confs.sort(function (a, b) {
-        return new Date(a.startdate) > new Date(b.startdate)
-      })
     }
   }
 }
