@@ -43,8 +43,8 @@
                             </a>
                         </v-card-text>
 
-                        <v-card-text>For further details: 🔗 <a :href="conference.homepage" target="_blank">{{
-                            addReferralTo(conference.homepage) }}</a></v-card-text>
+                        <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
+                            conference.homepage }}</a></v-card-text>
 
                         <template v-if="conference.callforpaper">
                             <v-card-text>At this very moment 🎤 call for paper is open.</v-card-text>
