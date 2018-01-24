@@ -2,9 +2,10 @@
     <div class="home">
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
         <div class="intro">
-            <h1>{{ welcomeMsg }} {{ total }} {{ welcomeMsg2}}</h1>
+            <h1>{{ welcomeMsg }} <b>{{ total }}</b> {{ welcomeMsg2}}</h1>
         </div>
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
+        <p>{{ quickLook }}</p>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
             <li v-for="conference in conferences" :key="conference.id">
@@ -52,7 +53,8 @@ export default {
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mobileMsg: 'Stay always updated using our 📱 dedicated application:',
       submitMsg: 'Support the project sending interesting conference:',
-      discoverMore: 'Discover more...',
+      quickLook: 'Have a ⚡️quick too to latest 🔟 conferences published:',
+      discoverMore: 'or 🧐 discover more...',
       conferences: [],
       showSpinner: true,
       firstRun: false,
@@ -80,7 +82,7 @@ export default {
       axios.get('https://aweconf.herokuapp.com/api/conference/last/10')
         .then((resp) => {
           this.conferences = resp.data.conferences
-          this.total = resp.data.total + '+'
+          this.total = 5 * Math.round(resp.data.total / 5)
           this.showSpinner = false
         })
         .catch((err) => {
