@@ -17,7 +17,7 @@
                                 </v-card-text>
 
                                 <v-card-text v-if="formatDate(conference.startdate) !== formatDate(conference.enddate)">
-                                    It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{ formatDate(conference.enddate) }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
+                                    It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{ formatDate(conference.enddate) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>, {{ conference.emojiflag }} <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
                                 </v-card-text>
 
                                 <v-card-text v-else>
