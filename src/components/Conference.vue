@@ -15,8 +15,13 @@
                             <v-card-text>
                                     is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
                                 </v-card-text>
-                                <v-card-text>
+
+                                <v-card-text v-if="formatDate(conference.startdate) !== formatDate(conference.enddate)">
                                     It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{ formatDate(conference.enddate) }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
+                                </v-card-text>
+
+                                <v-card-text v-else>
+                                    It will be on 🗓 <em>{{ formatDate(conference.startdate) }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
                                 </v-card-text>
 
                                 <v-card-text>
