@@ -143,6 +143,12 @@
                         ></v-checkbox>
 
                         <v-checkbox
+                                label="DevOps"
+                                v-model="devops"
+                                color="deep-purple"
+                        ></v-checkbox>
+
+                        <v-checkbox
                                 label="Marketing"
                                 v-model="marketing"
                                 color="deep-purple"
