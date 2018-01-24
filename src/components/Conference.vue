@@ -47,7 +47,7 @@
                             conference.homepage }}</a></v-card-text>
 
                         <template v-if="conference.callforpaper">
-                            <v-card-text>At this very moment 🎤 call for paper is open.</v-card-text>
+                            <v-card-text>At this very moment 🎤 call for paper is open, feel free to submit your talk.</v-card-text>
                         </template>
                         <template v-else>
                             <v-card-text>Sadly call for paper 🎤 is closed.</v-card-text>
