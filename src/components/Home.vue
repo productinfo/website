@@ -4,10 +4,8 @@
         <vue-headful
                 title="🎉 Awesome Conferences"
                 description="Awesome Conferences is a collaborative and free listing of the best developer, marketer, designer conference around the world"
-                lang="en"
                 url="https://aweconf.com"
                 keywords="awesome conference, designer conference, developer conference, android, ios, mobile, ux, ui"
-                ogLocale="en"
         />
 
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>

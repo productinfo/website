@@ -4,9 +4,7 @@
         <vue-headful
                 :title="`${$route.params.category} / Awesome Conferences`"
                 :description="`All the best conferences about ${$route.params.category}`"
-                lang="en"
                 :url="`https://aweconf.com/#/category/${$route.params.category}`"
-                ogLocale="en"
         />
 
         <v-container grid-list-xl text-xs-left>

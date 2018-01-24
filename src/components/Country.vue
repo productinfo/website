@@ -2,9 +2,8 @@
     <div class="country">
 
         <vue-headful
-                :title="`${$route.params.country} / Awesome Conferences`"
+                :title="`${title} / Awesome Conferences`"
                 :description="`All the best conferences in ${$route.params.country}`"
-                :lang="en"
         />
 
         <v-container grid-list-xl text-xs-left>

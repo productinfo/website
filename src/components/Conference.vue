@@ -11,9 +11,7 @@
                         <vue-headful
                                 :title="`${conference.title} / Awesome Conferences`"
                                 :description="`All about ${conference.title} conference in ${conference.city} ${conference.country}`"
-                                lang="en"
                                 :url="`https://aweconf.com/#/conference/${$route.params.id}`"
-                                ogLocale="en"
                         />
 
                         <v-card-text>
