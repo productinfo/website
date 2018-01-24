@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.88588b4cced28cd1b17bb347eb81ee8d.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.88588b4cced28cd1b17bb347eb81ee8d.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/0.6bf47e24889b97e407b7.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/0.6bf47e24889b97e407b7.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.ba0858e764037b0ca994.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.ba0858e764037b0ca994.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.74bdb243178294845725.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.74bdb243178294845725.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.9c4ac366d0c580b82171.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.9c4ac366d0c580b82171.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/Conference.vue" afterPath="$PROJECT_DIR$/src/components/Conference.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +47,8 @@
       <file leaf-file-name="Conference.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+            <state relative-caret-position="259">
+              <caret line="118" column="133" lean-forward="false" selection-start-line="118" selection-start-column="133" selection-end-line="118" selection-end-column="133" />
               <folding />
             </state>
           </provider>
@@ -201,12 +211,12 @@
       <workItem from="1516724114948" duration="18000" />
       <workItem from="1516727364187" duration="702000" />
       <workItem from="1516729960745" duration="4762000" />
-      <workItem from="1516748138867" duration="2701000" />
+      <workItem from="1516748138867" duration="3024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48889000" />
+    <option name="totallyTimeSpent" value="49212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -619,15 +629,15 @@
         <state relative-caret-position="397">
           <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+        <state relative-caret-position="259">
+          <caret line="118" column="133" lean-forward="false" selection-start-line="118" selection-start-column="133" selection-end-line="118" selection-end-column="133" />
           <folding />
         </state>
       </provider>
