@@ -12,6 +12,7 @@
                                 :title="`${conference.title} / Awesome Conferences`"
                                 :description="`All about ${conference.title} conference in ${conference.city} ${conference.country}`"
                                 :url="`https://aweconf.com/#/conference/${$route.params.id}`"
+                                :image="`${gmapsImage(conference.where, googleMapsApiKey)}`"
                         />
 
                         <v-card-text>

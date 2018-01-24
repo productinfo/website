@@ -5,6 +5,7 @@
                 :title="`${$route.params.category} / Awesome Conferences`"
                 :description="`All the best conferences about ${$route.params.category}`"
                 :url="`https://aweconf.com/#/category/${$route.params.category}`"
+                :image="undefined"
         />
 
         <v-container grid-list-xl text-xs-left>

@@ -6,6 +6,7 @@
                 description="Awesome Conferences is a collaborative and free listing of the best developer, marketer, designer conference around the world"
                 url="https://aweconf.com"
                 keywords="awesome conference, designer conference, developer conference, android, ios, mobile, ux, ui"
+                :image="undefined"
         />
 
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
