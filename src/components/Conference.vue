@@ -44,7 +44,7 @@
                         </v-card-text>
 
                         <v-card-text>For further details: 🔗 <a :href="conference.homepage" target="_blank">{{
-                            conference.homepage }}</a></v-card-text>
+                            addReferralTo(conference.homepage) }}</a></v-card-text>
 
                         <template v-if="conference.callforpaper">
                             <v-card-text>At this very moment 🎤 call for paper is open.</v-card-text>
@@ -149,6 +149,9 @@ export default {
         where = ''
       }
       return 'https://www.google.com/maps/search/?api=1&query=' + where.replace(' ', '+')
+    },
+    addReferralTo (url) {
+      return url + '?ref=aweconf'
     }
   }
 }
