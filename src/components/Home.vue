@@ -17,7 +17,7 @@
         <br/>
         <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
 
-        <div class="mobileapps">
+        <!--div class="mobileapps">
             <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
             <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
                 <img src="../assets/download-on-the-app-store.png" />
@@ -25,7 +25,7 @@
             <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
                 <img src="../assets/google-play-badge.png" />
             </a>
-        </div>
+        </div-->
 
         <div class="submit">
             <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
