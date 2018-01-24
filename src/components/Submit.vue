@@ -213,6 +213,7 @@ export default {
     backend: false,
     marketing: false,
     mobile: false,
+    devops: false,
     ui: false,
     callforpaper: false,
     where: '',
@@ -267,6 +268,7 @@ export default {
     this.mobile = (this.$route.params.category === 'mobile')
     this.ui = (this.$route.params.category === 'ui')
     this.ux = (this.$route.params.category === 'ux')
+    this.devops = (this.$route.params.category === 'devops')
   },
   methods: {
     submit () {
@@ -301,6 +303,9 @@ export default {
       }
       if (this.ux) {
         categories.push('ux')
+      }
+      if (this.devops) {
+        categories.push('devops')
       }
 
       const content = {
