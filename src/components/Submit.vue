@@ -119,6 +119,7 @@
                         <v-checkbox
                                 label="Is Call for Paper open?"
                                 v-model="callforpaper"
+                                color="deep-purple"
                         ></v-checkbox>
 
                         <v-text-field
