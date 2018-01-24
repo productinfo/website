@@ -25,7 +25,7 @@
                             hide-actions
                     >
                         <template slot="items" slot-scope="props">
-                            <td>{{ props.item.title }}</td>
+                            <td><a :href="props.item.homepage" target="_blank">{{ props.item.title }}</a></td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                             <td>{{ formatDate(props.item.startdate) }}</td>
