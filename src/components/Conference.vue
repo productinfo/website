@@ -33,9 +33,9 @@
                         </v-card-text>
 
                         <v-card-text v-else>
-                            It will be on 🗓 <em>{{ formatDate(conference.startdate) }}</em> in {{ conference.emojiflag
-                            }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{
-                            conference.country }}</a>
+                            It will be on 🗓 <em>{{ formatDate(conference.startdate) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
+                            , {{ conference.emojiflag }}
+                            <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
                         </v-card-text>
 
                         <v-card-text>
