@@ -31,7 +31,7 @@
                             <td>
                                 <ul>
                                     <li class="inline" v-for="category in props.item.category" :key="category">
-                                        <router-link :to="`/conference/${category}`">{{ category }}</router-link>
+                                        <router-link :to="`/category/${category}`">{{ category }}</router-link>
                                     </li>
                                 </ul>
                             </td>

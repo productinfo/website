@@ -1,7 +1,6 @@
 <template>
     <div class="country">
 
-
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
@@ -28,7 +27,16 @@
                             hide-actions
                     >
                         <template slot="items" slot-scope="props">
-                            <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
+                            <td>
+                                <router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li class="inline" v-for="category in props.item.category" :key="category">
+                                        <router-link :to="`/category/${category}`">{{ category }}</router-link>
+                                    </li>
+                                </ul>
+                            </td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                             <td>{{ formatDate(props.item.startdate) }}</td>
@@ -68,10 +76,11 @@ export default {
           sortable: false,
           value: 'title'
         },
-        { text: 'City', sortable: false, align: 'left', value: 'city' },
-        { text: 'Country', sortable: false, align: 'left', value: 'country' },
-        { text: 'Start', value: 'startdate', align: 'left' },
-        { text: 'End', value: 'enddate', align: 'left' }
+        {text: 'Category', sortable: false, align: 'center'},
+        {text: 'City', sortable: false, align: 'left', value: 'city'},
+        {text: 'Country', sortable: false, align: 'left', value: 'country'},
+        {text: 'Start', value: 'startdate', align: 'left'},
+        {text: 'End', value: 'enddate', align: 'left'}
       ]
     }
   },
@@ -114,13 +123,16 @@ export default {
     h1, h2 {
         font-weight: normal;
     }
+
     ul {
         list-style-type: none;
         padding: 0;
     }
+
     li {
         margin: 0 10px;
     }
+
     a {
         color: #5719B8;
         text-decoration: none;

@@ -122,7 +122,6 @@ export default {
         where = ''
       }
       const map = 'https://maps.googleapis.com/maps/api/staticmap?center=' + where.replace(' ', '+').replace('%20', '+') + '&key=' + key + '&zoom=15&scale=2&size=400x200&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:small%7Ccolor:0x5719B8%7Clabel:1%7C' + where.replace(' ', '+').replace('%20', '+')
-      // console.log(map)
       return map
     },
     gmapsUrl (where) {
