@@ -1,12 +1,18 @@
 <template>
     <div class="city">
 
-        <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+        <vue-headful
+                :title="`${$route.params.city} / Awesome Conferences`"
+                :description="`All the best conferences about ${$route.params.city}`"
+                :lang="en"
+        />
+
 
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
+                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
                     <h1>{{ $route.params.city }}</h1>
 
                     <v-card-title>

@@ -10,10 +10,12 @@ import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
+import vueHeadful from 'vue-headful'
 
 Vue.use(Router)
 Vue.use(Vuetify)
 Vue.use(VueCookie)
+Vue.component('vue-headful', vueHeadful)
 
 export default new Router({
   routes: [

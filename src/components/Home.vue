@@ -1,5 +1,12 @@
 <template>
     <div class="home">
+
+        <vue-headful
+                title="🎉 Awesome Conferences"
+                description="Awesome Conferences is a collaborative and free listing of the best developer, marketer, designer conference around the world"
+                lang="en"
+        />
+
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
         <div class="intro">
             <h1>{{ welcomeMsg }} <b>{{ total }}</b> {{ welcomeMsg2}}</h1>

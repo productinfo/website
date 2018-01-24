@@ -1,9 +1,18 @@
 <template>
     <div class="category">
-        <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+
+        <vue-headful
+                :title="`${$route.params.category} / Awesome Conferences`"
+                :description="`All the best conferences about ${$route.params.category}`"
+                :lang="en"
+        />
+
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
+
+                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+
                     <v-card-title>
                         <v-text-field
                                 append-icon="search"
@@ -71,12 +80,16 @@ export default {
 
   created () {
     this.fetchData()
+    this.title = this.$route.params.category + ' / Awesome Conference'
   },
 
   watch: {
     '$route': 'fetchData'
   },
 
+  mounted () {
+    this.title = this.$route.params.category + ' / Awesome Conference'
+  },
   methods: {
     fetchData () {
       axios.get('https://aweconf.herokuapp.com/api/conference')

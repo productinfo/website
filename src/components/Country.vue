@@ -1,6 +1,12 @@
 <template>
     <div class="country">
 
+        <vue-headful
+                :title="`${$route.params.country} / Awesome Conferences`"
+                :description="`All the best conferences in ${$route.params.country}`"
+                :lang="en"
+        />
+
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
