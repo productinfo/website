@@ -61,7 +61,7 @@ export default {
       instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mobileMsg: 'Stay always updated using our 📱 dedicated application:',
-      submitMsg: 'Support the project sending interesting conference:',
+      submitMsg: 'Support the project suggesting a 🆕 conference:',
       quickLook: 'Have a ⚡️👀 at the latest conferences published:',
       discoverMore: 'or 🧐 discover more...',
       conferences: [],
