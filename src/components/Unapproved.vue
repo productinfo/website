@@ -123,7 +123,7 @@ export default {
             this.fetchData()
             this.dialog = false
           } else {
-            alert('An error occured')
+            alert(resp.data.error)
           }
         })
         .catch((err) => {
