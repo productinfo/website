@@ -26,6 +26,13 @@
                     >
                         <template slot="items" slot-scope="props">
                             <td><a :href="props.item.homepage" target="_blank">{{ props.item.title }}</a></td>
+                            <td>
+                                <ul>
+                                    <li class="inline" v-for="category in props.item.category" :key="category">
+                                        <router-link :to="`/category/${category}`">{{ category }}</router-link>
+                                    </li>
+                                </ul>
+                            </td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                             <td>{{ formatDate(props.item.startdate) }}</td>
@@ -80,6 +87,7 @@ export default {
           sortable: false,
           value: 'title'
         },
+        { text: 'Category', sortable: false, align: 'left' },
         { text: 'City', sortable: false, align: 'left', value: 'city' },
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'startdate', align: 'left' },
