@@ -53,7 +53,7 @@ export default {
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mobileMsg: 'Stay always updated using our 📱 dedicated application:',
       submitMsg: 'Support the project sending interesting conference:',
-      quickLook: 'Have a ⚡️quick too to latest 🔟 conferences published:',
+      quickLook: 'Have a ⚡️👀 to the latest 🔟 conferences published:',
       discoverMore: 'or 🧐 discover more...',
       conferences: [],
       showSpinner: true,
