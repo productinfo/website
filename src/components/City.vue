@@ -74,7 +74,7 @@ export default {
           sortable: false,
           value: 'title'
         },
-        { text: 'Category', sortable: false, align: 'center'},
+        { text: 'Category', sortable: false, align: 'center' },
         { text: 'City', sortable: false, align: 'left', value: 'city' },
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'startdate', align: 'left' },
