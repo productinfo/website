@@ -28,6 +28,13 @@
                     >
                         <template slot="items" slot-scope="props">
                             <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
+                            <td>
+                                <ul>
+                                    <li class="inline" v-for="category in props.item.category" :key="category">
+                                        <router-link :to="`/conference/${category}`">{{ category }}</router-link>
+                                    </li>
+                                </ul>
+                            </td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                             <td>{{ formatDate(props.item.startdate) }}</td>
@@ -67,6 +74,7 @@ export default {
           sortable: false,
           value: 'title'
         },
+        { text: 'Category', sortable: false, align: 'center'},
         { text: 'City', sortable: false, align: 'left', value: 'city' },
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'startdate', align: 'left' },
@@ -118,5 +126,8 @@ export default {
     a {
         color: #5719B8;
         text-decoration: none;
+    }
+    li .inline {
+        display: inline;
     }
 </style>
