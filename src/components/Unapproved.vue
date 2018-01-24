@@ -4,6 +4,9 @@
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
+
+                    <h1>🎟 {{ remaining }} to be approved</h1>
+
                     <v-card-title>
                         <v-text-field
                                 append-icon="search"
@@ -67,6 +70,7 @@ export default {
       dialog: false,
       password: '',
       e1: false,
+      remaining: 0,
       tmp: '',
       search: '',
       headers: [
@@ -100,6 +104,7 @@ export default {
         .then((resp) => {
           if (resp.data.success === true) {
             this.conferences = resp.data.conferences
+            this.remaining = this.conferences.length
           }
           this.showSpinner = false
         })
