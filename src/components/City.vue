@@ -6,6 +6,9 @@
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
+
+                    <h1>{{ $route.params.city }}</h1>
+
                     <v-card-title>
                         <v-text-field
                                 append-icon="search"
@@ -19,7 +22,7 @@
                     <v-data-table
                             v-bind:headers="headers"
                             v-bind:search="search"
-                            :items="sortAndFilter(conferences, $route.params.city)"
+                            :items="conferences"
                             class="elevation-1"
                             hide-actions
                     >
@@ -54,6 +57,7 @@ export default {
     return {
       conferences: [],
       showSpinner: true,
+      title: '',
       tmp: '',
       search: '',
       headers: [
@@ -81,7 +85,7 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://aweconf.herokuapp.com/api/conference')
+      axios.post('https://aweconf.herokuapp.com/api/conference/city', { city: this.$route.params.city })
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
@@ -93,15 +97,6 @@ export default {
     formatDate (date) {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
-    },
-    sortAndFilter (conf, city) {
-      if (city !== 'all') {
-        return conf.filter(function (b) {
-          return b.city.indexOf(city) !== -1
-        })
-      } else {
-        return conf
-      }
     }
   }
 }

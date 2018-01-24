@@ -1,11 +1,15 @@
 <template>
     <div class="country">
 
-        <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
+
+                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+
+                    <h1>{{ title }}</h1>
+
                     <v-card-title>
                         <v-text-field
                                 append-icon="search"
@@ -19,7 +23,7 @@
                     <v-data-table
                             v-bind:headers="headers"
                             v-bind:search="search"
-                            :items="sortAndFilter(conferences, $route.params.country)"
+                            :items="conferences"
                             class="elevation-1"
                             hide-actions
                     >
@@ -54,6 +58,7 @@ export default {
     return {
       conferences: [],
       showSpinner: true,
+      title: '',
       tmp: '',
       search: '',
       headers: [
@@ -81,10 +86,15 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://aweconf.herokuapp.com/api/conference')
+      axios.get('https://aweconf.herokuapp.com/api/conference/country/' + this.$route.params.country)
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
+
+          // set title dinamically getting the emojiflag from first entry
+          if (this.conferences.length > 0) {
+            this.title = this.conferences[0].emojiflag + ' ' + this.conferences[0].country
+          }
         })
         .catch((err) => {
           console.log(err)
@@ -93,15 +103,6 @@ export default {
     formatDate (date) {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
-    },
-    sortAndFilter (conf, country) {
-      if (country !== 'all') {
-        return conf.filter(function (b) {
-          return b.country.indexOf(country) !== -1
-        })
-      } else {
-        return conf
-      }
     }
   }
 }
