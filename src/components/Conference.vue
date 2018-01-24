@@ -118,11 +118,17 @@ export default {
       return cats.substr(0, cats.length - 2)
     },
     gmapsImage (where, key) {
+      if (!where) {
+        where = ''
+      }
       const map = 'https://maps.googleapis.com/maps/api/staticmap?center=' + where.replace(' ', '+').replace('%20', '+') + '&key=' + key + '&zoom=15&scale=2&size=400x200&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:small%7Ccolor:0x5719B8%7Clabel:1%7C' + where.replace(' ', '+').replace('%20', '+')
-      console.log(map)
+      // console.log(map)
       return map
     },
     gmapsUrl (where) {
+      if (!where) {
+        where = ''
+      }
       return 'https://www.google.com/maps/search/?api=1&query=' + where.replace(' ', '+')
     }
   }
