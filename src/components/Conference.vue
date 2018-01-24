@@ -8,45 +8,66 @@
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
                     <v-card v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference._id">
 
-                            <v-card-text>
-                                <h1>{{ conference.title }} {{ conference.emojiflag }}</h1>
-                            </v-card-text>
+                        <vue-headful
+                                :title="`${conference.title} / Awesome Conferences`"
+                                :description="`All about ${conference.title} conference in ${conference.city} ${conference.country}`"
+                                lang="en"
+                                :url="`https://aweconf.com/#/conference/${$route.params.id}`"
+                                ogLocale="en"
+                        />
 
-                            <v-card-text>
-                                    is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
-                                </v-card-text>
+                        <v-card-text>
+                            <h1>{{ conference.title }} {{ conference.emojiflag }}</h1>
+                        </v-card-text>
 
-                                <v-card-text v-if="formatDate(conference.startdate) !== formatDate(conference.enddate)">
-                                    It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{ formatDate(conference.enddate) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>, {{ conference.emojiflag }} <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
-                                </v-card-text>
+                        <v-card-text>
+                            is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
+                        </v-card-text>
 
-                                <v-card-text v-else>
-                                    It will be on 🗓 <em>{{ formatDate(conference.startdate) }}</em> in {{ conference.emojiflag }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{ conference.country }}</a>
-                                </v-card-text>
+                        <v-card-text v-if="formatDate(conference.startdate) !== formatDate(conference.enddate)">
+                            It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{
+                            formatDate(conference.enddate) }}</em> in
+                            <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
+                            , {{ conference.emojiflag }}
+                            <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
+                        </v-card-text>
 
-                                <v-card-text>
-                                    <a :href='gmapsUrl(conference.where)'>
-                                        <img :src='gmapsImage(conference.where, googleMapsApiKey)'>
-                                    </a>
-                                </v-card-text>
+                        <v-card-text v-else>
+                            It will be on 🗓 <em>{{ formatDate(conference.startdate) }}</em> in {{ conference.emojiflag
+                            }} <a :href="gmapsUrl(conference.where)" target="_blank">{{ conference.city }} - {{
+                            conference.country }}</a>
+                        </v-card-text>
 
-                                <v-card-text>For further details: 🔗 <a :href="conference.homepage" target="_blank">{{ conference.homepage }}</a> </v-card-text>
+                        <v-card-text>
+                            <a :href='gmapsUrl(conference.where)'>
+                                <img :src='gmapsImage(conference.where, googleMapsApiKey)'>
+                            </a>
+                        </v-card-text>
 
-                                <template v-if="conference.callforpaper">
-                                    <v-card-text>At this very moment 🎤 call for paper is open.</v-card-text>
-                                </template>
-                                <template v-else>
-                                    <v-card-text>Sadly call for paper 🎤 is closed.</v-card-text>
-                                </template>
+                        <v-card-text>For further details: 🔗 <a :href="conference.homepage" target="_blank">{{
+                            conference.homepage }}</a></v-card-text>
+
+                        <template v-if="conference.callforpaper">
+                            <v-card-text>At this very moment 🎤 call for paper is open.</v-card-text>
+                        </template>
+                        <template v-else>
+                            <v-card-text>Sadly call for paper 🎤 is closed.</v-card-text>
+                        </template>
 
                     </v-card>
                     <br/>
                     <div v-for="conf in sortAndFilter(conferences, $route.params.id)" :key="conf.id">
-                        <p>Discover other conferences in <router-link :to="`/country/${conf.country}`">{{ conf.emojiflag }} {{ conf.country }}</router-link>:</p>
+                        <p>Discover other conferences in
+                            <router-link :to="`/country/${conf.country}`">{{ conf.emojiflag }} {{ conf.country }}
+                            </router-link>
+                            :
+                        </p>
                         <ul>
-                            <li v-for="confz in sortForCountry(conferences, conf.country, $route.params.id)" :key="confz.id">
+                            <li v-for="confz in sortForCountry(conferences, conf.country, $route.params.id)"
+                                :key="confz.id">
                                 <span v-for="category in confz.category" :key="category">
-                                    <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
+                                    <router-link :to="`/category/${category}`"><v-chip color="deep-purple"
+                                                                                       text-color="white">{{ category }}</v-chip></router-link>
                                 </span>
                                 <router-link :to="`/conference/${confz._id}`">{{ confz.title }}</router-link>
                             </li>
