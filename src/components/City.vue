@@ -59,16 +59,16 @@
                     <template>
                         <gmap-map
                                 :center="center"
-                                :zoom="7"
+                                :zoom="11"
                                 style="width: 100%; height: 300px"
                         >
                             <gmap-marker
                                     :key="index"
                                     v-for="(m, index) in markers"
                                     :position="m.position"
-                                    :clickable="false"
+                                    :clickable="true"
                                     :draggable="false"
-                                    @click="center=m.position"
+                                    @click="$router.push({ path: '/conference/' + m.id })"
                             ></gmap-marker>
                         </gmap-map>
                     </template>
@@ -129,18 +129,22 @@ export default {
           this.conferences = resp.data.conferences
           this.showSpinner = false
 
-          // retrieve center
           if (this.conferences.length > 0) {
-            // generate markers
-            this.conferences.forEach(function (conf) {
-              if (conf.lat && conf.lon) {
+            // loop confs
+            for (var conf of this.conferences) {
+              // if lat has a value
+              if (conf.lat > 0) {
                 this.center.lat = conf.lat
                 this.center.lng = conf.lon
-                this.markers.append({
+                // generate marker
+                const position = {
+                  id: conf._id,
                   position: { lat: conf.lat, lng: conf.lon }
-                })
+                }
+                // add to list
+                this.markers.push(position)
               }
-            })
+            }
           }
         })
         .catch((err) => {
