@@ -11,7 +11,7 @@
 
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
         <div class="intro">
-            <h1>{{ welcomeMsg }} <b>{{ total }}</b> {{ welcomeMsg2}}</h1>
+            <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
         </div>
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
         <p>{{ quickLook }}</p>
