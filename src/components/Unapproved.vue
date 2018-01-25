@@ -57,6 +57,16 @@
                             required
                             color="deep-purple"
                     ></v-text-field>
+                    <v-checkbox
+                            label="Publish on Twitter"
+                            v-model="twitter"
+                            color="deep-purple"
+                    ></v-checkbox>
+                    <v-checkbox
+                            label="Send push notification"
+                            v-model="push"
+                            color="deep-purple"
+                    ></v-checkbox>
                 </v-flex>
 
             </v-layout>
@@ -80,6 +90,8 @@ export default {
       remaining: 0,
       tmp: '',
       search: '',
+      twitter: true,
+      push: true,
       headers: [
         {
           text: 'Name',
@@ -130,7 +142,7 @@ export default {
       })
     },
     approveConf (id) {
-      axios.put('https://aweconf.herokuapp.com/api/conference/approve/', { id: id, password: this.$data.password })
+      axios.put('https://aweconf.herokuapp.com/api/conference/approve/', { id: id, password: this.$data.password, push: true, twitter: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.fetchData()
