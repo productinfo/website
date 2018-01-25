@@ -55,7 +55,7 @@ export default {
 
   data () {
     return {
-      welcomeMsg: '🔎 more than',
+      welcomeMsg: '🔎 ',
       welcomeMsg2: 'conferences around the 🌍',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
       instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
@@ -91,7 +91,7 @@ export default {
       axios.get('https://aweconf.herokuapp.com/api/conference/last/10')
         .then((resp) => {
           this.conferences = resp.data.conferences
-          this.total = 5 * Math.round(resp.data.total / 5)
+          this.total = 5 * Math.round(resp.data.total / 5) + "+"
           this.showSpinner = false
         })
         .catch((err) => {
