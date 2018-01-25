@@ -59,15 +59,15 @@
                     <template>
                         <gmap-map
                                 :center="center"
-                                :zoom="13"
+                                :zoom="7"
                                 style="width: 100%; height: 300px"
                         >
                             <gmap-marker
                                     :key="index"
                                     v-for="(m, index) in markers"
                                     :position="m.position"
-                                    :clickable="true"
-                                    :draggable="true"
+                                    :clickable="false"
+                                    :draggable="false"
                                     @click="center=m.position"
                             ></gmap-marker>
                         </gmap-map>
@@ -131,14 +131,15 @@ export default {
 
           // retrieve center
           if (this.conferences.length > 0) {
-            this.center.lat = parseFloat(this.conferences[0].lat)
-            this.center.lng = parseFloat(this.confereces[0].lon)
-
             // generate markers
             this.conferences.forEach(function (conf) {
-              this.markers.append({
-                position: { lat: parseFloat(conf.lat), lng: parseFloat(conf.lon) }
-              })
+              if (conf.lat && conf.lon) {
+                this.center.lat = conf.lat
+                this.center.lng = conf.lon
+                this.markers.append({
+                  position: { lat: conf.lat, lng: conf.lon }
+                })
+              }
             })
           }
         })
