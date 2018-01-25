@@ -2,7 +2,7 @@
     <div class="country">
 
         <vue-headful
-                :title="`${title}`"
+                :title="`${title} / Awesome Conferences`"
                 :description="`All the best conferences in ${$route.params.country}`"
                 :url="`https://aweconf.com/#/country/${$route.params.country}`"
                 :image="undefined"
