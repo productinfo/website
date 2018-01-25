@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/Category.vue" afterPath="$PROJECT_DIR$/src/components/Category.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/Conference.vue" afterPath="$PROJECT_DIR$/src/components/Conference.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/Country.vue" afterPath="$PROJECT_DIR$/src/components/Country.vue" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.d1af086875cec670b58eee05b54fc80d.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.d1af086875cec670b58eee05b54fc80d.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.81662d11533ff35e1d77.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.81662d11533ff35e1d77.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.48b5afb1c7f120f31fb7.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.48b5afb1c7f120f31fb7.js.map" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Category.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="72" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="72" />
+              <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -287,16 +291,15 @@
       <workItem from="1516826899344" duration="429000" />
       <workItem from="1516828089933" duration="487000" />
       <workItem from="1516835586464" duration="993000" />
-      <workItem from="1516887688074" duration="3536000" />
+      <workItem from="1516887688074" duration="3852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68116000" />
+    <option name="totallyTimeSpent" value="68432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17453505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -307,7 +310,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20621118" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20621118" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -669,7 +672,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Category.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="72" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="72" />
+          <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="72" />
           <folding />
         </state>
       </provider>
