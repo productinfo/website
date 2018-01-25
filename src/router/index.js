@@ -13,6 +13,7 @@ import Unapproved from '@/components/Unapproved'
 import vueHeadful from 'vue-headful'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+// use
 Vue.use(Router)
 Vue.use(Vuetify)
 Vue.use(VueCookie)
@@ -21,7 +22,12 @@ Vue.use(VueGoogleMaps, {
     key: 'AIzaSyCqZUt0HuQwFtO1P8HN0wsZJohNaiifd4g'
   }
 })
+
+//  component
 Vue.component('vue-headful', vueHeadful)
+Vue.component('google-map', VueGoogleMaps.Map)
+Vue.component('google-marker', VueGoogleMaps.Marker)
+Vue.component('google-cluster', VueGoogleMaps.Cluster)
 
 export default new Router({
   routes: [

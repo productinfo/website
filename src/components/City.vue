@@ -62,14 +62,17 @@
                                 :zoom="11"
                                 style="width: 100%; height: 300px"
                         >
-                            <gmap-marker
+                            <google-cluster>
+                                <gmap-marker
                                     :key="index"
                                     v-for="(m, index) in markers"
                                     :position="m.position"
+                                    icon="http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                                     :clickable="true"
                                     :draggable="false"
                                     @click="$router.push({ path: '/conference/' + m.id })"
                             ></gmap-marker>
+                            </google-cluster>
                         </gmap-map>
                     </template>
                 </v-flex>
