@@ -9,8 +9,8 @@
                     <v-card v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference._id">
 
                         <vue-headful
-                                :title="`${conference.title} / Awesome Conferences`"
-                                :description="`All about ${conference.title} conference in ${conference.city} ${conference.country}`"
+                                :title="`${conference.title}`"
+                                :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
                                 :url="`https://aweconf.com/#/conference/${$route.params.id}`"
                                 :image="`${gmapsImage(conference.where, googleMapsApiKey)}`"
                         />

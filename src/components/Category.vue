@@ -2,7 +2,7 @@
     <div class="category">
 
         <vue-headful
-                :title="`${$route.params.category} / Awesome Conferences`"
+                :title="`${$route.params.category}`"
                 :description="`All the best conferences about ${$route.params.category}`"
                 :url="`https://aweconf.com/#/category/${$route.params.category}`"
                 :image="undefined"
