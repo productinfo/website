@@ -38,9 +38,23 @@
                         </v-card-text>
 
                         <v-card-text>
-                            <a :href='gmapsUrl(conference.where)'>
-                                <img :src='gmapsImage(conference.where, googleMapsApiKey)'>
-                            </a>
+                            <template>
+                                <gmap-map
+                                        :center="{ lat: conference.lat ? conference.lat : 0, lng: conference.lon ? conference.lon : 0}"
+                                        :zoom="18"
+                                        style="width: 100%; height: 300px"
+                                >
+                                    <google-cluster>
+                                        <gmap-marker
+                                                :position="{ lat: conference.lat ? conference.lat : 0, lng: conference.lon ? conference.lon : 0}"
+                                                icon="http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                                                :clickable="true"
+                                                :draggable="false"
+                                                @click="$router.push({ path: '/conference/' + conference._id })"
+                                        ></gmap-marker>
+                                    </google-cluster>
+                                </gmap-map>
+                            </template>
                         </v-card-text>
 
                         <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
@@ -90,6 +104,8 @@ export default {
   data () {
     return {
       conferences: [],
+      center: { lat: 0, lng: 0 },
+      markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
       showSpinner: true
     }
