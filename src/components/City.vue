@@ -53,6 +53,29 @@
             </v-layout>
         </v-container>
 
+        <v-container grid-list-xl text-xs-left>
+            <v-layout row wrap>
+                <v-flex xs10 offset-xs1>
+                    <template>
+                        <gmap-map
+                                :center="center"
+                                :zoom="13"
+                                style="width: 100%; height: 300px"
+                        >
+                            <gmap-marker
+                                    :key="index"
+                                    v-for="(m, index) in markers"
+                                    :position="m.position"
+                                    :clickable="true"
+                                    :draggable="true"
+                                    @click="center=m.position"
+                            ></gmap-marker>
+                        </gmap-map>
+                    </template>
+                </v-flex>
+            </v-layout>
+        </v-container>
+
         <br/>
         <router-link :to="`/submit`">
             <v-btn block color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.city }}</v-btn>
@@ -85,7 +108,9 @@ export default {
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'startdate', align: 'left' },
         { text: 'End', value: 'enddate', align: 'left' }
-      ]
+      ],
+      center: { lat: 0, lng: 0 },
+      markers: []
     }
   },
 
@@ -103,6 +128,19 @@ export default {
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
+
+          // retrieve center
+          if (this.conferences.length > 0) {
+            this.center.lat = parseFloat(this.conferences[0].lat)
+            this.center.lng = parseFloat(this.confereces[0].lon)
+
+            // generate markers
+            this.conferences.forEach(function (conf) {
+              this.markers.append({
+                position: { lat: parseFloat(conf.lat), lng: parseFloat(conf.lon) }
+              })
+            })
+          }
         })
         .catch((err) => {
           console.log(err)

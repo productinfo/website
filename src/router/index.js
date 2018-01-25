@@ -11,10 +11,16 @@ import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
 import vueHeadful from 'vue-headful'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.use(Router)
 Vue.use(Vuetify)
 Vue.use(VueCookie)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCqZUt0HuQwFtO1P8HN0wsZJohNaiifd4g'
+  }
+})
 Vue.component('vue-headful', vueHeadful)
 
 export default new Router({
