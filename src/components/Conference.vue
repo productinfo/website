@@ -12,7 +12,6 @@
                                 :title="`${conference.title} / Awesome Conferences`"
                                 :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
                                 :url="`https://aweconf.com/#/conference/${$route.params.id}`"
-                                :image="`${gmapsImage(conference.where, googleMapsApiKey)}`"
                         />
 
                         <v-card-text>
@@ -104,7 +103,6 @@ export default {
   data () {
     return {
       conferences: [],
-      center: { lat: 0, lng: 0 },
       markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
       showSpinner: true
@@ -152,19 +150,6 @@ export default {
         cats += category + ', '
       })
       return cats.substr(0, cats.length - 2)
-    },
-    gmapsImage (where, key) {
-      if (!where) {
-        where = ''
-      }
-      const map = 'https://maps.googleapis.com/maps/api/staticmap?center=' + where.replace(' ', '+').replace('%20', '+') + '&key=' + key + '&zoom=15&scale=2&size=400x200&maptype=roadmap&format=jpg&visual_refresh=true&markers=size:small%7Ccolor:0x5719B8%7Clabel:1%7C' + where.replace(' ', '+').replace('%20', '+')
-      return map
-    },
-    gmapsUrl (where) {
-      if (!where) {
-        where = ''
-      }
-      return 'https://www.google.com/maps/search/?api=1&query=' + where.replace(' ', '+')
     },
     addReferralTo (url) {
       return url + '?ref=aweconf'
