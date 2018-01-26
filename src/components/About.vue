@@ -1,29 +1,55 @@
 <template>
-    <div class="about">
-        <h1>About Awesome Conferences</h1>
-        <p>Awesome Conferences is a free, 👫👭👬 collaborative and 🤲 open source project about the best <em>(developer|designer|markerter|devop)</em> conferences around the world 🌍.</p>
-        <h2>How to partecipate</h2>
-        <p>Partecipation is pretty easy, you can:</p>
-        <ul>
-            <li>- Submit a <router-link to="/submit">new conference</router-link></li>
-            <li>- Propose a PR on github <a href="https://github.com/aweconf/website" target="_blank">web</a> repository</li>
-            <li>- Propose a PR on github <a href="https://github.com/aweconf/awesome-conferences-ios" target="_blank">ios</a> mobile repository</li>
-            <li>- Propose a PR on github <a href="https://github.com/aweconf/awesome-conferences-android" target="_blank">android</a> mobile repository</li>
-        </ul>
-        <div class="developer">
-            <h2>About the developer</h2>
-            <p>It has been developed using <a href="https://vuejs.org" target="_blank">Vue.js</a>, <a href="http://expressjs.com" target="_blank">Expressjs</a>, <a href="https://swift.org" target="_blank">Swift</a> and <a href="https://kotlinlang.org" target="_blank">Kotlin</a> by <a href="https://matteocrippa.it" target="_blank">Matteo Crippa</a>.</p>
-        </div>
+    <div class="mt-4">
+        <v-container grid-list-xl text-xs-left>
+            <v-layout row wrap>
+                <v-flex xs10 offset-xs1>
+                    <h1>About Awesome Conferences</h1>
+                    <p class="mt-3">Awesome Conferences is a 🐳 free, 👫👭👬 collaborative and 🤲 open source project about the best
+                        <em>(developer|designer|markerter|devop)</em> conferences around the 🌍world.</p>
+                    <p>The main purpose is to create a 🚓 trustworthy place where you can easily find out an interesting
+                        conference, meetup next to you, or even far away, filtering items by 🏷 topic, 🏳 country or 🏙
+                        city.</p>
+                    <p>Conferences are a great place to 🤓 share knowledge, 🤯 learn new stuff and ☃️ meet new people.
+                        If you think this too, follow this project, I will do the best and with your precious help, we
+                        can only improve this.</p>
+                    <h2>How to participate</h2>
+                    <p>Participation is pretty easy, you can:</p>
+                    <ul>
+                        <li>- Submit a
+                            <router-link to="/submit">new conference</router-link>
+                        </li>
+                        <li>- Propose a PR on github <a href="https://github.com/aweconf/website"
+                                                        target="_blank">web</a> repository
+                        </li>
+                        <li>- Propose a PR on github <a href="https://github.com/aweconf/awesome-conferences-ios"
+                                                        target="_blank">ios</a> mobile repository
+                        </li>
+                        <li>- Propose a PR on github <a href="https://github.com/aweconf/awesome-conferences-android"
+                                                        target="_blank">android</a> mobile repository
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <h2>About the developer</h2>
+                        <p>It has been developed using <a href="https://vuejs.org" target="_blank">Vue.js</a>, <a
+                                href="http://expressjs.com" target="_blank">Expressjs</a>, <a href="https://swift.org"
+                                                                                              target="_blank">Swift</a>,
+                            and <a href="https://kotlinlang.org" target="_blank">Kotlin</a> by <a
+                                    href="https://matteocrippa.it" target="_blank">Matteo Crippa</a>.</p>
+                    </div>
+
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 
+<script>
+export default {
+  name: 'About'
+}
+</script>
+
 <style scoped>
-    .about {
-        margin-top: 20px;
-    }
-    .developer {
-        margin-top: 20px;
-    }
     h1, h2 {
         font-weight: normal;
     }
