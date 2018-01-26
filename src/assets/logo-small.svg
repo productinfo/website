@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="48px" viewBox="0 0 50 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15.1992368,40.2118844 C6.44667056,37.8806871 -1.13686838e-13,29.9169676 -1.13686838e-13,20.4512684 C-1.13686838e-13,16.6520396 1.0385346,13.0947741 2.84786589,10.0465483 C2.82247175,10.3997837 2.80955599,10.7564647 2.80955599,11.1161549 C2.80955599,19.2566404 9.42507128,25.8558077 17.585723,25.8558077 C25.7463747,25.8558077 32.3618899,19.2566404 32.3618899,11.1161549 C32.3618899,6.68089139 30.3980689,2.70316943 27.2904908,0.00102654978 C27.359602,0.000342718935 27.428795,0 27.4980683,0 C38.8209725,0 48,9.15634473 48,20.4512684 C48,29.8826136 41.6000386,37.8228615 32.8959695,40.1862801 C31.4199473,43.6058649 28.0112839,46 24.042055,46 C20.0827402,46 16.681194,43.6178098 15.1992368,40.2118844 Z" id="path-1"></path>
+        <filter x="-1.0%" y="-1.1%" width="102.1%" height="102.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="19" cy="13.5" r="4.5"></circle>
+        <filter x="-5.6%" y="-5.6%" width="111.1%" height="111.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-small">
+            <g id="Group" transform="translate(1.000000, 1.000000)">
+                <g id="Combined-Shape">
+                    <use fill="#673AB7" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Oval-3">
+                    <use fill="#673AB7" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
