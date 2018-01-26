@@ -5,7 +5,6 @@
                 :title="`${title} / Awesome Conferences`"
                 :description="`All the best conferences in ${$route.params.country}`"
                 :url="`https://aweconf.com/#/country/${$route.params.country}`"
-                :image="undefined"
         />
 
         <v-container grid-list-xl text-xs-left>
@@ -103,17 +102,12 @@ export default {
       tmp: '',
       search: '',
       headers: [
-        {
-          text: 'Name',
-          align: 'left',
-          sortable: false,
-          value: 'title'
-        },
-        {text: 'Category', sortable: false, align: 'center'},
-        {text: 'City', sortable: false, align: 'left', value: 'city'},
-        {text: 'Country', sortable: false, align: 'left', value: 'country'},
-        {text: 'Start', value: 'startdate', align: 'left'},
-        {text: 'End', value: 'enddate', align: 'left'}
+        { text: 'Name', align: 'left', sortable: false, value: 'title' },
+        { text: 'Category', sortable: false, align: 'center' },
+        { text: 'City', sortable: false, align: 'left', value: 'city' },
+        { text: 'Country', sortable: false, align: 'left', value: 'country' },
+        { text: 'Start', value: 'startdate', align: 'left' },
+        { text: 'End', value: 'enddate', align: 'left' }
       ],
       center: { lat: 0, lng: 0 },
       markers: []
@@ -169,7 +163,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     h1, h2 {
         font-weight: normal;
