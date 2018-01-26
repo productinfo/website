@@ -13,11 +13,38 @@
         <div class="intro">
             <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
         </div>
+
+        <v-container grid-list-xl text-xs-left>
+            <v-layout row wrap>
+                <v-flex xs10 offset-xs1>
+                    <template>
+                        <gmap-map
+                                :center="center"
+                                :zoom="2"
+                                style="width: 100%; height: 450px"
+                        >
+                            <google-cluster>
+                                <gmap-marker
+                                        :key="index"
+                                        v-for="(m, index) in markers"
+                                        :position="m.position"
+                                        icon="http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                                        :clickable="true"
+                                        :draggable="false"
+                                        @click="$router.push({ path: '/conference/' + m.id })"
+                                ></gmap-marker>
+                            </google-cluster>
+                        </gmap-map>
+                    </template>
+                </v-flex>
+            </v-layout>
+        </v-container>
+
         <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
         <p>{{ quickLook }}</p>
         <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
         <ul>
-            <li v-for="conference in conferences" :key="conference.id">
+            <li v-for="conference in lastConferences" :key="conference.id">
                 <span v-for="category in conference.category" :key="category">
                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
                 </span>
@@ -65,9 +92,12 @@ export default {
       quickLook: 'Have a ⚡️👀 at the latest conferences published:',
       discoverMore: 'or 🧐 discover more...',
       conferences: [],
+      lastConferences: [],
       showSpinner: true,
       firstRun: false,
-      total: ''
+      total: '',
+      center: { lat: 41, lng: 40 },
+      markers: []
     }
   },
 
@@ -88,11 +118,39 @@ export default {
 
   methods: {
     fetchData () {
+      this.showSpinner = true
+
       axios.get('https://aweconf.herokuapp.com/api/conference/last/10')
         .then((resp) => {
-          this.conferences = resp.data.conferences
+          this.lastConferences = resp.data.conferences
           this.total = 5 * Math.round(resp.data.total / 5)
           this.showSpinner = false
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+
+      axios.get('https://aweconf.herokuapp.com/api/conference')
+        .then((resp) => {
+          this.conferences = resp.data.conferences
+          this.showSpinner = false
+          if (this.conferences.length > 0) {
+            // loop confs
+            for (var conf of this.conferences) {
+              // if lat has a value
+              if (conf.lat > 0) {
+                this.center.lat = conf.lat
+                this.center.lng = conf.lon
+                // generate marker
+                const position = {
+                  id: conf._id,
+                  position: { lat: conf.lat, lng: conf.lon }
+                }
+                // add to list
+                this.markers.push(position)
+              }
+            }
+          }
         })
         .catch((err) => {
           console.log(err)
@@ -123,7 +181,6 @@ a {
 }
 .intro {
     margin-top: 38px;
-    margin-bottom: 42px;
 }
 .mobileapps {
   margin-top: 40px;

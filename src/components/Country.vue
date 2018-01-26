@@ -56,6 +56,32 @@
             </v-layout>
         </v-container>
 
+        <v-container grid-list-xl text-xs-left>
+            <v-layout row wrap>
+                <v-flex xs10 offset-xs1>
+                    <template>
+                        <gmap-map
+                                :center="center"
+                                :zoom="4"
+                                style="width: 100%; height: 300px"
+                        >
+                            <google-cluster>
+                                <gmap-marker
+                                        :key="index"
+                                        v-for="(m, index) in markers"
+                                        :position="m.position"
+                                        icon="http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                                        :clickable="true"
+                                        :draggable="false"
+                                        @click="$router.push({ path: '/conference/' + m.id })"
+                                ></gmap-marker>
+                            </google-cluster>
+                        </gmap-map>
+                    </template>
+                </v-flex>
+            </v-layout>
+        </v-container>
+
         <br/>
         <router-link :to="`/submit`">
             <v-btn block color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.country }}</v-btn>
@@ -88,7 +114,9 @@ export default {
         {text: 'Country', sortable: false, align: 'left', value: 'country'},
         {text: 'Start', value: 'startdate', align: 'left'},
         {text: 'End', value: 'enddate', align: 'left'}
-      ]
+      ],
+      center: { lat: 0, lng: 0 },
+      markers: []
     }
   },
 
@@ -107,9 +135,25 @@ export default {
           this.conferences = resp.data.conferences
           this.showSpinner = false
 
-          // set title dinamically getting the emojiflag from first entry
           if (this.conferences.length > 0) {
+            // set title dinamically getting the emojiflag from first entry
             this.title = this.conferences[0].emojiflag + ' ' + this.conferences[0].country
+
+            // loop confs
+            for (var conf of this.conferences) {
+              // if lat has a value
+              if (conf.lat > 0) {
+                this.center.lat = conf.lat
+                this.center.lng = conf.lon
+                // generate marker
+                const position = {
+                  id: conf._id,
+                  position: { lat: conf.lat, lng: conf.lon }
+                }
+                // add to list
+                this.markers.push(position)
+              }
+            }
           }
         })
         .catch((err) => {
