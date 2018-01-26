@@ -9,12 +9,12 @@
                     <p>The main purpose is to create a 🚓 trustworthy place where you can easily find out an interesting
                         conference, meetup next to you, or even far away, filtering items by 🏷 topic, 🏳 country or 🏙
                         city.</p>
-                    <p>Conferences are a great place to 🤓 share knowledge, 🤯 learn new stuff and ☃️ meet new people.
-                        If you think this too, follow this project, I will do the best and with your precious help, we
+                    <p>Conferences are a great place to 🤓 share knowledge, 🤯 learn new stuff and ☃️ meet new people.</p>
+                    <p>If you think this too, follow this project, I will do the best and with your precious help, we
                         can only improve this.</p>
-                    <h2>How to participate</h2>
+                    <h2 class="mt-3">How to participate</h2>
                     <p>Participation is pretty easy, you can:</p>
-                    <ul>
+                    <ul class="mt-3">
                         <li>- Submit a
                             <router-link to="/submit">new conference</router-link>
                         </li>
