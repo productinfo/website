@@ -6,7 +6,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-                    <v-card v-for="conference in sortAndFilter(conferences, $route.params.id)" :key="conference._id">
+                    <v-card>
 
                         <vue-headful
                                 :title="`${conference.title} / Awesome Conferences`"
@@ -68,14 +68,14 @@
 
                     </v-card>
                     <br/>
-                    <div v-for="conf in sortAndFilter(conferences, $route.params.id)" :key="conf.id">
+                    <div>
                         <p>Discover other conferences in
-                            <router-link :to="`/country/${conf.country}`">{{ conf.emojiflag }} {{ conf.country }}
+                            <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
                             </router-link>
                             :
                         </p>
                         <ul>
-                            <li v-for="confz in sortForCountry(conferences, conf.country, $route.params.id)"
+                            <li v-for="confz in conferences"
                                 :key="confz.id">
                                 <span v-for="category in confz.category" :key="category">
                                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple"
@@ -102,6 +102,7 @@ export default {
 
   data () {
     return {
+      conference: {},
       conferences: [],
       markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
@@ -119,7 +120,21 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://aweconf.herokuapp.com/api/conference')
+      this.showSpinner = true
+
+      axios
+        .get('https://aweconf.herokuapp.com/api/conference/id/' + this.$route.params.id)
+        .then((resp) => {
+          this.conference = resp.data.conference
+          this.fetchCountry()
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    fetchCountry () {
+      axios
+        .get('https://aweconf.herokuapp.com/api/conference/country/' + this.conference.country)
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
@@ -132,23 +147,14 @@ export default {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
     },
-    sortAndFilter (conf, id) {
-      return conf.filter(function (a) {
-        return a._id === id
-      }).splice(0, 1)
-    },
-    sortForCountry: function (conf, country, id) {
-      return conf.filter(function (b) {
-        return b.country === country
-      }).filter(function (c) {
-        return c._id !== id
-      }).splice(0, 5)
-    },
     commaSeparated: function (categories) {
       var cats = ''
-      categories.forEach(function (category) {
-        cats += category + ', '
-      })
+      if (categories) {
+        categories.forEach(function (category) {
+          cats += category + ', '
+        })
+      }
+
       return cats.substr(0, cats.length - 2)
     },
     addReferralTo (url) {
