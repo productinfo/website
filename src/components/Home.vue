@@ -9,7 +9,7 @@
         />
 
         <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
-        <div class="intro">
+        <div class="mt-5">
             <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
         </div>
 
@@ -53,7 +53,7 @@
         <br/>
         <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
 
-        <!--div class="mobileapps">
+        <!--div class="mt-4">
             <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
             <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
                 <img src="../assets/download-on-the-app-store.png" />
@@ -63,7 +63,7 @@
             </a>
         </div-->
 
-        <div class="submit">
+        <div class="mt-4 mb-4">
             <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
             <router-link :to="`/submit`">
                 <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
@@ -177,15 +177,5 @@ a {
 }
 .hint {
   color: darkgray;
-}
-.intro {
-    margin-top: 38px;
-}
-.mobileapps {
-  margin-top: 40px;
-}
-.submit {
-    margin-top: 40px;
-    margin-bottom: 30px;
 }
 </style>

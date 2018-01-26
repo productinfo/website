@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/City.vue" afterPath="$PROJECT_DIR$/src/components/City.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/Country.vue" afterPath="$PROJECT_DIR$/src/components/Country.vue" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.2a7292d23c8f90648b03f7f5a4e85842.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.2a7292d23c8f90648b03f7f5a4e85842.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.c1b7e3c2c37d21e8fb99.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.c1b7e3c2c37d21e8fb99.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.4be8ecfdb4f015767785.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.4be8ecfdb4f015767785.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/Home.vue" afterPath="$PROJECT_DIR$/src/components/Home.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="111">
+              <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#gmap-map#0;n#template#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -61,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Country.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Country.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Country.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
+            <state relative-caret-position="2475">
               <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
               <folding />
             </state>
@@ -106,9 +112,9 @@
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/components/Conference.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
-        <option value="$PROJECT_DIR$/src/components/Home.vue" />
         <option value="$PROJECT_DIR$/src/components/City.vue" />
         <option value="$PROJECT_DIR$/src/components/Country.vue" />
+        <option value="$PROJECT_DIR$/src/components/Home.vue" />
       </list>
     </option>
   </component>
@@ -268,12 +274,12 @@
       <workItem from="1516826899344" duration="429000" />
       <workItem from="1516828089933" duration="487000" />
       <workItem from="1516835586464" duration="993000" />
-      <workItem from="1516887688074" duration="17129000" />
+      <workItem from="1516887688074" duration="17396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81709000" />
+    <option name="totallyTimeSpent" value="81976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -673,16 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#gmap-map#0;n#template#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -705,9 +701,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Country.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
+        <state relative-caret-position="2475">
           <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#gmap-map#0;n#template#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
