@@ -46,7 +46,7 @@
                                     <google-cluster>
                                         <gmap-marker
                                                 :position="{ lat: conference.lat ? conference.lat : 0, lng: conference.lon ? conference.lon : 0}"
-                                                icon="http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                                                icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                                                 :clickable="true"
                                                 :draggable="false"
                                                 @click="$router.push({ path: '/conference/' + conference._id })"
