@@ -82,7 +82,7 @@ export default {
   data () {
     return {
       welcomeMsg: '🔎 ',
-      welcomeMsg2: '+ conferences around the 🌍',
+      welcomeMsg2: '+ 🔥🔥 conferences around the 🌍',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
       instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
