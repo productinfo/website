@@ -126,6 +126,7 @@ export default {
         .get('https://aweconf.herokuapp.com/api/conference/id/' + this.$route.params.id)
         .then((resp) => {
           this.conference = resp.data.conference
+          // retrieve conference in this country
           this.fetchCountry()
         })
         .catch((err) => {
@@ -136,7 +137,11 @@ export default {
       axios
         .get('https://aweconf.herokuapp.com/api/conference/country/' + this.conference.country)
         .then((resp) => {
-          this.conferences = resp.data.conferences
+          let id = this.$route.params.id
+          this.conferences = resp.data.conferences.filter(function (conf) {
+            return conf._id !== id
+          })
+
           this.showSpinner = false
         })
         .catch((err) => {
@@ -154,7 +159,6 @@ export default {
           cats += category + ', '
         })
       }
-
       return cats.substr(0, cats.length - 2)
     },
     addReferralTo (url) {
