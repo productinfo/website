@@ -6,7 +6,9 @@
                     <router-link :to="{ path: '/'}"><img src="./assets/logo-small.png"></router-link>
                 </li>
                 <li class="inline" v-for="category in categories" v-bind:key="category.tag">
-                    <router-link :to="`/category/${category.tag}`"><v-btn outline color="deep-purple">{{ category.emoji }} {{ category.tag }}</v-btn></router-link>
+                    <router-link :to="`/category/${category.tag}`">
+                        <v-btn outline color="deep-purple">{{ category.emoji }} {{ category.tag }}</v-btn>
+                    </router-link>
                 </li>
             </ul>
             <router-view>
