@@ -12,6 +12,7 @@ import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
 import vueHeadful from 'vue-headful'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import VueAnalytics from 'vue-analytics'
 
 // use
 Vue.use(Router)
@@ -77,4 +78,9 @@ export default new Router({
       component: City
     }
   ]
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-637174-40',
+  router: this.router
 })

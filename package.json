@@ -14,6 +14,7 @@
     "axios": "^0.17.1",
     "cookie-in-vue": "^0.1.8",
     "vue": "^2.5.2",
+    "vue-analytics": "^5.8.0",
     "vue-headful": "^1.0.0",
     "vue-router": "^3.0.1",
     "vue2-google-maps": "^0.8.4",
