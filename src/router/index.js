@@ -12,7 +12,7 @@ import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
 import vueHeadful from 'vue-headful'
 import * as VueGoogleMaps from 'vue2-google-maps'
-import VueAnalytics from 'vue-analytics'
+import VueAnalytics from 'vue-ua'
 
 // use
 Vue.use(Router)
@@ -81,6 +81,9 @@ export default new Router({
 })
 
 Vue.use(VueAnalytics, {
-  id: 'UA-637174-40',
-  router: this.router
+  appName: 'AweConf', // Mandatory
+  appVersion: '0.1', // Mandatory
+  trackingId: 'UA-637174-40', // Mandatory
+  debug: true, // Whether or not display console logs debugs (optional)
+  vueRouter: this.router // Pass the router instance to automatically sync with router (optional)
 })

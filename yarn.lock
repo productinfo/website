@@ -6067,10 +6067,6 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-analytics@^5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.8.0.tgz#0df9ce8e6f52f32f1fef597af9debcd2674eea91"
-
 vue-eslint-parser@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.2.tgz#8d603545e9d7c134699075bd1772af1ffd86b744"
@@ -6132,6 +6128,10 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
+vue-ua@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/vue-ua/-/vue-ua-1.4.0.tgz#6f539c1ad0b4e123df3bb03a199f2fe5a6679c5d"
+
 vue2-google-maps@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/vue2-google-maps/-/vue2-google-maps-0.8.4.tgz#4c5201f8f79a54a8e7c56841677fa3f3bb1600ca"
@@ -6144,10 +6144,6 @@ vue2-google-maps@^0.8.4:
 vue@^2.5.2:
   version "2.5.13"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.13.tgz#95bd31e20efcf7a7f39239c9aa6787ce8cf578e1"
-
-vuelidate@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/vuelidate/-/vuelidate-0.6.1.tgz#c52c9fd2b48f974613485e2cf51c182e84bcf747"
 
 vuetify@^0.17.6:
   version "0.17.6"
