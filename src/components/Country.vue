@@ -69,7 +69,7 @@
                                         :key="index"
                                         v-for="(m, index) in markers"
                                         :position="m.position"
-                                        icon="http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                                        icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                                         :clickable="true"
                                         :draggable="false"
                                         @click="$router.push({ path: '/conference/' + m.id })"
