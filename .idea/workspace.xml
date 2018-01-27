@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.d3205c3e58f44968356f.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.d3205c3e58f44968356f.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.24be2c37d3d9f328cadf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.24be2c37d3d9f328cadf.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.644c2d8163aa9039f50f.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.644c2d8163aa9039f50f.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -270,12 +278,12 @@
       <workItem from="1516887688074" duration="18362000" />
       <workItem from="1516981738116" duration="4263000" />
       <workItem from="1517003025984" duration="19000" />
-      <workItem from="1517057661835" duration="961000" />
+      <workItem from="1517057661835" duration="1000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88185000" />
+    <option name="totallyTimeSpent" value="88224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
