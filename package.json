@@ -16,7 +16,6 @@
     "vue": "^2.5.2",
     "vue-headful": "^1.0.0",
     "vue-router": "^3.0.1",
-    "vue-ua": "^1.4.0",
     "vue2-google-maps": "^0.8.4",
     "vuetify": "^0.17.6"
   },
