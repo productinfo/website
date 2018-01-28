@@ -53,15 +53,15 @@
         <br/>
         <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
 
-        <!--div class="mt-4">
+        <div class="mt-4">
             <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+            <!--a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
                 <img src="../assets/download-on-the-app-store.png" />
-            </a>
+            </a-->
             <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
                 <img src="../assets/google-play-badge.png" />
             </a>
-        </div-->
+        </div>
 
         <div class="mt-4 mb-4">
             <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
