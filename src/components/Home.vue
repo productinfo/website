@@ -137,7 +137,7 @@ export default {
             // loop confs
             for (var conf of this.conferences) {
               // if lat has a value
-              if (conf.lat > 0) {
+              if (conf.lat !== 0 && conf.lon !== 0) {
                 this.center.lat = conf.lat
                 this.center.lng = conf.lon
                 // generate marker
