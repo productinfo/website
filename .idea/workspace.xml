@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-chrome-96x96.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-touch-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/browserconfig.xml" afterPath="$PROJECT_DIR$/docs/static/favicon/browserconfig.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-16x16.png" afterPath="$PROJECT_DIR$/docs/static/favicon/favicon-16x16.png" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-32x32.png" afterPath="$PROJECT_DIR$/docs/static/favicon/favicon-32x32.png" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon.ico" afterPath="$PROJECT_DIR$/docs/static/favicon/favicon.ico" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/manifest.json" afterPath="$PROJECT_DIR$/docs/static/favicon/manifest.json" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/mstile-150x150.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/safari-pinned-tab.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.699d40fe65c3dfd60af7.js.map" afterPath="$PROJECT_DIR$/docs/static/js/manifest.699d40fe65c3dfd60af7.js.map" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -332,23 +343,22 @@
       <workItem from="1517064537570" duration="16000" />
       <workItem from="1517173839527" duration="321000" />
       <workItem from="1517180163034" duration="103000" />
-      <workItem from="1517246948364" duration="445000" />
+      <workItem from="1517246948364" duration="525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89345000" />
+    <option name="totallyTimeSpent" value="89425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20621118" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20621118" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18955651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
