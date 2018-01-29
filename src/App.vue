@@ -3,7 +3,7 @@
         <v-content>
             <ul>
                 <li class="inline">
-                    <router-link :to="{ path: '/'}"><img src="./assets/logo-small.svg"></router-link>
+                    <router-link :to="{ path: '/'}"><img class="logo" src="./assets/logo-small.svg"></router-link>
                 </li>
                 <li class="inline" v-for="category in categories" v-bind:key="category.tag">
                     <router-link :to="`/category/${category.tag}`">
@@ -87,4 +87,7 @@ li.inline {
     margin: 0 10px;
     display: inline-flex;
 }
+    .logo {
+        width: 64px;
+    }
 </style>
