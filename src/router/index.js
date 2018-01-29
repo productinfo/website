@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Router from 'vue-router'
 import VueCookie from 'cookie-in-vue'
-import VueAnalytics from 'vue-analytics'
 import vueHeadful from 'vue-headful'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import Home from '@/components/Home'
@@ -78,9 +77,4 @@ export default new Router({
       component: City
     }
   ]
-})
-
-Vue.use(VueAnalytics, {
-  id: 'UA-637174-40',
-  router: this.router
 })
