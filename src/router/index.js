@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Router from 'vue-router'
 import VueCookie from 'cookie-in-vue'
+import VueAnalytics from 'vue-analytics'
+import vueHeadful from 'vue-headful'
+import * as VueGoogleMaps from 'vue2-google-maps'
 import Home from '@/components/Home'
 import Category from '@/components/Category'
 import City from '@/components/City'
@@ -10,8 +13,6 @@ import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
-import vueHeadful from 'vue-headful'
-import * as VueGoogleMaps from 'vue2-google-maps'
 
 // use
 Vue.use(Router)
@@ -77,4 +78,9 @@ export default new Router({
       component: City
     }
   ]
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-637174-40',
+  router: this.router
 })
