@@ -136,13 +136,15 @@ export default {
             // loop confs
             for (var conf of this.conferences) {
               // if lat has a value
-              if (conf.lat > 0) {
-                this.center.lat = conf.lat
-                this.center.lng = conf.lon
+              if (conf.lat !== 0 && conf.lon !== 0) {
+                let lat = parseFloat(conf.lat)
+                let lng = parseFloat(conf.lon)
+                this.center.lat = lat
+                this.center.lng = lng
                 // generate marker
                 const position = {
                   id: conf._id,
-                  position: { lat: conf.lat, lng: conf.lon }
+                  position: { lat: lat, lng: lng }
                 }
                 // add to list
                 this.markers.push(position)
