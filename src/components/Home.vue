@@ -95,7 +95,7 @@ export default {
       showSpinner: true,
       firstRun: false,
       total: '',
-      center: { lat: 41, lng: 40 },
+      center: { lat: 20, lng: 20 },
       markers: []
     }
   },
@@ -140,9 +140,6 @@ export default {
               if (conf.lat !== 0 && conf.lon !== 0) {
                 let lat = parseFloat(conf.lat)
                 let lng = parseFloat(conf.lon)
-
-                this.center.lat = lat
-                this.center.lng = lng
                 // generate marker
                 const position = {
                   id: conf._id,
