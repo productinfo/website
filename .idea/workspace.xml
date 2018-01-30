@@ -2,45 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/static/js/app.beec2dfaa60f22db35bf.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.51015840803bc9df12062168abfcc4c0.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.51015840803bc9df12062168abfcc4c0.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-192x192.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-36x36.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-48x48.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-72x72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-96x96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-114x114.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-120x120.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-152x152.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-180x180.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-57x57.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-60x60.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-72x72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-76x76.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-precomposed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/browserconfig.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-16x16.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-32x32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-96x96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-150x150.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-310x310.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-70x70.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/0.6bf47e24889b97e407b7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/0.6bf47e24889b97e407b7.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.bd489235d80becaff85a521b4b90671b.css" afterPath="$PROJECT_DIR$/docs/static/css/app.51015840803bc9df12062168abfcc4c0.css" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.bd489235d80becaff85a521b4b90671b.css.map" afterPath="$PROJECT_DIR$/docs/static/css/app.51015840803bc9df12062168abfcc4c0.css.map" />
       <change beforePath="$PROJECT_DIR$/docs/static/js/app.85add5210c6f28948a71.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.beec2dfaa60f22db35bf.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.ce3eacd9edaa6ae37a39.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.ce3eacd9edaa6ae37a39.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.408d1fc7e8a80e68b7a3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.408d1fc7e8a80e68b7a3.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.85add5210c6f28948a71.js.map" afterPath="$PROJECT_DIR$/docs/static/js/app.beec2dfaa60f22db35bf.js.map" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.0a543b506f4fb9d0f551.js" afterPath="$PROJECT_DIR$/docs/static/js/manifest.ce3eacd9edaa6ae37a39.js" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.0a543b506f4fb9d0f551.js.map" afterPath="$PROJECT_DIR$/docs/static/js/manifest.ce3eacd9edaa6ae37a39.js.map" />
       <change beforePath="$PROJECT_DIR$/src/components/City.vue" afterPath="$PROJECT_DIR$/src/components/City.vue" />
       <change beforePath="$PROJECT_DIR$/src/components/Country.vue" afterPath="$PROJECT_DIR$/src/components/Country.vue" />
     </list>
@@ -337,12 +307,12 @@
       <workItem from="1517246948364" duration="697000" />
       <workItem from="1517258812996" duration="2241000" />
       <workItem from="1517306434724" duration="671000" />
-      <workItem from="1517308424225" duration="98000" />
+      <workItem from="1517308424225" duration="127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92607000" />
+    <option name="totallyTimeSpent" value="92636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
