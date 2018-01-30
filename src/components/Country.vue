@@ -137,8 +137,8 @@ export default {
             for (var conf of this.conferences) {
               // if lat has a value
               if (conf.lat !== 0 && conf.lon !== 0) {
-                  let lat = isNaN(parseFloat(conf.lat)) ? 0.0 : parseFloat(conf.lat)
-                  let lng = isNaN(parseFloat(conf.lon)) ? 0.0 : parseFloat(conf.lat)
+                let lat = isNaN(parseFloat(conf.lat)) ? 0.0 : parseFloat(conf.lat)
+                let lng = isNaN(parseFloat(conf.lon)) ? 0.0 : parseFloat(conf.lat)
                 this.center.lat = lat
                 this.center.lng = lng
                 // generate marker
