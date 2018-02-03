@@ -79,7 +79,7 @@
                                     :rules="enddateRules"
                                     readonly
                             ></v-text-field>
-                            <v-date-picker v-model="enddate" no-title scrollable actions>
+                            <v-date-picker v-model="enddate" no-title scrollable actions :picker-date="startdate">
                                 <template slot-scope="{ save, cancel }">
                                     <v-card-actions>
                                         <v-spacer></v-spacer>
