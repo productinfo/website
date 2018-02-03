@@ -13,6 +13,16 @@
             <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
         </div>
 
+        <div class="mt-4">
+            <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
+            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+                <img src="../assets/download-on-the-app-store.png" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+                <img src="../assets/google-play-badge.png" />
+            </a>
+        </div>
+
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
@@ -52,16 +62,6 @@
         </ul>
         <br/>
         <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
-
-        <div class="mt-4">
-            <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-                <img src="../assets/download-on-the-app-store.png" />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
-                <img src="../assets/google-play-badge.png" />
-            </a>
-        </div>
 
         <div class="mt-4 mb-4">
             <p class="hint" v-if="firstRun">{{ submitMsg }}</p>

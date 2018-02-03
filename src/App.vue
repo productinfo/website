@@ -15,9 +15,9 @@
                 <v-container fluid></v-container>
             </router-view>
         </v-content>
-        <v-footer app>
+        <v-footer>
             <v-spacer></v-spacer>
-            <div>© Awesome Conferences {{ new Date().getFullYear() }} - <a href="https://twitter.com/aweconf" target="_blank">@aweconf</a> - <router-link :to="{ path: '/about' }" active-class="noneclass">About</router-link> - <router-link :to="`/submit`" active-class="noneclass">Submit</router-link> - <a href="https://www.iubenda.com/privacy-policy/7904617" target="_blank">Privacy</a> - <a href="https://www.iubenda.com/privacy-policy/7904617/cookie-policy" target="_blank">Cookie</a> Policy</div>
+            <div>&copy; {{ new Date().getFullYear() }} AweConf.com - <a href="https://twitter.com/aweconf" target="_blank">@aweconf</a> - <router-link :to="{ path: '/about' }" active-class="noneclass">About</router-link> - <router-link :to="`/submit`" active-class="noneclass">Submit</router-link> - <a href="https://www.iubenda.com/privacy-policy/7904617" target="_blank">Privacy</a> - <a href="https://www.iubenda.com/privacy-policy/7904617/cookie-policy" target="_blank">Cookie</a> Policy</div>
         </v-footer>
     </v-app>
 </template>
@@ -28,6 +28,7 @@ export default {
   name: 'App',
   data () {
     return {
+      icons: ['fa-twitter'],
       categories: [
         {
           emoji: '🤖',
