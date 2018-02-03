@@ -43,9 +43,10 @@
                                             label="Start date"
                                             v-model="startdate"
                                             prepend-icon="event"
+                                            color="deep-purple"
                                             readonly
                                     ></v-text-field>
-                                    <v-date-picker v-model="startdate" no-title scrollable>
+                                    <v-date-picker v-model="startdate" no-title scrollable color="deep-purple">
                                         <v-spacer></v-spacer>
                                         <v-btn flat color="deep-purple" @click="menustart = false">Cancel</v-btn>
                                         <v-btn flat color="deep-purple" @click="$refs.menustart.save(startdate)">OK
@@ -70,9 +71,10 @@
                                             label="End date"
                                             v-model="enddate"
                                             prepend-icon="event"
+                                            color="deep-purple"
                                             readonly
                                     ></v-text-field>
-                                    <v-date-picker v-model="enddate" no-title scrollable :picker-date="startdate"
+                                    <v-date-picker v-model="enddate" no-title scrollable :picker-date="startdate" color="deep-purple"
                                     >
                                         <v-spacer></v-spacer>
                                         <v-btn flat color="deep-purple" @click="menuend = false">Cancel</v-btn>
