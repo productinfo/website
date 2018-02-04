@@ -52,15 +52,7 @@
         <div class="mt-4">
             <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
             <p>{{ quickLook }}</p>
-            <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-            <ul>
-                <li v-for="conference in lastConferences" :key="conference.id">
-                <span v-for="category in conference.category" :key="category">
-                    <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
-                </span>
-                    <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
-                </li>
-            </ul>
+            <suggestion-aweconf url="https://aweconf.herokuapp.com/api/conference/last/10"></suggestion-aweconf>
             <br/>
             <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
         </div>
@@ -77,10 +69,13 @@
 
 <script>
 import axios from 'axios'
+import Suggestion from './partials/Suggestion.vue'
 
 export default {
   name: 'Home',
-
+  components: {
+    'suggestion-aweconf': Suggestion
+  },
   data () {
     return {
       welcomeMsg: '🔎 ',
@@ -121,19 +116,10 @@ export default {
     fetchData () {
       this.showSpinner = true
 
-      axios.get('https://aweconf.herokuapp.com/api/conference/last/10')
-        .then((resp) => {
-          this.lastConferences = resp.data.conferences
-          this.total = 5 * Math.round(resp.data.total / 5)
-          this.showSpinner = false
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-
       axios.get('https://aweconf.herokuapp.com/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
+          this.total = 5 * Math.round(resp.data.conferences.length / 5)
           this.showSpinner = false
           if (this.conferences.length > 0) {
             // loop confs
