@@ -16,6 +16,7 @@
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
+                    <p class="hint align-content-center" v-if="firstRun">{{ mapMsg }}</p>
                     <template>
                         <gmap-map
                                 :center="center"
@@ -83,7 +84,8 @@ export default {
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
       instructionMsg1: '👈 You can navigate conferences by category tapping just above️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
-      mobileMsg: '👇 Stay always updated using our 📱 dedicated application 👇',
+      mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
+      mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
       quickLook: 'have a ⚡️👀 at the latest conferences published:',
       discoverMore: 'or 🧐 discover more...',
@@ -165,6 +167,7 @@ a {
 }
 .hint {
   color: darkgray;
+    text-align: center;
 }
 .hint-left {
     color: darkgray;
