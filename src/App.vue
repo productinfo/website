@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Menu from './components/Menu.vue'
-import Footer from './components/Footer.vue'
+import Menu from './components/partials/Menu.vue'
+import Footer from './components/partials/Footer.vue'
 
 export default {
   components: {
