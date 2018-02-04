@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer mini-variant app>
+    <v-navigation-drawer mini-variant app permanent>
         <v-toolbar flat class="transparent">
             <v-list class="pa-0">
                 <v-list-tile avatar>
