@@ -85,7 +85,7 @@ export default {
           url: '/category/ui'
 
         }, {
-          emoji: '🥤',
+          emoji: '🧤',
           title: 'Ux',
           url: '/category/ux'
 
