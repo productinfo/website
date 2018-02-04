@@ -12,6 +12,8 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
+                    <h1 class="capitalized">{{ $route.params.category }}</h1>
+
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
                     <v-card-title>
@@ -135,5 +137,8 @@ export default {
     a {
         color: #5719B8;
         text-decoration: none;
+    }
+    .capitalized {
+        text-transform: capitalize;
     }
 </style>

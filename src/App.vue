@@ -1,21 +1,12 @@
 <template>
     <v-app>
+        <menu-aweconf></menu-aweconf>
         <v-content>
-            <ul>
-                <li class="inline">
-                    <router-link :to="{ path: '/'}"><img class="logo" src="./assets/logo-small.svg"></router-link>
-                </li>
-                <li class="inline" v-for="category in categories" v-bind:key="category.tag">
-                    <router-link :to="`/category/${category.tag}`">
-                        <v-btn outline color="deep-purple">{{ category.emoji }} {{ category.tag }}</v-btn>
-                    </router-link>
-                </li>
-            </ul>
-            <router-view>
-                <v-container fluid></v-container>
-            </router-view>
+            <v-container fluid>
+                <router-view></router-view>
+            </v-container>
         </v-content>
-        <v-footer>
+        <v-footer app>
             <v-spacer></v-spacer>
             <div>&copy; {{ new Date().getFullYear() }} AweConf.com - <a href="https://twitter.com/aweconf" target="_blank">@aweconf</a> - <router-link :to="{ path: '/about' }" active-class="noneclass">About</router-link> - <router-link :to="`/submit`" active-class="noneclass">Submit</router-link> - <a href="https://www.iubenda.com/privacy-policy/7904617" target="_blank">Privacy</a> - <a href="https://www.iubenda.com/privacy-policy/7904617/cookie-policy" target="_blank">Cookie</a> Policy</div>
         </v-footer>
@@ -23,41 +14,11 @@
 </template>
 
 <script>
+import Menu from './components/Menu.vue'
 
 export default {
-  name: 'App',
-  data () {
-    return {
-      icons: ['fa-twitter'],
-      categories: [
-        {
-          emoji: '🤖',
-          tag: 'backend'
-        },
-        {
-          emoji: '🔨',
-          tag: 'devops'
-        },
-        {
-          emoji: '🖥',
-          tag: 'frontend'
-        },
-        {
-          emoji: '🎰',
-          tag: 'marketing'
-        },
-        {
-          emoji: '📱',
-          tag: 'mobile'
-        }, {
-          emoji: '🎨',
-          tag: 'ui'
-        }, {
-          emoji: '🥤',
-          tag: 'ux'
-        }
-      ]
-    }
+  components: {
+    'menu-aweconf': Menu
   }
 }
 </script>
@@ -73,22 +34,4 @@ a {
     color: #673ab7 !important;
     text-decoration: none;
 }
-.router-link-active {
-    text-transform: uppercase;
-    font-size: 45px;
-}
-img {
-    vertical-align: bottom;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li.inline {
-    margin: 0 10px;
-    display: inline-flex;
-}
-    .logo {
-        width: 64px;
-    }
 </style>

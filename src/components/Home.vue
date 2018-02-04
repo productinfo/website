@@ -13,16 +13,6 @@
             <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
         </div>
 
-        <div class="mt-4">
-            <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-                <img src="../assets/download-on-the-app-store.png" />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
-                <img src="../assets/google-play-badge.png" />
-            </a>
-        </div>
-
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
@@ -49,19 +39,32 @@
             </v-layout>
         </v-container>
 
-        <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
-        <p>{{ quickLook }}</p>
-        <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-        <ul>
-            <li v-for="conference in lastConferences" :key="conference.id">
+        <div class="mt-2">
+            <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
+            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+                <img src="../assets/download-on-the-app-store.png" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+                <img src="../assets/google-play-badge.png" />
+            </a>
+        </div>
+
+        <div class="mt-4">
+            <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
+            <p>{{ quickLook }}</p>
+            <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+            <ul>
+                <li v-for="conference in lastConferences" :key="conference.id">
                 <span v-for="category in conference.category" :key="category">
                     <router-link :to="`/category/${category}`"><v-chip color="deep-purple" text-color="white">{{ category }}</v-chip></router-link>
                 </span>
-                <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
-            </li>
-        </ul>
-        <br/>
-        <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
+                    <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
+                </li>
+            </ul>
+            <br/>
+            <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
+        </div>
+
 
         <div class="mt-4 mb-4">
             <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
