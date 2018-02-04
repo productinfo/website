@@ -60,6 +60,7 @@ export default {
             this.conferences = this.conferences.slice(0, this.limit)
           }
           this.showSpinner = false
+          this.$emit('totalConferenceUpdated', this.conferences.length)
         })
         .catch((err) => {
           console.log(err)

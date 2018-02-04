@@ -5,6 +5,7 @@
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
+
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
                     <v-card>
 
@@ -69,12 +70,13 @@
                     </v-card>
                     <br/>
                     <div>
-                        <p>Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
+                        <p v-if="totalCountryConf > 0">
+                            Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
                             <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
                             </router-link>
                             :
                         </p>
-                        <suggestion-aweconf :url="`https://aweconf.herokuapp.com/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit"></suggestion-aweconf>
+                        <suggestion-aweconf :url="`https://aweconf.herokuapp.com/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
                     </div>
 
                 </v-flex>
@@ -96,12 +98,27 @@ export default {
   },
   data () {
     return {
+      totalCountryConf: 0,
       limit: 5,
       conference: {},
       conferences: [],
       markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
-      showSpinner: true
+      showSpinner: true,
+      breadcrumbs: [
+        {
+          text: 'Dashboard',
+          disabled: false
+        },
+        {
+          text: 'Link 1',
+          disabled: false
+        },
+        {
+          text: 'Link 2',
+          disabled: true
+        }
+      ]
     }
   },
 
