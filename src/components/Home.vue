@@ -8,7 +8,7 @@
                 keywords="awesome conference, designer conference, developer conference, android, ios, mobile, ux, ui"
         />
 
-        <p class="hint" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
+        <p class="hint-left" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
         <div class="mt-5">
             <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
         </div>
@@ -65,7 +65,6 @@
             <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
         </div>
 
-
         <div class="mt-4 mb-4">
             <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
             <router-link :to="`/submit`">
@@ -87,9 +86,9 @@ export default {
       welcomeMsg: '🔎 ',
       welcomeMsg2: '+ 🔥🔥 conferences around the 🌍',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
-      instructionMsg1: 'You can navigate conferences by category tapping just above ⬆️.',
+      instructionMsg1: '👈 You can navigate conferences by category tapping just above️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
-      mobileMsg: 'Stay always updated using our 📱 dedicated application:',
+      mobileMsg: '👇 Stay always updated using our 📱 dedicated application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
       quickLook: 'have a ⚡️👀 at the latest conferences published:',
       discoverMore: 'or 🧐 discover more...',
@@ -180,5 +179,9 @@ a {
 }
 .hint {
   color: darkgray;
+}
+.hint-left {
+    color: darkgray;
+    text-align: left;
 }
 </style>
