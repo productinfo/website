@@ -69,21 +69,12 @@
                     </v-card>
                     <br/>
                     <div>
-                        <p>Discover other conferences in
+                        <p>Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
                             <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
                             </router-link>
                             :
                         </p>
-                        <ul>
-                            <li v-for="confz in conferences"
-                                :key="confz.id">
-                                <span v-for="category in confz.category" :key="category">
-                                    <router-link :to="`/category/${category}`"><v-chip color="deep-purple"
-                                                                                       text-color="white">{{ category }}</v-chip></router-link>
-                                </span>
-                                <router-link :to="`/conference/${confz._id}`">{{ confz.title }}</router-link>
-                            </li>
-                        </ul>
+                        <suggestion-aweconf :url="`https://aweconf.herokuapp.com/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit"></suggestion-aweconf>
                     </div>
 
                 </v-flex>
@@ -96,12 +87,16 @@
 
 <script>
 import axios from 'axios'
+import Suggestion from './partials/Suggestion.vue'
 
 export default {
   name: 'Conference',
-
+  components: {
+    'suggestion-aweconf': Suggestion
+  },
   data () {
     return {
+      limit: 5,
       conference: {},
       conferences: [],
       markers: [],
@@ -127,21 +122,7 @@ export default {
         .then((resp) => {
           this.conference = resp.data.conference
           // retrieve conference in this country
-          this.fetchCountry()
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    },
-    fetchCountry () {
-      axios
-        .get('https://aweconf.herokuapp.com/api/conference/country/' + this.conference.country)
-        .then((resp) => {
-          let id = this.$route.params.id
-          this.conferences = resp.data.conferences.filter(function (conf) {
-            return conf._id !== id
-          })
-
+          // this.fetchCountry()
           this.showSpinner = false
         })
         .catch((err) => {

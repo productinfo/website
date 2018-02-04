@@ -19,7 +19,15 @@ import axios from 'axios'
 
 export default {
   props: {
-    url: String
+    url: {
+      type: String,
+      required: true
+    },
+    exclude: String,
+    limit: {
+      type: Number,
+      default: 10
+    }
   },
   data () {
     return {
@@ -31,7 +39,8 @@ export default {
     this.fetchData()
   },
   watch: {
-    '$route': 'fetchData'
+    '$route': 'fetchData',
+    'exclude': 'fetchData'
   },
   methods: {
     fetchData () {
@@ -40,6 +49,16 @@ export default {
       axios.get(this.url)
         .then((resp) => {
           this.conferences = resp.data.conferences
+          if (this.exclude != null) {
+            const excludeId = this.exclude
+            this.conferences = this.conferences.filter(function (conf) {
+              return conf._id !== excludeId
+            })
+          }
+          // limiting results
+          if (this.limit !== -1 && this.conferences.length > 0) {
+            this.conferences = this.conferences.slice(0, this.limit)
+          }
           this.showSpinner = false
         })
         .catch((err) => {
