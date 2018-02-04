@@ -6,7 +6,7 @@
                     <v-card>
                         <v-card-text>
                             <v-form ref="form" lazy-validation v-model="valid">
-                                <p>Complete the form below to ask a new conference to be published:</p>
+                                <p>Complete the form below suggest a new conference to be added:</p>
 
                                 <v-text-field
                                         label="Name"
