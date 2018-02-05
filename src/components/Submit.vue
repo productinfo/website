@@ -314,6 +314,15 @@ export default {
       if (this.mobile) {
         categories.push('mobile')
       }
+      if (this.pm) {
+        categories.push('pm')
+      }
+      if (this.security) {
+        categories.push('security')
+      }
+      if (this.testing) {
+        categories.push('testing')
+      }
       if (this.ui) {
         categories.push('ui')
       }

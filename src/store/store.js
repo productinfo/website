@@ -65,6 +65,11 @@ export const Store = new Vuex.Store({
         url: '/category/ux'
 
       }, {
+        emoji: '🎤',
+        title: 'CfP Open',
+        url: '/call-for-paper'
+
+      }, {
         emoji: '📩️',
         title: 'Submit',
         url: '/submit'
