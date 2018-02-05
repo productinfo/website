@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <menu-aweconf :items="categories"></menu-aweconf>
+        <menu-aweconf :items="$store.state.categories"></menu-aweconf>
         <v-content>
             <v-container fluid>
                 <router-view></router-view>
@@ -18,75 +18,7 @@ export default {
   components: {
     'menu-aweconf': Menu,
     'footer-aweconf': Footer
-  },
-  data: () => ({
-    categories: [
-      {
-        emoji: '🏡',
-        title: 'Home',
-        url: '/'
-      },
-      {
-        emoji: '🤖',
-        title: 'Backend',
-        url: '/category/backend'
-      },
-      {
-        emoji: '🔨',
-        title: 'Devops',
-        url: '/category/devops'
-
-      },
-      {
-        emoji: '🖥',
-        title: 'Frontend',
-        url: '/category/frontend'
-
-      },
-      {
-        emoji: '🎰',
-        title: 'Marketing',
-        url: '/category/marketing'
-
-      },
-      {
-        emoji: '📱',
-        title: 'Mobile',
-        url: '/category/mobile'
-
-      }, {
-        emoji: '🚧️',
-        title: 'PM',
-        url: '/category/pm'
-
-      }, {
-        emoji: '👮‍♂️',
-        title: 'Security',
-        url: '/category/security'
-
-      }, {
-        emoji: '🐛️',
-        title: 'Testing',
-        url: '/category/testing'
-
-      }, {
-        emoji: '🎨',
-        title: 'Ui',
-        url: '/category/ui'
-
-      }, {
-        emoji: '🧤',
-        title: 'Ux',
-        url: '/category/ux'
-
-      }, {
-        emoji: '📩️',
-        title: 'Submit',
-        url: '/submit'
-
-      }
-    ]
-  })
+  }
 }
 </script>
 
