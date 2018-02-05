@@ -80,6 +80,21 @@ export default {
           url: '/category/mobile'
 
         }, {
+          emoji: '🚧️',
+          title: 'PM',
+          url: '/category/pm'
+
+        }, {
+          emoji: '👮‍♂️',
+          title: 'Security',
+          url: '/category/security'
+
+        }, {
+          emoji: '🐛️',
+          title: 'Testing',
+          url: '/category/testing'
+
+        }, {
           emoji: '🎨',
           title: 'Ui',
           url: '/category/ui'
