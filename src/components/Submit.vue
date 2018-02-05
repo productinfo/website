@@ -337,22 +337,22 @@ export default {
         category: categories
       }
 
-      axios.post('https://formspree.io/awc@boostco.de', {title: 'A new conference ' + this.name})
+      axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
         .then((resp) => {
-          axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
-            .then((resp) => {
-              this.submitSuccess = true
-              this.showSpinner = false
-              this.$refs.form.reset()
-            }).catch((err) => {
-              this.submitFail = true
-              this.showSpinner = false
-              console.log(err)
-            })
-        })
-        .catch((err) => {
+          this.submitSuccess = true
+          this.showSpinner = false
+          this.$refs.form.reset()
+        }).catch((err) => {
           this.submitFail = true
           this.showSpinner = false
+          console.log(err)
+        })
+
+      axios.post('https://formspree.io/awc@boostco.de', {title: 'A new conference ' + this.name})
+        .then((resp) => {
+
+        })
+        .catch((err) => {
           console.log(err)
         })
     }
