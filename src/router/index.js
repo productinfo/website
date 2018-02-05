@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import VueCookie from 'cookie-in-vue'
 import vueHeadful from 'vue-headful'
 import * as VueGoogleMaps from 'vue2-google-maps'
+
+// router
 import Home from '@/components/Home'
 import Category from '@/components/Category'
 import City from '@/components/City'
@@ -12,6 +14,7 @@ import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
+import Cfp from '@/components/Cfp'
 
 // use
 Vue.use(Router)
@@ -75,6 +78,11 @@ export default new Router({
       path: '/city/:city',
       name: 'City',
       component: City
+    },
+    {
+      path: '/call-for-paper/open',
+      name: 'Cfp',
+      component: Cfp
     }
   ]
 })
