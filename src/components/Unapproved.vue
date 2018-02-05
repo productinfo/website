@@ -35,8 +35,8 @@
                             </td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td>{{ formatDate(props.item.startdate) }}</td>
-                            <td>{{ formatDate(props.item.enddate) }}</td>
+                            <td>{{ formatDate(props.item.date.start) }}</td>
+                            <td>{{ formatDate(props.item.date.end) }}</td>
                             <td>
                                 <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">Approve</v-btn>
                             </td>

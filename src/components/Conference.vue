@@ -23,16 +23,16 @@
                             is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
                         </v-card-text>
 
-                        <v-card-text v-if="formatDate(conference.startdate) !== formatDate(conference.enddate)">
-                            It will be between 🗓 <em>{{ formatDate(conference.startdate) }}</em> and <em>{{
-                            formatDate(conference.enddate) }}</em> in
+                        <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
+                            It will be between 🗓 <em>{{ formatDate(conference.date.start) }}</em> and <em>{{
+                            formatDate(conference.date.end) }}</em> in
                             <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
                             , {{ conference.emojiflag }}
                             <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
                         </v-card-text>
 
                         <v-card-text v-else>
-                            It will be on 🗓 <em>{{ formatDate(conference.startdate) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
+                            It will be on 🗓 <em>{{ formatDate(conference.date.start) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
                             , {{ conference.emojiflag }}
                             <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
                         </v-card-text>
@@ -40,13 +40,13 @@
                         <v-card-text>
                             <template>
                                 <gmap-map
-                                        :center="{ lat: conference.lat ? conference.lat : 0, lng: conference.lon ? conference.lon : 0}"
+                                        :center="{ lat: conference.geo.lat ? conference.geo.lat : 0, lng: conference.geo.lng ? conference.geo.lng : 0}"
                                         :zoom="18"
                                         style="width: 100%; height: 300px"
                                 >
                                     <google-cluster>
                                         <gmap-marker
-                                                :position="{ lat: conference.lat ? conference.lat : 0, lng: conference.lon ? conference.lon : 0}"
+                                                :position="{ lat: conference.geo.lat ? conference.geo.lat : 0, lng: conference.geo.lng ? conference.geo.lng : 0}"
                                                 icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                                                 :clickable="true"
                                                 :draggable="false"

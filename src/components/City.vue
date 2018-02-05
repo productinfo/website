@@ -42,8 +42,8 @@
                             </td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td>{{ formatDate(props.item.startdate) }}</td>
-                            <td>{{ formatDate(props.item.enddate) }}</td>
+                            <td>{{ formatDate(props.item.date.start) }}</td>
+                            <td>{{ formatDate(props.item.date.end) }}</td>
                         </template>
                     </v-data-table>
 
@@ -135,9 +135,9 @@ export default {
             // loop confs
             for (var conf of this.conferences) {
               // if lat has a value
-              if (conf.lat !== 0 && conf.lon !== 0) {
-                let lat = isNaN(parseFloat(conf.lat)) ? 0.0 : parseFloat(conf.lat)
-                let lng = isNaN(parseFloat(conf.lon)) ? 0.0 : parseFloat(conf.lon)
+              if (conf.geo.lat !== 0 && conf.geo.lng !== 0) {
+                let lat = isNaN(parseFloat(conf.geo.lat)) ? 0.0 : parseFloat(conf.geo.lat)
+                let lng = isNaN(parseFloat(conf.geo.lng)) ? 0.0 : parseFloat(conf.geo.lng)
                 this.center.lat = lat
                 this.center.lng = lng
                 // generate marker
