@@ -153,6 +153,24 @@
                                 ></v-checkbox>
 
                                 <v-checkbox
+                                        label="PM"
+                                        v-model="pm"
+                                        color="deep-purple"
+                                ></v-checkbox>
+
+                                <v-checkbox
+                                        label="Security"
+                                        v-model="security"
+                                        color="deep-purple"
+                                ></v-checkbox>
+
+                                <v-checkbox
+                                        label="Testing"
+                                        v-model="testing"
+                                        color="deep-purple"
+                                ></v-checkbox>
+
+                                <v-checkbox
                                         label="UI"
                                         v-model="ui"
                                         color="deep-purple"
@@ -258,6 +276,9 @@ export default {
     this.frontend = (this.$route.params.category === 'frontend')
     this.marketing = (this.$route.params.category === 'marketing')
     this.mobile = (this.$route.params.category === 'mobile')
+    this.pm = (this.$route.params.category === 'pm')
+    this.security = (this.$route.params.category === 'security')
+    this.testing = (this.$route.params.category === 'testing')
     this.ui = (this.$route.params.category === 'ui')
     this.ux = (this.$route.params.category === 'ux')
     this.devops = (this.$route.params.category === 'devops')
