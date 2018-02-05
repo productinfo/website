@@ -2,7 +2,7 @@
     <div class="category">
 
         <vue-headful
-                title="Call fo Paper open / Awesome Conferences"
+                title="Call fo Paper Open / Awesome Conferences"
                 description="All the best conferences with call for paper open"
                 url="https://aweconf.com/#/call-for-paper/open"
                 :image="undefined"
@@ -13,6 +13,7 @@
                 <v-flex xs10 offset-xs1>
 
                     <h1 class="capitalized">Call for Paper Open Conferences</h1>
+                    <p>Call for Paper section is still ⚗️ experimental, we're working 👨‍💻 to improve this section with the next release.</p>
 
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
@@ -29,7 +30,7 @@
                     <v-data-table
                             v-bind:headers="headers"
                             v-bind:search="search"
-                            :items="sortAndFilter(conferences, $route.params.category)"
+                            :items="conferences"
                             class="elevation-1"
                             hide-actions
                     >
@@ -55,7 +56,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'Category',
+  name: 'Cfp',
 
   data () {
     return {
@@ -99,15 +100,6 @@ export default {
     formatDate (date) {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
-    },
-    sortAndFilter (conf, category) {
-      if (category !== 'all') {
-        return conf.filter(function (b) {
-          return b.category.indexOf(category) !== -1
-        })
-      } else {
-        return conf
-      }
     }
   }
 }

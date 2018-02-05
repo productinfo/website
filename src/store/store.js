@@ -67,7 +67,7 @@ export const Store = new Vuex.Store({
       }, {
         emoji: '🎤',
         title: 'CfP Open',
-        url: '/call-for-paper'
+        url: '/call-for-paper/open'
 
       }, {
         emoji: '📩️',
