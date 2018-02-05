@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <menu-aweconf :items="$store.state.categories"></menu-aweconf>
+        <menu-aweconf :items="$store.getters.menu"></menu-aweconf>
         <v-content>
             <v-container fluid>
                 <router-view></router-view>
