@@ -7,9 +7,19 @@ export const Store = new Vuex.Store({
   state: {
     categories: [
       {
-        emoji: '🤖',
+        emoji: '🧠',
+        title: 'AI',
+        url: '/category/ai'
+      },
+      {
+        emoji: '📦',
         title: 'Backend',
         url: '/category/backend'
+      },
+      {
+        emoji: '⛓',
+        title: 'Blockchain',
+        url: '/category/blockchain'
       },
       {
         emoji: '🔨',
