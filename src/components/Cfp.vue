@@ -38,8 +38,7 @@
                             <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td>{{ formatDate(props.item.startdate) }}</td>
-                            <td>{{ formatDate(props.item.enddate) }}</td>
+                            <td v-if="props.item.cfp">{{ formatDate(props.item.cfp.end) }}</td>
                         </template>
                     </v-data-table>
 
@@ -73,8 +72,7 @@ export default {
         },
         { text: 'City', sortable: false, align: 'left', value: 'city' },
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
-        { text: 'Start', value: 'startdate', align: 'left' },
-        { text: 'End', value: 'enddate', align: 'left' }
+        { text: 'Cfp Close', value: 'cfp.end', align: 'left' }
       ]
     }
   },

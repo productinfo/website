@@ -106,8 +106,8 @@ export default {
         { text: 'Category', sortable: false, align: 'center' },
         { text: 'City', sortable: false, align: 'left', value: 'city' },
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
-        { text: 'Start', value: 'startdate', align: 'left' },
-        { text: 'End', value: 'enddate', align: 'left' }
+        { text: 'Start', value: 'date.start', align: 'left' },
+        { text: 'End', value: 'date.end', align: 'left' }
       ],
       center: { lat: 0, lng: 0 },
       markers: []
