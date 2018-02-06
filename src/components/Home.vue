@@ -102,12 +102,7 @@ export default {
   created () {
     this.fetchData()
     // first run show instructions
-    const run = parseInt(this.$cookie.get('firstrun')) || 0
-    this.firstRun = (run < 3)
-    if (this.firstRun) {
-      var visit = run + 1
-      this.$cookie.set('firstrun', visit, 0)
-    }
+    this.onBoarding()
   },
 
   watch: {
@@ -115,13 +110,25 @@ export default {
   },
 
   methods: {
+    onBoarding () {
+      const run = parseInt(this.$cookie.get('firstrun')) || 0
+      this.firstRun = (run < 3)
+      if (this.firstRun) {
+        let visit = run + 1
+        this.$cookie.set('firstrun', visit, 0)
+      }
+    },
+    calculateTotals (items) {
+      this.total = 5 * Math.round(items / 5)
+    },
     fetchData () {
       this.showSpinner = true
 
       axios.get('https://aweconf.herokuapp.com/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
-          this.total = 5 * Math.round(resp.data.conferences.length / 5)
+          this.calculateTotals(this.conferences.length)
+
           this.showSpinner = false
           if (this.conferences.length > 0) {
             // loop confs
