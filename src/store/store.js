@@ -100,6 +100,11 @@ export const Store = new Vuex.Store({
         title: 'Home',
         url: '/'
       })
+      cats.push({
+        emoji: '🕶',
+        title: 'All',
+        url: '/all'
+      })
       cats.push(...state.categories)
       cats.push({
         emoji: '🎤',

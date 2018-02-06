@@ -1,10 +1,10 @@
 <template>
-    <div class="category">
+    <div class="all">
 
         <vue-headful
-                :title="`${$route.params.category} / Awesome Conferences`"
-                :description="`All the best conferences about ${$route.params.category}`"
-                :url="`https://aweconf.com/#/category/${$route.params.category}`"
+                title="All / Awesome Conferences"
+                description="All the best conferences around the world"
+                url="https://aweconf.com/#/all"
                 :image="undefined"
         />
 
@@ -12,7 +12,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
-                    <h1 class="capitalized">{{ emojiForCategory($route.params.category) }} {{ $route.params.category }} Conferences</h1>
+                    <h1 class="capitalized">🕶 All upcoming Conferences</h1>
 
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
@@ -58,7 +58,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'Category',
+  name: 'All',
 
   data () {
     return {
@@ -83,20 +83,15 @@ export default {
 
   created () {
     this.fetchData()
-    this.title = this.$route.params.category + ' / Awesome Conference'
   },
 
   watch: {
     '$route': 'fetchData'
   },
-
-  mounted () {
-    this.title = this.$route.params.category + ' / Awesome Conference'
-  },
   methods: {
     fetchData () {
       this.showSpinner = true
-      axios.get('https://aweconf.herokuapp.com/api/conference/category/' + this.$route.params.category)
+      axios.get('https://aweconf.herokuapp.com/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false
@@ -124,7 +119,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     h1, h2 {
         font-weight: normal;
