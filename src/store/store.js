@@ -101,11 +101,17 @@ export const Store = new Vuex.Store({
         url: '/'
       })
       cats.push({
+        separator: true
+      })
+      cats.push({
         emoji: '🕶',
         title: 'All',
         url: '/all'
       })
       cats.push(...state.categories)
+      cats.push({
+        separator: true
+      })
       cats.push({
         emoji: '🎤',
         title: 'Cfp',
