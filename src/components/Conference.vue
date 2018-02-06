@@ -104,21 +104,7 @@ export default {
       conferences: [],
       markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
-      showSpinner: true,
-      breadcrumbs: [
-        {
-          text: 'Dashboard',
-          disabled: false
-        },
-        {
-          text: 'Link 1',
-          disabled: false
-        },
-        {
-          text: 'Link 2',
-          disabled: true
-        }
-      ]
+      showSpinner: true
     }
   },
 
