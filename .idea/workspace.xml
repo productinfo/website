@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/Menu.vue" afterPath="$PROJECT_DIR$/src/components/partials/Menu.vue" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.6e396eb85bed1768a7c5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.6e396eb85bed1768a7c5.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.29bddc6c47d0db5f3eb3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.29bddc6c47d0db5f3eb3.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/store/store.js" afterPath="$PROJECT_DIR$/src/store/store.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +52,8 @@
       <file leaf-file-name="store.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="102" column="4" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
+            <state relative-caret-position="251">
+              <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -333,12 +337,12 @@
       <workItem from="1517825822320" duration="678000" />
       <workItem from="1517836574487" duration="3872000" />
       <workItem from="1517843068850" duration="1000" />
-      <workItem from="1517847052972" duration="19718000" />
+      <workItem from="1517847052972" duration="19944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135032000" />
+    <option name="totallyTimeSpent" value="135258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -757,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="102" column="4" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
+        <state relative-caret-position="251">
+          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding />
         </state>
       </provider>
