@@ -5,7 +5,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
-                    <h1>🎟 {{ remaining }} to be approved</h1>
+                    <h1>😱 {{ remaining }} to be approved</h1>
 
                     <v-card-title>
                         <v-text-field
