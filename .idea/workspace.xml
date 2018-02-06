@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/All.vue" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.09a5421b9c9a6d21f19ec8c397ac7028.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.09a5421b9c9a6d21f19ec8c397ac7028.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-192x192.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-36x36.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-48x48.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-72x72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-96x96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-114x114.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-120x120.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-152x152.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-180x180.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-57x57.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-60x60.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-72x72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-76x76.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-precomposed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/browserconfig.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-16x16.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-32x32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-96x96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-150x150.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-310x310.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-70x70.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/0.6bf47e24889b97e407b7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/0.6bf47e24889b97e407b7.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.4634d2666a1084473bd8.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.4634d2666a1084473bd8.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.a17b86c8938c05481cc2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.a17b86c8938c05481cc2.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.dad404466a6aa5401b30.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.dad404466a6aa5401b30.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/Category.vue" afterPath="$PROJECT_DIR$/src/components/Category.vue" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" afterPath="$PROJECT_DIR$/src/store/store.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Conference.vue" afterPath="$PROJECT_DIR$/src/components/Conference.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,11 +63,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="All.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="All.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/All.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Conference.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/components/City.vue" />
         <option value="$PROJECT_DIR$/src/components/Country.vue" />
-        <option value="$PROJECT_DIR$/src/components/Conference.vue" />
         <option value="$PROJECT_DIR$/src/components/Unapproved.vue" />
         <option value="$PROJECT_DIR$/src/components/Cfp.vue" />
         <option value="$PROJECT_DIR$/src/components/Submit.vue" />
@@ -168,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/store/store.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/components/All.vue" />
+        <option value="$PROJECT_DIR$/src/components/Conference.vue" />
       </list>
     </option>
   </component>
@@ -364,12 +333,12 @@
       <workItem from="1517825822320" duration="678000" />
       <workItem from="1517836574487" duration="3872000" />
       <workItem from="1517843068850" duration="1000" />
-      <workItem from="1517847052972" duration="14123000" />
+      <workItem from="1517847052972" duration="14870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129437000" />
+    <option name="totallyTimeSpent" value="130184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -715,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/City.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1628">
@@ -781,8 +742,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/All.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>

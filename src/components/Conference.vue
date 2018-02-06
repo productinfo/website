@@ -23,6 +23,7 @@
                             is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
                         </v-card-text>
 
+                        <div v-if="conference.date">
                         <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
                             It will be between 🗓 <em>{{ formatDate(conference.date.start) }}</em> and <em>{{
                             formatDate(conference.date.end) }}</em> in
@@ -36,7 +37,9 @@
                             , {{ conference.emojiflag }}
                             <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
                         </v-card-text>
+                        </div>
 
+                        <div v-if="conference.geo">
                         <v-card-text>
                             <template>
                                 <gmap-map
@@ -56,6 +59,7 @@
                                 </gmap-map>
                             </template>
                         </v-card-text>
+                        </div>
 
                         <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                             conference.homepage }}</a></v-card-text>
