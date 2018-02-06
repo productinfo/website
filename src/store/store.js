@@ -108,7 +108,7 @@ export const Store = new Vuex.Store({
       cats.push(...state.categories)
       cats.push({
         emoji: '🎤',
-        title: 'CfP Open',
+        title: 'Cfp',
         url: '/call-for-paper/open'
 
       })
