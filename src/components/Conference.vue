@@ -40,25 +40,7 @@
                         </div>
 
                         <div v-if="conference.geo">
-                        <v-card-text>
-                            <template>
-                                <gmap-map
-                                        :center="{ lat: conference.geo.lat ? conference.geo.lat : 0, lng: conference.geo.lng ? conference.geo.lng : 0}"
-                                        :zoom="18"
-                                        style="width: 100%; height: 300px"
-                                >
-                                    <google-cluster>
-                                        <gmap-marker
-                                                :position="{ lat: conference.geo.lat ? conference.geo.lat : 0, lng: conference.geo.lng ? conference.geo.lng : 0}"
-                                                icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-                                                :clickable="true"
-                                                :draggable="false"
-                                                @click="$router.push({ path: '/conference/' + conference._id })"
-                                        ></gmap-marker>
-                                    </google-cluster>
-                                </gmap-map>
-                            </template>
-                        </v-card-text>
+                            <map-aweconf :conference="conference"></map-aweconf>
                         </div>
 
                         <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
@@ -94,11 +76,13 @@
 <script>
 import axios from 'axios'
 import Suggestion from './partials/Suggestion.vue'
+import Map from './partials/Map.vue'
 
 export default {
   name: 'Conference',
   components: {
-    'suggestion-aweconf': Suggestion
+    'suggestion-aweconf': Suggestion,
+    'map-aweconf': Map
   },
   data () {
     return {
