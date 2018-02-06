@@ -12,7 +12,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
-                    <h1 class="capitalized">Call for Paper Open Conferences</h1>
+                    <h1 class="capitalized">🎤 Call for Paper Open Conferences</h1>
                     <p>Call for Paper section is still ⚗️ experimental, we're working 👨‍💻 to improve this section with the next release.</p>
 
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>

@@ -12,7 +12,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
-                    <h1 class="capitalized">{{ $route.params.category }} Conferences</h1>
+                    <h1 class="capitalized">{{ emojiForCategory($route.params.category) }} {{ $route.params.category }} Conferences</h1>
 
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
@@ -107,6 +107,16 @@ export default {
     formatDate (date) {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
+    },
+    emojiForCategory (name) {
+      const emoji = this.$store.state.categories.filter(function (item) {
+        return item.title.toLowerCase() === name
+      })
+      if (emoji.length === 1) {
+        return emoji[0].emoji
+      } else {
+        return ''
+      }
     },
     sortAndFilter (conf, category) {
       if (category !== 'all') {

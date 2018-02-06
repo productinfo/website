@@ -1,9 +1,11 @@
 <template>
     <div class="submit">
+
         <v-container grid-list-xl text-xs-left>
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
-                    <h1>Submit a new Conference 🎟</h1>
+
+                    <h1 class="capitalized">📩 Submit a new Conference 🎟</h1>
                     <v-card>
                         <v-card-text>
                             <v-form ref="form" lazy-validation v-model="valid">
@@ -382,3 +384,23 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+    h1, h2 {
+        font-weight: normal;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin: 0 10px;
+    }
+    a {
+        color: #5719B8;
+        text-decoration: none;
+    }
+    .capitalized {
+        text-transform: capitalize;
+    }
+</style>
