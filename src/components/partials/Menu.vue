@@ -4,7 +4,7 @@
             <v-list class="pa-0">
                 <v-list-tile avatar>
                     <v-list-tile-avatar>
-                        <img src="../../assets/logo-small.svg" >
+                        <img class="image" src="../../assets/logo-small.svg" >
                     </v-list-tile-avatar>
                     <v-list-tile-content>
                         <v-list-tile-title>AweConf</v-list-tile-title>
@@ -60,5 +60,9 @@ export default {
     }
     .router-link-active {
         text-transform: uppercase;
+    }
+    .image {
+        width: 32px;
+        height: 32px;
     }
 </style>
