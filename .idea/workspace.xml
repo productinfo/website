@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/partials/SmartBanner.vue" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.6e396eb85bed1768a7c5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.6e396eb85bed1768a7c5.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.29bddc6c47d0db5f3eb3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.29bddc6c47d0db5f3eb3.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" afterPath="$PROJECT_DIR$/src/store/store.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,21 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/store.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="251">
-              <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+              <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/partials/Menu.vue">
+      <file leaf-file-name="SmartBanner.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/partials/SmartBanner.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="375">
+              <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -134,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/components/Category.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/Menu.vue" />
         <option value="$PROJECT_DIR$/src/store/store.js" />
+        <option value="$PROJECT_DIR$/src/components/partials/SmartBanner.vue" />
       </list>
     </option>
   </component>
@@ -337,12 +333,12 @@
       <workItem from="1517825822320" duration="678000" />
       <workItem from="1517836574487" duration="3872000" />
       <workItem from="1517843068850" duration="1000" />
-      <workItem from="1517847052972" duration="19944000" />
+      <workItem from="1517847052972" duration="20356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135258000" />
+    <option name="totallyTimeSpent" value="135670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -405,13 +401,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="24" lean-forward="false" selection-start-line="104" selection-start-column="24" selection-end-line="110" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/robots.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -751,18 +740,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/partials/Menu.vue">
+    <entry file="file://$PROJECT_DIR$/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="251">
+          <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/store.js">
+    <entry file="file://$PROJECT_DIR$/src/components/partials/Menu.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        <state relative-caret-position="262">
+          <caret line="57" column="1" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/partials/SmartBanner.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
