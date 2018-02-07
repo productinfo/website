@@ -2,72 +2,71 @@
 
     <div class="conference">
 
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
+        <vue-headful
+                :title="`${conference.title} / Awesome Conferences`"
+                :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
+                :url="`https://aweconf.com/#/conference/${$route.params.id}`"
+        />
 
-                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-                    <v-card>
-
-                        <vue-headful
-                                :title="`${conference.title} / Awesome Conferences`"
-                                :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
-                                :url="`https://aweconf.com/#/conference/${$route.params.id}`"
-                        />
-
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
+                <v-flex xs12 sm12 md12>
+                    <v-card class="elevation-12">
+                        <v-toolbar dark color="deep-purple">
+                            <v-toolbar-title>{{ conference.title }} {{ conference.emojiflag }}</v-toolbar-title>
+                            <v-spacer></v-spacer>
+                        </v-toolbar>
                         <v-card-text>
-                            <h1>{{ conference.title }} {{ conference.emojiflag }}</h1>
+                            <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+                            <v-card-text>
+                                is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
+                            </v-card-text>
+
+                            <template v-if="conference.date">
+                                <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
+                                    It will be between 🗓 <em>{{ formatDate(conference.date.start) }}</em> and <em>{{
+                                    formatDate(conference.date.end) }}</em> in
+                                    <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
+                                    , {{ conference.emojiflag }}
+                                    <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
+                                </v-card-text>
+
+                                <v-card-text v-else>
+                                    It will be on 🗓 <em>{{ formatDate(conference.date.start) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
+                                    , {{ conference.emojiflag }}
+                                    <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
+                                </v-card-text>
+                            </template>
+
+                            <template v-if="conference.geo">
+                                <map-aweconf :conference="conference"></map-aweconf>
+                            </template>
+
+                            <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
+                                conference.homepage }}</a></v-card-text>
+
+                            <template v-if="conference.callforpaper">
+                                <v-card-text>At this very moment 🎤 call for paper is open, feel free to submit your talk.</v-card-text>
+                            </template>
+                            <template v-else>
+                                <v-card-text>Sadly call for paper 🎤 is closed.</v-card-text>
+                            </template>
                         </v-card-text>
-
-                        <v-card-text>
-                            is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
-                        </v-card-text>
-
-                        <div v-if="conference.date">
-                        <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
-                            It will be between 🗓 <em>{{ formatDate(conference.date.start) }}</em> and <em>{{
-                            formatDate(conference.date.end) }}</em> in
-                            <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
-                            , {{ conference.emojiflag }}
-                            <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
-                        </v-card-text>
-
-                        <v-card-text v-else>
-                            It will be on 🗓 <em>{{ formatDate(conference.date.start) }}</em> in <router-link :to="`/city/${conference.city}`">{{ conference.city }}</router-link>
-                            , {{ conference.emojiflag }}
-                            <router-link :to="`/country/${conference.country}`">{{ conference.country }}</router-link>
-                        </v-card-text>
-                        </div>
-
-                        <div v-if="conference.geo">
-                            <map-aweconf :conference="conference"></map-aweconf>
-                        </div>
-
-                        <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
-                            conference.homepage }}</a></v-card-text>
-
-                        <template v-if="conference.callforpaper">
-                            <v-card-text>At this very moment 🎤 call for paper is open, feel free to submit your talk.</v-card-text>
-                        </template>
-                        <template v-else>
-                            <v-card-text>Sadly call for paper 🎤 is closed.</v-card-text>
-                        </template>
-
                     </v-card>
-                    <br/>
-                    <div>
-                        <p v-if="totalCountryConf > 0">
-                            Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
-                            <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
-                            </router-link>
-                            :
-                        </p>
-                        <suggestion-aweconf :url="`https://aweconf.herokuapp.com/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
-                    </div>
-
+                    <v-layout>
+                            <v-content class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left mt-2 mb-4">
+                                <p v-if="totalCountryConf > 0">
+                                    Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
+                                    <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
+                                    </router-link>
+                                    :
+                                </p>
+                                <suggestion-aweconf :url="`https://aweconf.herokuapp.com/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
+                            </v-content>
+                    </v-layout>
                 </v-flex>
-
             </v-layout>
+
         </v-container>
 
     </div>

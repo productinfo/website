@@ -1,10 +1,20 @@
 <template>
-    <v-app>
-        <menu-aweconf :items="$store.getters.menu"></menu-aweconf>
+    <v-app id="inspire">
+        <v-navigation-drawer
+                fixed
+                v-model="drawer"
+                mini-variant
+                app
+        >
+            <menu-aweconf :items="$store.getters.menu"></menu-aweconf>
+        </v-navigation-drawer>
+        <v-toolbar color="deep-purple" dark fixed app>
+            <v-toolbar-title>AweConf</v-toolbar-title>
+            <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-spacer></v-spacer>
+        </v-toolbar>
         <v-content>
-            <v-container fluid>
-                <router-view></router-view>
-            </v-container>
+            <router-view></router-view>
         </v-content>
         <footer-aweconf></footer-aweconf>
     </v-app>
@@ -18,7 +28,10 @@ export default {
   components: {
     'menu-aweconf': Menu,
     'footer-aweconf': Footer
-  }
+  },
+  data: () => ({
+    drawer: null
+  })
 }
 </script>
 
