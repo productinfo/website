@@ -55,7 +55,7 @@
             <p>{{ quickLook }}</p>
             <suggestion-aweconf url="https://aweconf.herokuapp.com/api/conference/last/10"></suggestion-aweconf>
             <br/>
-            <router-link :to="{ path: '/category/all'}">{{ discoverMore }}</router-link>
+            <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
         </div>
 
         <div class="mt-4 mb-4">
