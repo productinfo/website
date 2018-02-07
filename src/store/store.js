@@ -96,6 +96,9 @@ export const Store = new Vuex.Store({
     menu: state => {
       var cats = []
       cats.push({
+        separator: true
+      })
+      cats.push({
         emoji: '🏡',
         title: 'Home',
         url: '/'
