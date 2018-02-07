@@ -255,7 +255,7 @@
                     </v-card>
                     <br/>
 
-                    <v-btn @click="submit" color="deep-purple" dark>submit</v-btn>
+                    <v-btn @click="submitForm" color="deep-purple" dark>submit</v-btn>
 
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
@@ -331,7 +331,7 @@ export default {
     }
   },
   methods: {
-    submit () {
+    submitForm () {
       this.$refs.form.validate()
 
       if (!this.valid) {
@@ -360,8 +360,6 @@ export default {
         category: lcCats
       }
 
-      console.log(content)
-
       axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
         .then((resp) => {
           this.submitSuccess = true
@@ -370,14 +368,6 @@ export default {
         }).catch((err) => {
           this.submitFail = true
           this.showSpinner = false
-          console.log(err)
-        })
-
-      axios.post('https://formspree.io/awc@boostco.de', {title: 'A new conference ' + this.name})
-        .then((resp) => {
-
-        })
-        .catch((err) => {
           console.log(err)
         })
     }
