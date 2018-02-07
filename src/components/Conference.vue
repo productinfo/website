@@ -87,6 +87,7 @@ export default {
   data () {
     return {
       totalCountryConf: 0,
+      total: 0,
       limit: 5,
       conference: {},
       conferences: [],
@@ -112,8 +113,6 @@ export default {
         .get('https://aweconf.herokuapp.com/api/conference/id/' + this.$route.params.id)
         .then((resp) => {
           this.conference = resp.data.conference
-          // retrieve conference in this country
-          // this.fetchCountry()
           this.showSpinner = false
         })
         .catch((err) => {

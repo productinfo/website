@@ -12,7 +12,7 @@
             <v-layout row wrap>
                 <v-flex xs10 offset-xs1>
 
-                    <h1 class="capitalized">🕶 All upcoming Conferences</h1>
+                    <h1 class="capitalized">🕶 {{ total }} upcoming Conferences</h1>
 
                     <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
@@ -64,6 +64,7 @@ export default {
     return {
       conferences: [],
       showSpinner: true,
+      total: 0,
       tmp: '',
       search: '',
       headers: [
@@ -94,11 +95,19 @@ export default {
       axios.get('https://aweconf.herokuapp.com/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
+          this.calculateTotals(this.conferences.length)
           this.showSpinner = false
         })
         .catch((err) => {
           console.log(err)
         })
+    },
+    calculateTotals (items) {
+      if (items < 5) {
+        this.total = items
+      } else {
+        this.total = 5 * Math.round(items / 5) + '+'
+      }
     },
     formatDate (date) {
       const currentDate = new Date(date)
