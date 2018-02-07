@@ -1,76 +1,83 @@
 <template>
     <div class="unapproved">
-        <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
 
-                    <h1>😱 {{ remaining }} to be approved</h1>
-
-                    <v-card-title>
-                        <v-text-field
-                                append-icon="search"
-                                label="Search"
-                                single-line
-                                hide-details
-                                v-model="search"
-                                color="deep-purple"
-                        ></v-text-field>
-                    </v-card-title>
-                    <v-data-table
-                            v-bind:headers="headers"
-                            v-bind:search="search"
-                            :items="conferences"
-                            class="elevation-1"
-                            hide-actions
-                    >
-                        <template slot="items" slot-scope="props">
-                            <td><a :href="props.item.homepage" target="_blank">{{ props.item.title }}</a></td>
-                            <td>
-                                <ul>
-                                    <li class="inline" v-for="category in props.item.category" :key="category">
-                                        <router-link :to="`/category/${category}`">{{ category }}</router-link>
-                                    </li>
-                                </ul>
-                            </td>
-                            <td>{{ props.item.city }}</td>
-                            <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td>{{ formatDate(props.item.date.start) }}</td>
-                            <td>{{ formatDate(props.item.date.end) }}</td>
-                            <td>
-                                <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">Approve</v-btn>
-                            </td>
-                        </template>
-                    </v-data-table>
-
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
+                <v-flex xs12 sm12 md10 xl10>
+                    <v-card class="elevation-12">
+                        <v-toolbar dark color="deep-purple">
+                            <v-toolbar-title class="capitalized">
+                                😱 {{ remaining }} to be approved
+                            </v-toolbar-title>
+                            <v-spacer></v-spacer>
+                        </v-toolbar>
+                        <v-card-title>
+                            <v-text-field
+                                    append-icon="search"
+                                    label="Search"
+                                    single-line
+                                    hide-details
+                                    v-model="search"
+                                    color="deep-purple"
+                            ></v-text-field>
+                        </v-card-title>
+                        <v-data-table
+                                v-bind:headers="headers"
+                                v-bind:search="search"
+                                :items="conferences"
+                                class="elevation-1"
+                                hide-actions
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td><a :href="props.item.homepage" target="_blank">{{ props.item.title }}</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="inline" v-for="category in props.item.category" :key="category">
+                                            <router-link :to="`/category/${category}`">{{ category }}</router-link>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>{{ props.item.city }}</td>
+                                <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
+                                <td>{{ formatDate(props.item.date.start) }}</td>
+                                <td>{{ formatDate(props.item.date.end) }}</td>
+                                <td>
+                                    <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">Approve</v-btn>
+                                </td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
                 </v-flex>
-                <v-flex xs6 offset-xs1>
-                    <v-text-field
-                            name="input-10-1"
-                            label="Enter your password"
-                            v-model="password"
-                            min="8"
-                            :append-icon="e1 ? 'visibility' : 'visibility_off'"
-                            :append-icon-cb="() => (e1 = !e1)"
-                            :type="e1 ? 'password' : 'text'"
-                            counter
-                            required
-                            color="deep-purple"
-                    ></v-text-field>
-                    <v-checkbox
-                            label="Publish on Twitter"
-                            v-model="twitter"
-                            color="deep-purple"
-                    ></v-checkbox>
-                    <v-checkbox
-                            label="Send push notification"
-                            v-model="push"
-                            color="deep-purple"
-                    ></v-checkbox>
-                </v-flex>
-
             </v-layout>
         </v-container>
+
+        <template class="mt5">
+            <v-flex xs6 offset-xs1>
+                <v-text-field
+                        name="input-10-1"
+                        label="Enter your password"
+                        v-model="password"
+                        min="8"
+                        :append-icon="e1 ? 'visibility' : 'visibility_off'"
+                        :append-icon-cb="() => (e1 = !e1)"
+                        :type="e1 ? 'password' : 'text'"
+                        counter
+                        required
+                        color="deep-purple"
+                ></v-text-field>
+                <v-checkbox
+                        label="Publish on Twitter"
+                        v-model="twitter"
+                        color="deep-purple"
+                ></v-checkbox>
+                <v-checkbox
+                        label="Send push notification"
+                        v-model="push"
+                        color="deep-purple"
+                ></v-checkbox>
+            </v-flex>
+        </template>
+
     </div>
 </template>
 
