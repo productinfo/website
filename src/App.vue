@@ -9,8 +9,8 @@
             <menu-aweconf :items="$store.getters.menu"></menu-aweconf>
         </v-navigation-drawer>
         <v-toolbar color="deep-purple" dark fixed app>
-            <v-toolbar-title>AweConf</v-toolbar-title>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-title>AweConf</v-toolbar-title>
             <v-spacer></v-spacer>
         </v-toolbar>
         <v-content>
