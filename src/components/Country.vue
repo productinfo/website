@@ -7,84 +7,81 @@
                 :url="`https://aweconf.com/#/country/${$route.params.country}`"
         />
 
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
-
-                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-
-                    <h1>{{ title }}</h1>
-
-                    <v-card-title>
-                        <v-text-field
-                                append-icon="search"
-                                label="Search"
-                                single-line
-                                hide-details
-                                v-model="search"
-                                color="deep-purple"
-                        ></v-text-field>
-                    </v-card-title>
-                    <v-data-table
-                            v-bind:headers="headers"
-                            v-bind:search="search"
-                            :items="conferences"
-                            class="elevation-1"
-                            hide-actions
-                    >
-                        <template slot="items" slot-scope="props">
-                            <td>
-                                <router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li class="inline" v-for="category in props.item.category" :key="category">
-                                        <router-link :to="`/category/${category}`">{{ category }}</router-link>
-                                    </li>
-                                </ul>
-                            </td>
-                            <td>{{ props.item.city }}</td>
-                            <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td>{{ formatDate(props.item.date.start) }}</td>
-                            <td>{{ formatDate(props.item.date.end) }}</td>
-                        </template>
-                    </v-data-table>
-
-                </v-flex>
-
-            </v-layout>
-        </v-container>
-
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
-                    <template>
-                        <gmap-map
-                                :center="center"
-                                :zoom="4"
-                                style="width: 100%; height: 300px"
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
+                <v-flex xs12 sm12 md10 xl10>
+                    <v-card class="elevation-12">
+                        <v-toolbar dark color="deep-purple">
+                            <v-toolbar-title class="capitalized">
+                                {{ title }}
+                            </v-toolbar-title>
+                            <v-spacer></v-spacer>
+                        </v-toolbar>
+                        <v-card-title>
+                            <v-text-field
+                                    append-icon="search"
+                                    label="Search"
+                                    single-line
+                                    hide-details
+                                    v-model="search"
+                                    color="deep-purple"
+                            ></v-text-field>
+                        </v-card-title>
+                        <v-data-table
+                                v-bind:headers="headers"
+                                v-bind:search="search"
+                                :items="conferences"
+                                class="elevation-1"
+                                hide-actions
                         >
-                            <google-cluster>
-                                <gmap-marker
-                                        :key="index"
-                                        v-for="(m, index) in markers"
-                                        :position="m.position"
-                                        icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-                                        :clickable="true"
-                                        :draggable="false"
-                                        @click="$router.push({ path: '/conference/' + m.id })"
-                                ></gmap-marker>
-                            </google-cluster>
-                        </gmap-map>
-                    </template>
+                            <template slot="items" slot-scope="props">
+                                <td>
+                                    <router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li class="inline" v-for="category in props.item.category" :key="category">
+                                            <router-link :to="`/category/${category}`">{{ category }}</router-link>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>{{ props.item.city }}</td>
+                                <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
+                                <td>{{ formatDate(props.item.date.start) }}</td>
+                                <td>{{ formatDate(props.item.date.end) }}</td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
                 </v-flex>
             </v-layout>
         </v-container>
 
-        <br/>
-        <router-link :to="`/submit`">
-            <v-btn block color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.country }}</v-btn>
-        </router-link>
+        <template>
+            <gmap-map
+                    :center="center"
+                    :zoom="4"
+                    style="width: 100%; height: 300px"
+            >
+                <google-cluster>
+                    <gmap-marker
+                            :key="index"
+                            v-for="(m, index) in markers"
+                            :position="m.position"
+                            icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                            :clickable="true"
+                            :draggable="false"
+                            @click="$router.push({ path: '/conference/' + m.id })"
+                    ></gmap-marker>
+                </google-cluster>
+            </gmap-map>
+        </template>
+
+        <template class="mt5">
+            <router-link :to="`/submit`">
+                <v-btn block color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.country }}</v-btn>
+            </router-link>
+        </template>
+
     </div>
 </template>
 
