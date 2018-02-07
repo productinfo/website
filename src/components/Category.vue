@@ -44,7 +44,6 @@
                     </v-card>
                 </v-flex>
             </v-layout>
-
         </v-container>
 
         <template class="mt5">
