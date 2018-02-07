@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/All.vue" afterPath="$PROJECT_DIR$/src/components/All.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/Category.vue" afterPath="$PROJECT_DIR$/src/components/Category.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/Conference.vue" afterPath="$PROJECT_DIR$/src/components/Conference.vue" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.58268c369db8b54f13c1980600becd15.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.58268c369db8b54f13c1980600becd15.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.dfc278e4df0b3e15a6b9.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.dfc278e4df0b3e15a6b9.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.bfead928bd385af3bd23.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.bfead928bd385af3bd23.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Submit.vue" afterPath="$PROJECT_DIR$/src/components/Submit.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="All.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="All.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/All.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+            <state relative-caret-position="315">
+              <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -66,6 +71,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Submit.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="213" column="64" lean-forward="false" selection-start-line="213" selection-start-column="64" selection-end-line="213" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Conference.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="120" column="4" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
+              <caret line="120" column="4" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -139,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/components/partials/SmartBanner.vue" />
         <option value="$PROJECT_DIR$/src/components/Unapproved.vue" />
         <option value="$PROJECT_DIR$/src/components/Home.vue" />
-        <option value="$PROJECT_DIR$/src/components/Submit.vue" />
         <option value="$PROJECT_DIR$/src/components/Conference.vue" />
         <option value="$PROJECT_DIR$/src/components/Category.vue" />
         <option value="$PROJECT_DIR$/src/components/All.vue" />
+        <option value="$PROJECT_DIR$/src/components/Submit.vue" />
       </list>
     </option>
   </component>
@@ -348,12 +363,12 @@
       <workItem from="1517843068850" duration="1000" />
       <workItem from="1517847052972" duration="21658000" />
       <workItem from="1517994037720" duration="1194000" />
-      <workItem from="1518011872892" duration="408000" />
+      <workItem from="1518011872892" duration="1757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138574000" />
+    <option name="totallyTimeSpent" value="139923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -709,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="332" column="12" lean-forward="false" selection-start-line="332" selection-start-column="12" selection-end-line="332" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Cfp.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -744,7 +751,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="120" column="4" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
+          <caret line="120" column="4" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -767,8 +774,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/All.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+        <state relative-caret-position="315">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="213" column="64" lean-forward="false" selection-start-line="213" selection-start-column="64" selection-end-line="213" selection-end-column="64" />
           <folding />
         </state>
       </provider>

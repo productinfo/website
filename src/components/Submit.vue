@@ -63,16 +63,13 @@
                                     <v-layout wrap>
 
                                         <v-flex xs12 sm6>
-                                            <v-menu
+                                            <v-dialog
                                                     ref="dateMenuStart"
-                                                    lazy
-                                                    :close-on-content-click="false"
+                                                    persistent
                                                     v-model="dateMenuStart"
-                                                    transition="scale-transition"
-                                                    offset-y
+                                                    lazy
                                                     full-width
-                                                    :nudge-right="40"
-                                                    min-width="330px"
+                                                    width="330px"
                                                     :return-value.sync="date.start"
                                             >
                                                 <v-text-field
@@ -94,21 +91,18 @@
                                                            @click="$refs.dateMenuStart.save(date.start)">OK
                                                     </v-btn>
                                                 </v-date-picker>
-                                            </v-menu>
+                                            </v-dialog>
                                         </v-flex>
                                         <v-flex xs12 sm6>
-                                            <v-menu
+                                            <v-dialog
                                                     ref="dateMenuEnd"
-                                                    lazy
-                                                    :close-on-content-click="false"
+                                                    persistent
                                                     v-model="dateMenuEnd"
-                                                    transition="scale-transition"
-                                                    offset-y
+                                                    lazy
                                                     full-width
-                                                    :nudge-right="40"
-                                                    min-width="330px"
+                                                    width="330px"
                                                     :return-value.sync="date.end"
-                                            >
+                                                    >
                                                 <v-text-field
                                                         slot="activator"
                                                         label="End date"
@@ -129,7 +123,7 @@
                                                            @click="$refs.dateMenuEnd.save(date.end)">OK
                                                     </v-btn>
                                                 </v-date-picker>
-                                            </v-menu>
+                                            </v-dialog>
                                         </v-flex>
                                     </v-layout>
                                 </v-container>
@@ -181,16 +175,13 @@
 
                                     <v-layout wrap>
                                         <v-flex xs12 sm6>
-                                            <v-menu
+                                            <v-dialog
                                                     ref="cfpMenuStart"
-                                                    lazy
-                                                    :close-on-content-click="false"
+                                                    persistent
                                                     v-model="cfpMenuStart"
-                                                    transition="scale-transition"
-                                                    offset-y
+                                                    lazy
                                                     full-width
-                                                    :nudge-right="40"
-                                                    min-width="330px"
+                                                    width="330px"
                                                     :return-value.sync="cfp.start"
                                             >
                                                 <v-text-field
@@ -211,19 +202,16 @@
                                                            @click="$refs.cfpMenuStart.save(cfp.start)">OK
                                                     </v-btn>
                                                 </v-date-picker>
-                                            </v-menu>
+                                            </v-dialog>
                                         </v-flex>
                                         <v-flex xs12 sm6>
-                                            <v-menu
+                                            <v-dialog
                                                     ref="cfpMenuEnd"
-                                                    lazy
-                                                    :close-on-content-click="false"
+                                                    persistent
                                                     v-model="cfpMenuEnd"
-                                                    transition="scale-transition"
-                                                    offset-y
+                                                    lazy
                                                     full-width
-                                                    :nudge-right="40"
-                                                    min-width="330px"
+                                                    width="330px"
                                                     :return-value.sync="cfp.end"
                                             >
                                                 <v-text-field
@@ -244,7 +232,7 @@
                                                            @click="$refs.cfpMenuEnd.save(cfp.end)">OK
                                                     </v-btn>
                                                 </v-date-picker>
-                                            </v-menu>
+                                            </v-dialog>
                                         </v-flex>
                                     </v-layout>
 
