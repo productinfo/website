@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/Unapproved.vue" afterPath="$PROJECT_DIR$/src/components/Unapproved.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +47,8 @@
       <file leaf-file-name="Unapproved.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="45" column="109" lean-forward="false" selection-start-line="45" selection-start-column="109" selection-end-line="45" selection-end-column="109" />
+            <state relative-caret-position="413">
+              <caret line="117" column="7" lean-forward="false" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -312,12 +313,12 @@
       <workItem from="1517994037720" duration="1194000" />
       <workItem from="1518011872892" duration="7494000" />
       <workItem from="1518086792571" duration="6857000" />
-      <workItem from="1518121398400" duration="150000" />
+      <workItem from="1518121398400" duration="264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152667000" />
+    <option name="totallyTimeSpent" value="152781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -566,6 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="45" column="109" lean-forward="false" selection-start-line="45" selection-start-column="109" selection-end-line="45" selection-end-column="109" />
+        <state relative-caret-position="413">
+          <caret line="117" column="7" lean-forward="false" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
           <folding />
         </state>
       </provider>

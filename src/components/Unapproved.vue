@@ -43,6 +43,8 @@
                                 <td>{{ formatDate(props.item.date.end) }}</td>
                                 <td>
                                     <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">Approve</v-btn>
+                                </td>
+                                <td>
                                     <v-btn color="red" dark @click.native="deleteConf(props.item._id)">Delete</v-btn>
                                 </td>
                             </template>
@@ -112,7 +114,8 @@ export default {
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'date.start', align: 'left' },
         { text: 'End', value: 'date.end', align: 'left' },
-        { text: 'Approve', sortable: false, align: 'left' }
+        { text: 'Approve', sortable: false, align: 'left' },
+        { text: 'Delete', sortable: false, align: 'left' }
       ]
     }
   },
