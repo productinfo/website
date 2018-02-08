@@ -8,46 +8,43 @@
                 :image="undefined"
         />
 
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
-
-                    <h1 class="capitalized">🎤 Call for Paper Open Conferences</h1>
-                    <p>Call for Paper section is still ⚗️ experimental, we're working 👨‍💻 to improve this section with the next release.</p>
-
-                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-
-                    <v-card-title>
-                        <v-text-field
-                                append-icon="search"
-                                label="Search"
-                                single-line
-                                hide-details
-                                v-model="search"
-                                color="deep-purple"
-                        ></v-text-field>
-                    </v-card-title>
-                    <v-data-table
-                            v-bind:headers="headers"
-                            v-bind:search="search"
-                            :items="conferences"
-                            class="elevation-1"
-                            hide-actions
-                    >
-                        <template slot="items" slot-scope="props">
-                            <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
-                            <td>{{ props.item.city }}</td>
-                            <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
-                            <td v-if="props.item.cfp">{{ formatDate(props.item.cfp.end) }}</td>
-                        </template>
-                    </v-data-table>
-
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
+                <v-flex xs12 sm12 md10 xl10>
+                    <v-card class="elevation-12">
+                        <v-toolbar dark color="deep-purple">
+                            <v-toolbar-title class="capitalized">🎤 Conference looking for Speaker</v-toolbar-title>
+                            <v-spacer></v-spacer>
+                        </v-toolbar>
+                        <v-card-title>
+                            <v-text-field
+                                    append-icon="search"
+                                    label="Search"
+                                    single-line
+                                    hide-details
+                                    v-model="search"
+                                    color="deep-purple"
+                            ></v-text-field>
+                        </v-card-title>
+                        <v-data-table
+                                v-bind:headers="headers"
+                                v-bind:search="search"
+                                :items="conferences"
+                                class="elevation-1"
+                                hide-actions
+                        >
+                            <template slot="items" slot-scope="props">
+                                <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
+                                <td>{{ props.item.city }}</td>
+                                <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
+                                <td v-if="props.item.cfp">{{ formatDate(props.item.cfp.end) }}</td>
+                            </template>
+                        </v-data-table>
+                    </v-card>
                 </v-flex>
-
             </v-layout>
         </v-container>
 
-        <br/>
     </div>
 </template>
 
