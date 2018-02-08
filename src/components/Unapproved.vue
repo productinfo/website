@@ -149,7 +149,12 @@ export default {
       })
     },
     approveConf (id) {
-      axios.put('https://aweconf.herokuapp.com/api/conference/approve/', { id: id, password: this.$data.password, push: true, twitter: true })
+      axios.put('https://aweconf.herokuapp.com/api/conference/approve/', {
+        id: id,
+        password: this.$data.password,
+        push: this.push,
+        twitter: this.twitter
+      })
         .then((resp) => {
           if (resp.data.success === true) {
             this.fetchData()
