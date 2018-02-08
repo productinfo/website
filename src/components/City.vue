@@ -7,6 +7,26 @@
                 :url="`https://aweconf.com/#/city/${$route.params.city}`"
         />
 
+        <template>
+            <gmap-map
+                    :center="center"
+                    :zoom="11"
+                    style="width: 100%; height: 300px"
+            >
+                <google-cluster>
+                    <gmap-marker
+                            :key="index"
+                            v-for="(m, index) in markers"
+                            :position="m.position"
+                            icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                            :clickable="true"
+                            :draggable="false"
+                            @click="$router.push({ path: '/conference/' + m.id })"
+                    ></gmap-marker>
+                </google-cluster>
+            </gmap-map>
+        </template>
+
         <v-container fluid fill-height>
             <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
                 <v-flex xs12 sm12 md10 xl10>
@@ -51,26 +71,6 @@
                 </v-flex>
             </v-layout>
         </v-container>
-
-        <template>
-            <gmap-map
-                    :center="center"
-                    :zoom="11"
-                    style="width: 100%; height: 300px"
-            >
-                <google-cluster>
-                    <gmap-marker
-                            :key="index"
-                            v-for="(m, index) in markers"
-                            :position="m.position"
-                            icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-                            :clickable="true"
-                            :draggable="false"
-                            @click="$router.push({ path: '/conference/' + m.id })"
-                    ></gmap-marker>
-                </google-cluster>
-            </gmap-map>
-        </template>
 
         <template class="mt5">
             <router-link :to="`/submit/${$route.params.category}`">
@@ -145,6 +145,7 @@ export default {
                 this.markers.push(position)
               }
             }
+            console.log(this.markers)
           }
         })
         .catch((err) => {
