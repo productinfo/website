@@ -43,6 +43,7 @@
                                 <td>{{ formatDate(props.item.date.end) }}</td>
                                 <td>
                                     <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">Approve</v-btn>
+                                    <v-btn color="red" dark @click.native="deleteConf(props.item._id)">Delete</v-btn>
                                 </td>
                             </template>
                         </v-data-table>
@@ -143,9 +144,19 @@ export default {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
     },
-    sortAndFilter (conf) {
-      return conf.sort(function (a, b) {
-        return new Date(a.startdate) > new Date(b.startdate)
+    deleteConf (id) {
+      axios.delete('https://aweconf.herokuapp.com/api/conference/delete', {
+        id: id,
+        password: this.$data.password
+      }).then((resp) => {
+        if (resp.data.success === true) {
+          this.fetchData()
+          this.dialog = false
+        } else {
+          alert(resp.data.error)
+        }
+      }).catch((err) => {
+        console.log(err)
       })
     },
     approveConf (id) {
