@@ -1,12 +1,20 @@
 <template>
     <div class="submit">
 
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
+        <vue-headful
+                title="📩 Submit a new Conference 🎟"
+        />
 
-                    <h1 class="capitalized">📩 Submit a new Conference 🎟</h1>
-                    <v-card>
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
+                <v-flex xs12 sm12 md10 xl10>
+                    <v-card class="elevation-12">
+                        <v-toolbar dark color="deep-purple">
+                            <v-toolbar-title class="capitalized">
+                                📩 Submit a new Conference 🎟
+                            </v-toolbar-title>
+                            <v-spacer></v-spacer>
+                        </v-toolbar>
                         <v-card-text>
                             <v-form ref="form" lazy-validation v-model="valid">
 
@@ -102,7 +110,7 @@
                                                     full-width
                                                     width="330px"
                                                     :return-value.sync="date.end"
-                                                    >
+                                            >
                                                 <v-text-field
                                                         slot="activator"
                                                         label="End date"
@@ -241,24 +249,22 @@
                             </v-form>
                         </v-card-text>
                     </v-card>
-                    <br/>
-
-                    <v-btn @click="submitForm" color="deep-purple" dark>submit</v-btn>
-
-                    <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
-
-                    <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
-                        Conference submitted.
-                    </v-alert>
-
-                    <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
-                        There was an error, try again or contact using twitter <a href="https://twitter.com/aweconf">@aweconf</a>.
-                    </v-alert>
-
                 </v-flex>
-
             </v-layout>
         </v-container>
+        <template>
+            <v-btn @click="submitForm" color="deep-purple" dark>submit</v-btn>
+
+            <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
+
+            <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
+                Conference submitted.
+            </v-alert>
+
+            <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
+                There was an error, try again or contact using twitter <a href="https://twitter.com/aweconf">@aweconf</a>.
+            </v-alert>
+        </template>
     </div>
 </template>
 
