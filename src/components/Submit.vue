@@ -2,7 +2,7 @@
     <div class="submit">
 
         <vue-headful
-                title="📩 Submit a new Conference 🎟"
+                title="📩 Submit a new Conference, Barcamp or Meetup"
         />
 
         <v-container fluid fill-height>
@@ -11,7 +11,7 @@
                     <v-card class="elevation-12">
                         <v-toolbar dark color="deep-purple">
                             <v-toolbar-title class="capitalized">
-                                📩 Submit a new Conference 🎟
+                                📩 Submit a new Conference, Barcamp or Meetup
                             </v-toolbar-title>
                             <v-spacer></v-spacer>
                         </v-toolbar>
@@ -22,7 +22,7 @@
                                     <v-layout wrap>
                                         <v-flex xs12 sm12>
                                             <v-text-field
-                                                    label="Conference Name"
+                                                    label="Name"
                                                     v-model="name"
                                                     :counter="80"
                                                     required
@@ -32,7 +32,7 @@
                                         </v-flex>
                                         <v-flex xs12 sm12>
                                             <v-text-field
-                                                    label="Conference Website Url"
+                                                    label="Website Url"
                                                     v-model="url"
                                                     :counter="100"
                                                     required
@@ -47,7 +47,7 @@
                                             <v-select
                                                     color="deep-purple"
                                                     v-model="categories"
-                                                    label="Select one or more categories for your conference"
+                                                    label="Select one or more categories"
                                                     multiple
                                                     required
                                                     tags
@@ -56,7 +56,7 @@
                                         </v-flex>
                                         <v-flex xs12 sm12>
                                             <v-text-field
-                                                    label="Conference Twitter handler"
+                                                    label="Twitter handler"
                                                     v-model="twitter"
                                                     :counter="50"
                                                     color="deep-purple"
@@ -67,7 +67,7 @@
 
                                 <v-container grid-list-xl fluid>
                                     <h2>🗓 Dates</h2>
-                                    <p>Share the dates of your conference</p>
+                                    <p>Share the dates of the event</p>
                                     <v-layout wrap>
 
                                         <v-flex xs12 sm6>
@@ -138,7 +138,7 @@
 
                                 <v-container grid-list-xl fluid>
                                     <h2>🗺 How to reach</h2>
-                                    <p>Can you help us sharing information about how to reach the conference venue?</p>
+                                    <p>Can you help us sharing information about how to reach the venue?</p>
 
                                     <v-layout wrap>
                                         <v-flex xs12 sm6>
@@ -258,7 +258,7 @@
             <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
             <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
-                Conference submitted.
+                Event submitted, it will be reviewed and shortly published.
             </v-alert>
 
             <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
