@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "1289255473.boostco.de.amc",
+        "paths": [ "/conference/*", "/#/conference/*", "#/conference/*"]
+      }
+    ]
+  }
+}
