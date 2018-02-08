@@ -148,7 +148,7 @@ export default {
       return currentDate.toLocaleDateString()
     },
     deleteConf (id) {
-      axios.delete('https://aweconf.herokuapp.com/api/conference/delete/', {
+      axios.put('https://aweconf.herokuapp.com/api/conference/delete/', {
         id: id,
         password: this.$data.password
       }).then((resp) => {
