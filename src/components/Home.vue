@@ -8,62 +8,69 @@
                 keywords="awesome conference, designer conference, developer conference, android, ios, mobile, ux, ui"
         />
 
-        <p class="hint-left" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
-        <div class="mt-5">
-            <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
-        </div>
-
-        <v-container grid-list-xl text-xs-left>
-            <v-layout row wrap>
-                <v-flex xs10 offset-xs1>
-                    <p class="hint align-content-center" v-if="firstRun">{{ mapMsg }}</p>
-                    <template>
-                        <gmap-map
-                                :center="center"
-                                :zoom="2"
-                                style="width: 100%; height: 450px"
-                        >
-                            <google-cluster>
-                                <gmap-marker
-                                        :key="index"
-                                        v-for="(m, index) in markers"
-                                        :position="m.position"
-                                        icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-                                        :clickable="true"
-                                        :draggable="false"
-                                        @click="$router.push({ path: '/conference/' + m.id })"
-                                ></gmap-marker>
-                            </google-cluster>
-                        </gmap-map>
-                    </template>
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center>
+                <v-flex xs12 sm12 md10 xl10>
+                    <p class="hint-left" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
+                    <div class="mt-1">
+                        <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
+                    </div>
                 </v-flex>
             </v-layout>
         </v-container>
 
-        <div class="mt-2">
-            <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-            <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-                <img src="../assets/download-on-the-app-store.png" />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
-                <img src="../assets/google-play-badge.png" />
-            </a>
-        </div>
+        <template>
+            <p class="hint align-content-center" v-if="firstRun">{{ mapMsg }}</p>
+            <gmap-map
+                    :center="center"
+                    :zoom="2"
+                    style="width: 100%; height: 450px"
+            >
+                <google-cluster>
+                    <gmap-marker
+                            :key="index"
+                            v-for="(m, index) in markers"
+                            :position="m.position"
+                            icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                            :clickable="true"
+                            :draggable="false"
+                            @click="$router.push({ path: '/conference/' + m.id })"
+                    ></gmap-marker>
+                </google-cluster>
+            </gmap-map>
+        </template>
 
-        <div class="mt-4">
-            <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
-            <p>{{ quickLook }}</p>
-            <suggestion-aweconf url="https://aweconf.herokuapp.com/api/conference/last/10"></suggestion-aweconf>
-            <br/>
-            <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
-        </div>
+        <v-container fluid fill-height>
+            <v-layout align-center justify-center>
+                <v-flex xs12 sm12 md10 xl10>
+                    <div class="mt-2">
+                        <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
+                        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+                            <img src="../assets/download-on-the-app-store.png" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+                            <img src="../assets/google-play-badge.png" />
+                        </a>
+                    </div>
 
-        <div class="mt-4 mb-4">
-            <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
-            <router-link :to="`/submit`">
-                <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
-            </router-link>
-        </div>
+                    <div class="mt-4">
+                        <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
+                        <p>{{ quickLook }}</p>
+                        <suggestion-aweconf url="https://aweconf.herokuapp.com/api/conference/last/10"></suggestion-aweconf>
+                        <br/>
+                        <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
+                    </div>
+
+                    <div class="mt-4 mb-4">
+                        <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
+                        <router-link :to="`/submit`">
+                            <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
+                        </router-link>
+                    </div>
+
+                </v-flex>
+            </v-layout>
+        </v-container>
 
     </div>
 </template>
@@ -82,7 +89,7 @@ export default {
       welcomeMsg: '🔎 ',
       welcomeMsg2: '+ 🔥🔥 conferences around the 🌍',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
-      instructionMsg1: '👈 You can navigate conferences by category tapping just above️.',
+      instructionMsg1: '👈 You can navigate conferences by categories️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
