@@ -1,0 +1,93 @@
+<template>
+    <v-container grid-list-xl text-xs-left fluid fill-height>
+    <v-layout row wrap>
+        <v-flex xs4 v-for="conference in conferences" :key="conference.id">
+            <v-card class="elevation-1">
+                <v-card-title>
+                    <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
+                </v-card-title>
+                <v-card-text>
+                    {{ conference.city }}, {{ conference.emojiflag }} {{ conference.country }}
+                </v-card-text>
+                <v-card-text>
+                    <span v-for="category in conference.category" :key="category">
+                        <router-link :to="`/category/${category}`">
+                            <v-chip color="deep-purple" text-color="white">{{ category }}</v-chip>
+                        </router-link>
+                    </span>
+                </v-card-text>
+            </v-card>
+        </v-flex>
+        <v-flex xs4>
+            <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
+        </v-flex>
+    </v-layout>
+    </v-container>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  props: {
+    url: {
+      type: String,
+      required: true
+    },
+    exclude: String,
+    limit: {
+      type: Number,
+      default: 10
+    }
+  },
+  data () {
+    return {
+      showSpinner: false,
+      discoverMore: 'or 🧐 discover more...',
+      conferences: []
+    }
+  },
+  created () {
+    this.fetchData()
+  },
+  watch: {
+    '$route': 'fetchData',
+    'exclude': 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      this.showSpinner = true
+
+      axios.get(this.url)
+        .then((resp) => {
+          this.conferences = resp.data.conferences
+          if (this.exclude != null) {
+            const excludeId = this.exclude
+            this.conferences = this.conferences.filter(function (conf) {
+              return conf._id !== excludeId
+            })
+          }
+          // limiting results
+          if (this.limit !== -1 && this.conferences.length > 0) {
+            this.conferences = this.conferences.slice(0, this.limit)
+          }
+          this.showSpinner = false
+          this.$emit('totalConferenceUpdated', this.conferences.length)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+  }
+}
+</script>
+
+<style scoped>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin: 0 10px;
+    }
+</style>

@@ -8,42 +8,16 @@
                 keywords="awesome conference, designer conference, developer conference, android, ios, mobile, ux, ui"
         />
 
-        <v-container fluid fill-height>
-            <v-layout align-center justify-center>
-                <v-flex xs12 sm12 md10 xl10>
+        <v-container grid-list-xl text-xs-left fluid fill-height>
+            <v-layout row wrap>
+
+                <v-flex xs12 sm12 md4 xl4>
                     <p class="hint-left" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
-                    <div class="mt-1">
+                    <div class="mt-1 pa-2">
                         <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
+                        <h4 class="mt-4">{{ introMsg }}</h4>
                     </div>
-                </v-flex>
-            </v-layout>
-        </v-container>
-
-        <template>
-            <p class="hint align-content-center" v-if="firstRun">{{ mapMsg }}</p>
-            <gmap-map
-                    :center="center"
-                    :zoom="2"
-                    style="width: 100%; height: 450px"
-            >
-                <google-cluster>
-                    <gmap-marker
-                            :key="index"
-                            v-for="(m, index) in markers"
-                            :position="m.position"
-                            icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-                            :clickable="true"
-                            :draggable="false"
-                            @click="$router.push({ path: '/conference/' + m.id })"
-                    ></gmap-marker>
-                </google-cluster>
-            </gmap-map>
-        </template>
-
-        <v-container fluid fill-height>
-            <v-layout align-center justify-center>
-                <v-flex xs12 sm12 md10 xl10>
-                    <div class="mt-2">
+                    <div class="pa-5">
                         <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
                         <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
                             <img src="../assets/download-on-the-app-store.png" />
@@ -52,56 +26,69 @@
                             <img src="../assets/google-play-badge.png" />
                         </a>
                     </div>
+                </v-flex>
 
-                    <div class="mt-4">
-                        <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
-                        <p>{{ quickLook }}</p>
-                        <suggestion-aweconf url="https://aweconf.herokuapp.com/api/conference/last/10"></suggestion-aweconf>
-                        <br/>
-                        <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
-                    </div>
+                <v-flex xs12 sm12 md8 xl8>
+                    <template>
+                        <p class="hint align-content-center" v-if="firstRun">{{ mapMsg }}</p>
+                        <gmap-map
+                                :center="center"
+                                :zoom="2"
+                                style="width: 100%; height: 450px"
+                        >
+                            <google-cluster>
+                                <gmap-marker
+                                        :key="index"
+                                        v-for="(m, index) in markers"
+                                        :position="m.position"
+                                        icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
+                                        :clickable="true"
+                                        :draggable="false"
+                                        @click="$router.push({ path: '/conference/' + m.id })"
+                                ></gmap-marker>
+                            </google-cluster>
+                        </gmap-map>
+                    </template>
+                </v-flex>
 
-                    <div class="mt-4 mb-4">
-                        <p class="hint" v-if="firstRun">{{ submitMsg }}</p>
-                        <router-link :to="`/submit`">
-                            <v-btn block color="deep-purple" dark>📩 Submit a new Conference</v-btn>
-                        </router-link>
-                    </div>
-
+                <v-flex xs12 sm12 md10 xl10 class="mt-4">
+                    <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
+                    <p>{{ quickLook }}</p>
                 </v-flex>
             </v-layout>
         </v-container>
+
+        <suggestioncard-aweconf url="https://aweconf.herokuapp.com/api/conference/last/9"></suggestioncard-aweconf>
 
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Suggestion from './partials/Suggestion.vue'
+import SuggestionCard from './partials/SuggestionCard.vue'
 
 export default {
   name: 'Home',
   components: {
-    'suggestion-aweconf': Suggestion
+    'suggestioncard-aweconf': SuggestionCard
   },
   data () {
     return {
-      welcomeMsg: '🔎 ',
-      welcomeMsg2: '+ 🔥🔥 conferences around the 🌍',
-      introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
+      welcomeMsg: 'Discover 🔎 ',
+      welcomeMsg2: '+ 🔥🔥 awesome conferences around the 🌍 world.',
+      introMsg: 'Awesome Conference is a web and mobile application built to help developers, markerters, designers in finding the best conference around the world in an unique place.',
       instructionMsg1: '👆 You can navigate conferences by categories️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
       quickLook: 'have a ⚡️👀 at the latest conferences published:',
-      discoverMore: 'or 🧐 discover more...',
       conferences: [],
       lastConferences: [],
       showSpinner: true,
       firstRun: false,
       total: '',
-      center: { lat: 20, lng: 20 },
+      center: { lat: 20, lng: 32 },
       markers: []
     }
   },
