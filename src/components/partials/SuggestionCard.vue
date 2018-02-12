@@ -4,7 +4,7 @@
         <v-flex xs12 sm12 md4 xl4 v-for="conference in conferences" :key="conference.id" >
             <v-card class="elevation-1" :to="`/conference/${conference._id}`">
                 <v-card-title>
-                    {{ conference.title }}
+                    <h2>{{ conference.title }}</h2>
                 </v-card-title>
                 <template v-if="conference.date">
                     <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
@@ -23,7 +23,7 @@
                 <v-card-text>
                     <span v-for="category in conference.category" :key="category">
                         <router-link :to="`/category/${category}`">
-                            <v-chip color="deep-purple" text-color="white">{{ category }}</v-chip>
+                            <v-chip color="deep-purple" outline small>{{ category }}</v-chip>
                         </router-link>
                     </span>
                 </v-card-text>
