@@ -1,10 +1,10 @@
 <template>
     <v-container grid-list-xl text-xs-left fluid fill-height>
     <v-layout row wrap>
-        <v-flex xs4 v-for="conference in conferences" :key="conference.id">
-            <v-card class="elevation-1">
+        <v-flex xs12 sm12 md4 xl4 v-for="conference in conferences" :key="conference.id" >
+            <v-card class="elevation-1" :to="`/conference/${conference._id}`">
                 <v-card-title>
-                    <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
+                    {{ conference.title }}
                 </v-card-title>
                 <template v-if="conference.date">
                     <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
@@ -29,7 +29,7 @@
                 </v-card-text>
             </v-card>
         </v-flex>
-        <v-flex xs4>
+        <v-flex xs12 sm 12 md4 xl4>
             <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
         </v-flex>
     </v-layout>
