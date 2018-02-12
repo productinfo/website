@@ -48,7 +48,7 @@
 
         <template class="mt5">
             <router-link :to="`/submit/${$route.params.category}`">
-                <v-btn block color="deep-purple" dark>📩 Submit a new Conference in {{ $route.params.category }} category</v-btn>
+                <v-btn block color="deep-purple" dark>📮 Submit a new Conference in {{ $route.params.category }} category</v-btn>
             </router-link>
         </template>
     </div>

@@ -2,7 +2,7 @@
     <div class="submit">
 
         <vue-headful
-                title="📩 Submit a new Conference, Barcamp or Meetup"
+                title="📮 Submit a new Conference, Barcamp or Meetup"
         />
 
         <v-container fluid fill-height>
@@ -11,7 +11,7 @@
                     <v-card class="elevation-12">
                         <v-toolbar dark color="deep-purple">
                             <v-toolbar-title class="capitalized">
-                                📩 Submit a new Conference, Barcamp or Meetup
+                                📮 Submit a new Conference, Barcamp or Meetup
                             </v-toolbar-title>
                             <v-spacer></v-spacer>
                         </v-toolbar>

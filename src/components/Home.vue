@@ -51,8 +51,8 @@
                     </template>
                 </v-flex>
 
-                <v-flex xs12 sm12 md10 xl10 class="mt-4">
-                    <p>{{ quickLook }}</p>
+                <v-flex xs12 sm12 md10 xl10 class="mt-2">
+                    <h3>{{ quickLook }}</h3>
                 </v-flex>
 
             </v-layout>
@@ -63,7 +63,7 @@
         <v-container grid-list-xl text-xs-left fluid fill-height>
             <v-layout row wrap>
                 <v-flex xs12 sm12 md12 xl12 class="mt-4">
-                    {{ discoverMore }}
+                    <h3>{{ discoverMore }}</h3>
                     <v-card-title>
                         <v-text-field
                                 append-icon="search"
