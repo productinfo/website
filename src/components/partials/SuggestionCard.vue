@@ -6,9 +6,20 @@
                 <v-card-title>
                     <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
                 </v-card-title>
-                <v-card-text>
-                    {{ conference.city }}, {{ conference.emojiflag }} {{ conference.country }}
-                </v-card-text>
+                <template v-if="conference.date">
+                    <v-card-text v-if="formatDate(conference.date.start) !== formatDate(conference.date.end)">
+                        🗓 <em>{{ formatDate(conference.date.start) }}</em> - <em>{{
+                        formatDate(conference.date.end) }}</em>
+                        <br/>
+                        {{ conference.city }}, {{ conference.emojiflag }} {{ conference.country }}
+                    </v-card-text>
+
+                    <v-card-text v-else>
+                        🗓 <em>{{ formatDate(conference.date.start) }}</em>
+                        <br/>
+                        {{ conference.city }}, {{ conference.emojiflag }} {{ conference.country }}
+                    </v-card-text>
+                </template>
                 <v-card-text>
                     <span v-for="category in conference.category" :key="category">
                         <router-link :to="`/category/${category}`">
@@ -77,6 +88,10 @@ export default {
         .catch((err) => {
           console.log(err)
         })
+    },
+    formatDate (date) {
+      const currentDate = new Date(date)
+      return currentDate.toLocaleDateString()
     }
   }
 }
