@@ -50,4 +50,7 @@ export default {
     width: 32px;
     height: 32px;
 }
+::selection {
+    color: #5719B8 !important;
+}
 </style>
