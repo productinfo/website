@@ -1,6 +1,6 @@
 <template>
     <v-app id="inspire">
-        <menuheader-aweconf :items="$store.state.categories"></menuheader-aweconf>
+        <menu-aweconf :items="$store.state.categories"></menu-aweconf>
         <v-content>
             <router-view></router-view>
         </v-content>
@@ -14,7 +14,7 @@ import Footer from './components/partials/Footer.vue'
 
 export default {
   components: {
-    'menuheader-aweconf': MenuHeader,
+    'menu-aweconf': MenuHeader,
     'footer-aweconf': Footer
   },
   data: () => ({

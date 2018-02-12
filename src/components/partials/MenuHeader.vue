@@ -1,11 +1,8 @@
 <template>
-    <v-toolbar light fixed app>
-
-        <img src="../../assets/logo-small.svg" class="logo"/>
-
+    <v-toolbar light fixed app class="elevation-0">
         <v-tooltip bottom>
             <v-btn icon slot="activator" to="/">
-                <v-icon>🏡</v-icon>
+                <img src="../../assets/logo-small.svg" class="logo"/>
             </v-btn>
             <span>Home</span>
         </v-tooltip>
@@ -16,7 +13,6 @@
             </v-btn>
             <span>All Conferences</span>
         </v-tooltip>
-
 
         <v-menu offset-y>
             <v-btn icon slot="activator">

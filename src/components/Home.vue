@@ -89,7 +89,7 @@ export default {
       welcomeMsg: '🔎 ',
       welcomeMsg2: '+ 🔥🔥 conferences around the 🌍',
       introMsg: 'Awesome Conference is a fully open sourced and collaborative project about conference listings, available for mobile too.',
-      instructionMsg1: '👈 You can navigate conferences by categories️.',
+      instructionMsg1: '👆 You can navigate conferences by categories️.',
       instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
