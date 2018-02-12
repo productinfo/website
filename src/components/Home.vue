@@ -19,10 +19,10 @@
                     </div>
                     <div class="pa-5">
                         <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-                        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+                        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8" class="pr-3">
                             <img src="../assets/download-on-the-app-store.png" />
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+                        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc" class="pl-3">
                             <img src="../assets/google-play-badge.png" />
                         </a>
                     </div>
