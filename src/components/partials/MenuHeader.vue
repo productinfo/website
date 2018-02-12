@@ -7,13 +7,6 @@
             <span>Home</span>
         </v-tooltip>
 
-        <v-tooltip bottom>
-            <v-btn icon slot="activator" to="/all">
-                <v-icon>🕶</v-icon>
-            </v-btn>
-            <span>All Conferences</span>
-        </v-tooltip>
-
         <v-menu offset-y>
             <v-btn icon slot="activator">
                 <v-icon>🎟</v-icon>

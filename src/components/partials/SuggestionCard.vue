@@ -29,9 +29,6 @@
                 </v-card-text>
             </v-card>
         </v-flex>
-        <v-flex xs12 sm 12 md4 xl4>
-            <router-link :to="{ path: '/all'}">{{ discoverMore }}</router-link>
-        </v-flex>
     </v-layout>
     </v-container>
 </template>
@@ -54,7 +51,6 @@ export default {
   data () {
     return {
       showSpinner: false,
-      discoverMore: 'or 🧐 discover more...',
       conferences: []
     }
   },

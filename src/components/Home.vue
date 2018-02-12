@@ -52,13 +52,46 @@
                 </v-flex>
 
                 <v-flex xs12 sm12 md10 xl10 class="mt-4">
-                    <p class="hint" v-if="firstRun">{{ instructionMsg2 }}<br/></p>
                     <p>{{ quickLook }}</p>
                 </v-flex>
+
             </v-layout>
         </v-container>
 
-        <suggestioncard-aweconf url="https://aweconf.herokuapp.com/api/conference/last/9"></suggestioncard-aweconf>
+        <suggestioncard-aweconf url="https://aweconf.herokuapp.com/api/conference/last/6"></suggestioncard-aweconf>
+
+        <v-container grid-list-xl text-xs-left fluid fill-height>
+            <v-layout row wrap>
+                <v-flex xs12 sm12 md12 xl12 class="mt-4">
+                    {{ discoverMore }}
+                    <v-card-title>
+                        <v-text-field
+                                append-icon="search"
+                                label="Filter"
+                                single-line
+                                hide-details
+                                v-model="search"
+                                color="deep-purple"
+                        ></v-text-field>
+                    </v-card-title>
+                    <v-data-table
+                            v-bind:headers="headers"
+                            v-bind:search="search"
+                            :items="conferences"
+                            class="elevation-1"
+                            hide-actions
+                    >
+                        <template slot="items" slot-scope="props">
+                            <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
+                            <td>{{ props.item.city }}</td>
+                            <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
+                            <td>{{ formatDate(props.item.date.start) }}</td>
+                            <td>{{ formatDate(props.item.date.end) }}</td>
+                        </template>
+                    </v-data-table>
+                </v-flex>
+            </v-layout>
+        </v-container>
 
     </div>
 </template>
@@ -78,18 +111,31 @@ export default {
       welcomeMsg2: '+ 🔥🔥 awesome conferences around the 🌍 world.',
       introMsg: 'Awesome Conference is a web and mobile application built to help developers, markerters, designers in finding the best conference around the world in an unique place.',
       instructionMsg1: '👆 You can navigate conferences by categories️.',
-      instructionMsg2: 'Or have a quick look at the last ⏰ conference added so far.',
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
-      quickLook: 'have a ⚡️👀 at the latest conferences published:',
+      quickLook: 'have a quick look at the last ⏰ conference added so far:',
+      discoverMore: 'or 🧐 discover more browsing all...',
       conferences: [],
       lastConferences: [],
       showSpinner: true,
       firstRun: false,
       total: '',
       center: { lat: 20, lng: 32 },
-      markers: []
+      markers: [],
+      search: '',
+      headers: [
+        {
+          text: 'Name',
+          align: 'left',
+          sortable: false,
+          value: 'title'
+        },
+        { text: 'City', sortable: false, align: 'left', value: 'city' },
+        { text: 'Country', sortable: false, align: 'left', value: 'country' },
+        { text: 'Start', value: 'startdate', align: 'left' },
+        { text: 'End', value: 'enddate', align: 'left' }
+      ]
     }
   },
 
@@ -115,6 +161,29 @@ export default {
     calculateTotals (items) {
       this.total = 5 * Math.round(items / 5)
     },
+    populateMaps () {
+      if (this.conferences.length > 0) {
+        // loop confs
+        for (var conf of this.conferences) {
+          // if lat has a value
+          if (conf.lat !== 0 && conf.lon !== 0) {
+            let lat = parseFloat(conf.lat)
+            let lng = parseFloat(conf.lon)
+            // generate marker
+            const position = {
+              id: conf._id,
+              position: { lat: lat, lng: lng }
+            }
+            // add to list
+            this.markers.push(position)
+          }
+        }
+      }
+    },
+    formatDate (date) {
+      const currentDate = new Date(date)
+      return currentDate.toLocaleDateString()
+    },
     fetchData () {
       this.showSpinner = true
 
@@ -124,23 +193,7 @@ export default {
           this.calculateTotals(this.conferences.length)
 
           this.showSpinner = false
-          if (this.conferences.length > 0) {
-            // loop confs
-            for (var conf of this.conferences) {
-              // if lat has a value
-              if (conf.lat !== 0 && conf.lon !== 0) {
-                let lat = parseFloat(conf.lat)
-                let lng = parseFloat(conf.lon)
-                // generate marker
-                const position = {
-                  id: conf._id,
-                  position: { lat: lat, lng: lng }
-                }
-                // add to list
-                this.markers.push(position)
-              }
-            }
-          }
+          this.populateMaps()
         })
         .catch((err) => {
           console.log(err)
