@@ -1,19 +1,6 @@
 <template>
     <v-app id="inspire">
-        <v-navigation-drawer
-                fixed
-                v-model="drawer"
-                mini-variant
-                app
-        >
-            <menu-aweconf :items="$store.getters.menu"></menu-aweconf>
-        </v-navigation-drawer>
-        <v-toolbar light fixed app>
-            <v-btn fab dark small color="deep-purple" @click.stop="drawer = !drawer">
-                <img src="./assets/logo-small-white.svg" class="icon">
-            </v-btn>
-            <v-spacer></v-spacer>
-        </v-toolbar>
+        <menuheader-aweconf :items="$store.state.categories"></menuheader-aweconf>
         <v-content>
             <router-view></router-view>
         </v-content>
@@ -22,12 +9,12 @@
 </template>
 
 <script>
-import Menu from './components/partials/Menu.vue'
+import MenuHeader from './components/partials/MenuHeader.vue'
 import Footer from './components/partials/Footer.vue'
 
 export default {
   components: {
-    'menu-aweconf': Menu,
+    'menuheader-aweconf': MenuHeader,
     'footer-aweconf': Footer
   },
   data: () => ({

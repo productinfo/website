@@ -9,65 +9,76 @@ export const Store = new Vuex.Store({
       {
         emoji: '🧠',
         title: 'AI',
-        url: '/category/ai'
+        url: '/category/ai',
+        aggregate: true
       },
       {
         emoji: '📦',
         title: 'Backend',
-        url: '/category/backend'
+        url: '/category/backend',
+        aggregate: true
       },
       {
         emoji: '⛓',
         title: 'Blockchain',
-        url: '/category/blockchain'
+        url: '/category/blockchain',
+        aggregate: true
       },
       {
         emoji: '🔨',
         title: 'Devops',
-        url: '/category/devops'
+        url: '/category/devops',
+        aggregate: true
 
       },
       {
         emoji: '🖥',
         title: 'Frontend',
-        url: '/category/frontend'
+        url: '/category/frontend',
+        aggregate: true
 
       },
       {
         emoji: '🎰',
         title: 'Marketing',
-        url: '/category/marketing'
-
+        url: '/category/marketing',
+        aggregate: true
       },
       {
         emoji: '📱',
         title: 'Mobile',
-        url: '/category/mobile'
+        url: '/category/mobile',
+        aggregate: true
 
       }, {
         emoji: '🚧️',
         title: 'PM',
-        url: '/category/pm'
+        url: '/category/pm',
+        aggregate: true
 
       }, {
         emoji: '👮‍♂️',
         title: 'Security',
-        url: '/category/security'
+        url: '/category/security',
+        aggregate: true
 
       }, {
         emoji: '🐛️',
         title: 'Testing',
-        url: '/category/testing'
+        url: '/category/testing',
+        aggregate: true
 
       }, {
         emoji: '🎨',
         title: 'Ui',
-        url: '/category/ui'
+        url: '/category/ui',
+        aggregate: true
 
       }, {
         emoji: '🧤',
         title: 'Ux',
-        url: '/category/ux'
+        url: '/category/ux',
+        aggregate: true
 
       }
     ],
@@ -92,41 +103,6 @@ export const Store = new Vuex.Store({
       return state.categories.map(function (item) {
         return item.title
       })
-    },
-    menu: state => {
-      var cats = []
-      cats.push({
-        separator: true
-      })
-      cats.push({
-        emoji: '🏡',
-        title: 'Home',
-        url: '/'
-      })
-      cats.push({
-        emoji: '🕶',
-        title: 'All',
-        url: '/all'
-      })
-      cats.push({
-        separator: true
-      })
-      cats.push(...state.categories)
-      cats.push({
-        separator: true
-      })
-      cats.push({
-        emoji: '🎤',
-        title: 'Cfp',
-        url: '/call-for-paper/open'
-
-      })
-      cats.push({
-        emoji: '📩️',
-        title: 'Submit',
-        url: '/submit'
-      })
-      return cats
     }
   }
 })
