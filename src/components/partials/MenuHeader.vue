@@ -34,18 +34,21 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn small href="https://aweconf.herokuapps.com/auth/twitter" color="light-blue" class="white--text">
-            <v-icon left small dark>fab fa-twitter</v-icon>
-            Login with Twitter
-        </v-btn>
+        <login-badge></login-badge>
 
     </v-toolbar>
 </template>
 
 <script>
+
+import LoginBadge from './LoginBadge.vue'
+
 export default {
   props: {
     items: Array
+  },
+  components: {
+    'login-badge': LoginBadge
   }
 }
 </script>
