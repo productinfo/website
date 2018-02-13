@@ -4,7 +4,7 @@
                 :size="avatarSize"
                 class="grey lighten-4"
         >
-            <img :src="`https://twitter.com/${ account }/profile_image?size=original`" :alt="account" :title="account">
+            <img :src="`https://avatars.io/twitter/${account}`" :alt="account" :title="account">
         </v-avatar>
     </a>
 </template>
