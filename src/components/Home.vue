@@ -34,7 +34,7 @@
                         <gmap-map
                                 :center="center"
                                 :zoom="2"
-                                style="width: 100%; height: 450px"
+                                style="width: 100%; height: 450px;"
                         >
                             <google-cluster>
                                 <gmap-marker

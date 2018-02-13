@@ -15,7 +15,6 @@ import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
 import Cfp from '@/components/Cfp'
-import All from '@/components/All'
 
 // use
 Vue.use(Router)
@@ -39,11 +38,6 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/all',
-      name: 'All',
-      component: All
     },
     {
       path: '/category/:category',

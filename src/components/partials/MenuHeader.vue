@@ -18,14 +18,14 @@
             </v-list>
         </v-menu>
 
-        <v-spacer></v-spacer>
-
         <v-tooltip bottom>
             <v-btn icon slot="activator" to="/call-for-paper/open">
                 <v-icon>🎤</v-icon>
             </v-btn>
             <span>Call for Paper</span>
         </v-tooltip>
+
+        <v-spacer></v-spacer>
 
         <v-tooltip bottom>
             <v-btn icon slot="activator" to="/submit">
