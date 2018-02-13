@@ -25,14 +25,19 @@
             <span>Call for Paper</span>
         </v-tooltip>
 
-        <v-spacer></v-spacer>
-
         <v-tooltip bottom>
             <v-btn icon slot="activator" to="/submit">
                 <v-icon>📮</v-icon>
             </v-btn>
             <span>Submit Conference</span>
         </v-tooltip>
+
+        <v-spacer></v-spacer>
+
+        <v-btn small href="https://aweconf.herokuapps.com/auth/twitter" color="light-blue" class="white--text">
+            <v-icon left small dark>fab fa-twitter</v-icon>
+            Login with Twitter
+        </v-btn>
 
     </v-toolbar>
 </template>
