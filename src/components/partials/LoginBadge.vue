@@ -4,6 +4,12 @@
         Login with Twitter
     </v-btn>
     <v-btn v-else>
+        <v-avatar
+                :size="avatarSize"
+                class="grey lighten-4"
+        >
+            <img :src="`https://avatars.io/twitter/${user.twitterUserId}`" :alt="user.twitterUserId" :title="user.twitterUserId">
+        </v-avatar>
         {{ user.twitterUserId }}
     </v-btn>
 </template>
@@ -14,6 +20,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
+      avatarSize: 32,
       user: {},
       success: false
     }
