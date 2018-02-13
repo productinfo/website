@@ -43,7 +43,7 @@
                             </template>
                             <template v-else>
                                 <v-card-text>
-                                    <p v-if="speakers.length > 0">🎤 You will be able to meet and listen to the talks of:</p>
+                                    <p v-if="speakers.length > 0">You will be able to meet and listen to the 🎤 talks of:</p>
                                     <template v-for="speaker in speakers">
                                         <twitter-badge :account="speaker" :key="speaker"></twitter-badge>
                                     </template>
