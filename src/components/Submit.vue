@@ -179,7 +179,6 @@
                                 <v-container grid-list-xl fluid>
                                     <h2>🎤 Speaker</h2>
 
-
                                     <v-layout wrap>
                                         <v-flex xs12 sm12>
                                             <p>Do you know already your speaker? List their Twitter account.</p>
@@ -387,7 +386,7 @@ export default {
         date: this.date,
         cfp: this.cfp,
         category: lcCats,
-        speaker: this.chips
+        speakers: this.chips
       }
 
       axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
