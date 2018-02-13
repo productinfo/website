@@ -177,12 +177,40 @@
                                 </v-container>
 
                                 <v-container grid-list-xl fluid>
-                                    <h2>🎤 Call for Paper</h2>
-                                    <p>If you have information about call for paper, please provide, a lot developers,
-                                        designer can be interesting in submitting their talk.</p>
+                                    <h2>🎤 Speaker</h2>
+
 
                                     <v-layout wrap>
+                                        <v-flex xs12 sm12>
+                                            <p>Do you know already your speaker? List their Twitter account.</p>
+                                            <v-select
+                                                    label="Speaker Twitter Account"
+                                                    chips
+                                                    tags
+                                                    solo
+                                                    prepend-icon="filter_list"
+                                                    color="deep-purple"
+                                                    append-icon=""
+                                                    clearable
+                                                    v-model="chips"
+                                            >
+                                                <template slot="selection" slot-scope="data">
+                                                    <v-chip
+                                                            close
+                                                            @input="remove(data.item)"
+                                                            :selected="data.selected"
+                                                    >
+                                                        <strong>{{ data.item }}</strong>&nbsp;
+                                                    </v-chip>
+                                                </template>
+                                            </v-select>
+                                        </v-flex>
+                                    </v-layout>
+
+                                    <p class="mt-4">Or if it is too early, share the information about you call for paper.</p>
+                                    <v-layout wrap>
                                         <v-flex xs12 sm6>
+
                                             <v-dialog
                                                     ref="cfpMenuStart"
                                                     persistent
@@ -253,7 +281,6 @@
             </v-layout>
         </v-container>
         <template>
-            <v-btn @click="submitForm" color="deep-purple" dark>submit</v-btn>
 
             <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
@@ -264,6 +291,9 @@
             <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
                 There was an error, try again or contact using twitter <a href="https://twitter.com/aweconf">@aweconf</a>.
             </v-alert>
+
+            <v-btn @click="submitForm" color="deep-purple" dark>submit</v-btn>
+
         </template>
     </div>
 </template>
@@ -294,6 +324,7 @@ export default {
     url: 'http://',
     name: '',
     country: '',
+    chips: [],
     submitSuccess: false,
     submitFail: false,
     valid: false,
@@ -325,6 +356,10 @@ export default {
     }
   },
   methods: {
+    remove (item) {
+      this.chips.splice(this.chips.indexOf(item), 1)
+      this.chips = [...this.chips]
+    },
     submitForm () {
       this.$refs.form.validate()
 
@@ -351,7 +386,8 @@ export default {
         country: this.country,
         date: this.date,
         cfp: this.cfp,
-        category: lcCats
+        category: lcCats,
+        speaker: this.chips
       }
 
       axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
