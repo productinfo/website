@@ -38,6 +38,18 @@
                                 </v-card-text>
                             </template>
 
+                            <template v-if="conference.callforpaper">
+                                <v-card-text>At this very moment 🎤 call for paper is open, feel free to submit your talk.</v-card-text>
+                            </template>
+                            <template v-else>
+                                <v-card-text>
+                                    <p v-if="speakers.length > 0">🎤 You will be able to meet and listen to the talks of:</p>
+                                    <template v-for="speaker in speakers">
+                                        <twitter-badge :account="speaker" :key="speaker"></twitter-badge>
+                                    </template>
+                                </v-card-text>
+                            </template>
+
                             <template v-if="conference.geo">
                                 <map-aweconf :conference="conference"></map-aweconf>
                             </template>
@@ -45,12 +57,6 @@
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.homepage }}</a></v-card-text>
 
-                            <template v-if="conference.callforpaper">
-                                <v-card-text>At this very moment 🎤 call for paper is open, feel free to submit your talk.</v-card-text>
-                            </template>
-                            <template v-else>
-                                <v-card-text>Sadly call for paper 🎤 is closed.</v-card-text>
-                            </template>
                         </v-card-text>
                     </v-card>
                     <v-layout>
@@ -76,10 +82,12 @@
 import axios from 'axios'
 import Suggestion from './partials/Suggestion.vue'
 import Map from './partials/Map.vue'
+import TwitterBadge from './partials/TwitterBadge.vue'
 
 export default {
   name: 'Conference',
   components: {
+    'twitter-badge': TwitterBadge,
     'suggestion-aweconf': Suggestion,
     'map-aweconf': Map
   },
@@ -90,6 +98,7 @@ export default {
       limit: 5,
       conference: {},
       conferences: [],
+      speakers: [],
       markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
       showSpinner: true
@@ -112,6 +121,7 @@ export default {
         .get('https://aweconf.herokuapp.com/api/conference/id/' + this.$route.params.id)
         .then((resp) => {
           this.conference = resp.data.conference
+          this.speakers = this.conference.speakers
           this.showSpinner = false
         })
         .catch((err) => {
