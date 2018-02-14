@@ -17,7 +17,7 @@
                         <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
                         <p class="mt-4">{{ introMsg }}</p>
                     </div>
-                    <div class="pa-5">
+                    <div class="pa-5 centerize">
                         <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
                         <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
                             <img src="../assets/download-on-the-app-store.png" />
@@ -226,5 +226,8 @@ a {
 .hint-left {
     color: darkgray;
     text-align: left;
+}
+.centerize {
+    text-align: center !important;
 }
 </style>

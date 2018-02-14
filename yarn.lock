@@ -54,16 +54,6 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@fortawesome/fontawesome-common-types@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.2.tgz#d6aa075058f0c984d6e2ebcbc0052c1f7f9bea72"
-
-"@fortawesome/fontawesome@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome/-/fontawesome-1.1.3.tgz#7a4844345cbc7fb238f5f1788af73bd302ee9b80"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.2"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -2672,10 +2662,6 @@ follow-redirects@^1.2.5:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.3.0.tgz#f684871fc116d2e329fda55ef67687f4fabc905c"
   dependencies:
     debug "^3.1.0"
-
-font-awesome@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -6108,13 +6094,6 @@ vue-eslint-parser@^2.0.1:
     esquery "^1.0.0"
     lodash "^4.17.4"
 
-vue-fontawesome@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/vue-fontawesome/-/vue-fontawesome-0.0.2.tgz#b1b9c922652b9fb2d74fe66a28411628502bb3eb"
-  dependencies:
-    font-awesome "^4.7.0"
-    vue "^2.1.8"
-
 vue-headful@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-headful/-/vue-headful-1.0.0.tgz#e79353b0d6970e2d44300de9545c23be08b67c5e"
@@ -6174,13 +6153,13 @@ vue2-google-maps@^0.8.4:
     babel-runtime "^5.8.0"
     marker-clusterer-plus "^2.1.4"
 
-vue@^2.1.8, vue@^2.5.2:
+vue@^2.5.2:
   version "2.5.13"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.13.tgz#95bd31e20efcf7a7f39239c9aa6787ce8cf578e1"
 
-vuetify@^1.0.0-beta.5':
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.0.0-beta.5.tgz#f90de266858b9343bd0b85d5604f51aebc94f4e3"
+vuetify@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.0.0.tgz#c21b133334e3f0115bb1bd839be88454cda3882b"
 
 vuex@^3.0.1:
   version "3.0.1"

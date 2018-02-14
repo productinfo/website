@@ -1,5 +1,5 @@
 <template>
-    <v-btn small href="https://aweconf.herokuapp.com/auth/twitter" color="light-blue" class="white--text" v-if="success === false">
+    <v-btn small href="https://aweconf.herokuapp.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="success === false">
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
