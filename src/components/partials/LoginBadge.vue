@@ -10,7 +10,6 @@
         >
             <img :src="`https://avatars.io/twitter/${user.twitterUsername}`" :alt="user.twitterUsername" :title="user.twitterUsername">
         </v-avatar>
-        {{ user.twitterUsername }}
     </v-btn>
 </template>
 
