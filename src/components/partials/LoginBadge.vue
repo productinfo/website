@@ -35,7 +35,6 @@ export default {
           if (this.success) {
             this.user = resp.data.user
           }
-          console.log(resp)
         })
         .catch((err) => {
           console.log(err)
