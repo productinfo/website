@@ -3,14 +3,14 @@
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
-    <v-btn v-else>
+    <v-btn v-else flat fab>
         <v-avatar
                 :size="avatarSize"
                 class="grey lighten-4"
         >
-            <img :src="`https://avatars.io/twitter/${user.twitterUserId}`" :alt="user.twitterUserId" :title="user.twitterUserId">
+            <img :src="`https://avatars.io/twitter/${user.twitterUsername}`" :alt="user.twitterUsername" :title="user.twitterUsername">
         </v-avatar>
-        {{ user.twitterUserId }}
+        {{ user.twitterUsername }}
     </v-btn>
 </template>
 
