@@ -34,21 +34,14 @@
 
         <v-spacer></v-spacer>
 
-        <login-badge></login-badge>
-
     </v-toolbar>
 </template>
 
 <script>
 
-import LoginBadge from './LoginBadge.vue'
-
 export default {
   props: {
     items: Array
-  },
-  components: {
-    'login-badge': LoginBadge
   }
 }
 </script>
