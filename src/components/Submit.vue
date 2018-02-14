@@ -11,7 +11,7 @@
                     <v-card class="elevation-12">
                         <v-toolbar dark color="deep-purple">
                             <v-toolbar-title class="capitalized">
-                                📮 Submit a new Conference, Barcamp or Meetup
+                                📮 Submit a new Conference
                             </v-toolbar-title>
                             <v-spacer></v-spacer>
                         </v-toolbar>
@@ -20,6 +20,7 @@
 
                                 <v-container grid-list-xl fluid>
                                     <v-layout wrap>
+                                        <p>You can feel free to suggest Conferences, Meetups or any other event about sharing knowledge.</p>
                                         <v-flex xs12 sm12>
                                             <v-text-field
                                                     label="Name"
