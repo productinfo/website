@@ -29,14 +29,6 @@ export default {
   },
   methods: {
     fetchData () {
-      axios.get('https://aweconf.herokuapp.com/api/logged')
-        .then((resp) => {
-          console.log(resp)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-
       axios.get('https://aweconf.herokuapp.com/api/profile')
         .then((resp) => {
           this.success = resp.data.success
