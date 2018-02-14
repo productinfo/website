@@ -34,7 +34,7 @@
 
         <v-spacer></v-spacer>
 
-        <!--login-badge></login-badge-->
+        <login-badge></login-badge>
 
     </v-toolbar>
 </template>
