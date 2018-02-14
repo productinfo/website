@@ -5,6 +5,9 @@ Vue.use(Vuex)
 
 export const Store = new Vuex.Store({
   state: {
+    isAuthenticated: false,
+    user: null,
+    token: '',
     categories: [
       {
         emoji: '🧠',
