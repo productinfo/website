@@ -13,8 +13,9 @@
                 <v-flex xs12 sm12 md10 xl10>
                     <v-card class="elevation-12">
                         <v-toolbar dark color="deep-purple">
-                            <v-toolbar-title>{{ conference.title }} {{ conference.emojiflag }}</v-toolbar-title>
-                            <v-spacer></v-spacer>
+                            <v-toolbar-title>
+                                {{ conference.title }}
+                            </v-toolbar-title>
                         </v-toolbar>
                         <v-card-text>
                             <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
@@ -55,7 +56,7 @@
                             </template>
 
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
-                                conference.homepage }}</a></v-card-text>
+                                conference.title }} Website</a></v-card-text>
 
                         </v-card-text>
                     </v-card>
