@@ -122,7 +122,7 @@ export default {
 
   methods: {
     fetchData () {
-      axios.post('https://aweconf.herokuapp.com/api/conference/city', { city: this.$route.params.city })
+      axios.post('https://core.aweconf.com/api/conference/city', { city: this.$route.params.city })
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false

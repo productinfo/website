@@ -58,7 +58,7 @@
             </v-layout>
         </v-container>
 
-        <suggestioncard-aweconf url="https://aweconf.herokuapp.com/api/conference/last/6"></suggestioncard-aweconf>
+        <suggestioncard-aweconf url="https://core.aweconf.com/api/conference/last/6"></suggestioncard-aweconf>
 
         <v-container grid-list-xl text-xs-left fluid fill-height>
             <v-layout row wrap>
@@ -187,7 +187,7 @@ export default {
     fetchData () {
       this.showSpinner = true
 
-      axios.get('https://aweconf.herokuapp.com/api/conference')
+      axios.get('https://core.aweconf.com/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.calculateTotals(this.conferences.length)

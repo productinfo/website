@@ -390,7 +390,7 @@ export default {
         speakers: this.chips
       }
 
-      axios.post('https://aweconf.herokuapp.com/api/conference/submit', content)
+      axios.post('https://core.aweconf.com/api/conference/submit', content)
         .then((resp) => {
           this.submitSuccess = true
           this.showSpinner = false

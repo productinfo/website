@@ -97,7 +97,7 @@ export default {
   methods: {
     fetchData () {
       this.showSpinner = true
-      axios.get('https://aweconf.herokuapp.com/api/conference/category/' + this.$route.params.category)
+      axios.get('https://core.aweconf.com/api/conference/category/' + this.$route.params.category)
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.calculateTotals(this.conferences.length)

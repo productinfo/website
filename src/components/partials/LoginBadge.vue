@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     fetchData () {
-      axios.get('https://core.aweconf.com/auth/profile')
+      axios.get('https://core.aweconf.com/auth/profile', { withCredentials: true })
         .then((resp) => {
           this.success = resp.data.success
           if (this.success) {
