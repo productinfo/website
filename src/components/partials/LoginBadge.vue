@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       avatarSize: 32,
-      user: {},
+      user: null,
       success: false
     }
   },
@@ -31,9 +31,9 @@ export default {
     fetchData () {
       axios.get('https://core.aweconf.com/auth/profile', { withCredentials: true })
         .then((resp) => {
-          this.success = resp.data.success
-          if (this.success) {
-            this.user = resp.data.user
+          this.$store.state.isAuthenticated = resp.data.success
+          if (this.$store.state.isAuthenticated) {
+            this.$store.state.user = resp.data.user
           }
         })
         .catch((err) => {
