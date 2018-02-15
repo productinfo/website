@@ -1,5 +1,5 @@
 <template>
-    <v-btn small href="https://aweconf.herokuapp.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="success === false">
+    <v-btn small href="https://core.aweconf.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="$store.state.isAuthenticated === false">
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
@@ -8,7 +8,7 @@
                 :size="avatarSize"
                 class="grey lighten-4"
         >
-            <img :src="`https://avatars.io/twitter/${user.twitterUsername}`" :alt="user.twitterUsername" :title="user.twitterUsername">
+            <img :src="`https://avatars.io/twitter/${$store.state.user.username}`" :alt="$store.state.user.username" :title="$store.state.user.username">
         </v-avatar>
     </v-btn>
 </template>
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     fetchData () {
-      axios.get('https://aweconf.herokuapp.com/api/profile')
+      axios.get('https://core.aweconf.com/auth/profile')
         .then((resp) => {
           this.success = resp.data.success
           if (this.success) {
