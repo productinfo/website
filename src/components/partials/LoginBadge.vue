@@ -14,6 +14,9 @@
             </v-avatar>
         </v-btn>
         <v-list>
+            <v-list-tile @click="unapproved" v-if="this.role === 'Admin'">
+                <v-list-tile-title>Unapproved</v-list-tile-title>
+            </v-list-tile>
             <v-list-tile @click="logOut">
                 <v-list-tile-title>Logout</v-list-tile-title>
             </v-list-tile>
@@ -60,6 +63,9 @@ export default {
           this.$session.destroy()
           console.log(err)
         })
+    },
+    unapproved () {
+      this.$router.push('/unapproved')
     },
     logOut () {
       axios.get(this.$store.state.baseUrl + '/auth/logout', { withCredentials: true })
