@@ -58,7 +58,7 @@
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.title }} Website</a></v-card-text>
 
-                            <attendee :conferenceId="conference.id" :attendees="conference.attendee"></attendee>
+                            <attendee :conferenceId="conference.id" :attendees="attendees"></attendee>
 
                         </v-card-text>
                     </v-card>
@@ -104,6 +104,7 @@ export default {
       conference: {},
       conferences: [],
       speakers: [],
+      attendees: [],
       markers: [],
       googleMapsApiKey: 'AIzaSyAYEeB9GkE0xjCE_Km3RU_qJQfwGUsK8_Y',
       showSpinner: true
@@ -127,6 +128,7 @@ export default {
         .then((resp) => {
           this.conference = resp.data.conference
           this.speakers = this.conference.speakers
+          this.attendees = this.conference.attendees
           this.showSpinner = false
         })
         .catch((err) => {
