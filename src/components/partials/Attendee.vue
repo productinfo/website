@@ -29,6 +29,10 @@ export default {
   },
   methods: {
     triggerAttending () {
+      if (this.$store.state.isAuthenticated == false) {
+        return alert('In order to add you as attendee, login first using twitter')
+      }
+
       axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.user.username, withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
