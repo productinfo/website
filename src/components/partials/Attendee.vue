@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Attendees</h3>
+        <h3> <b v-if="attendees.length > 0">{{ attendee.length }}</b> Attendees</h3>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
                 <v-icon color="white">remove</v-icon>
