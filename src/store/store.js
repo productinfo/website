@@ -8,6 +8,7 @@ export const Store = new Vuex.Store({
     isAuthenticated: false,
     user: null,
     token: '',
+    baseUrl: 'https://core.aweconf.com',
     categories: [
       {
         emoji: '🧠',

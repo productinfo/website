@@ -121,7 +121,7 @@ export default {
 
   methods: {
     fetchData () {
-      axios.get('https://core.aweconf.com/api/conference/country/' + this.$route.params.country)
+      axios.get(this.$store.baseUrl + '/api/conference/country/' + this.$route.params.country)
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false

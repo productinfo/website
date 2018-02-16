@@ -58,6 +58,8 @@
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.title }} Website</a></v-card-text>
 
+                            <attendee :attendees="conference.attendee"></attendee>
+
                         </v-card-text>
                     </v-card>
                     <v-layout>
@@ -68,7 +70,7 @@
                                     </router-link>
                                     :
                                 </p>
-                                <suggestion-aweconf :url="`https://core.aweconf.com/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
+                                <suggestion-aweconf :url="`${this.$store.baseUrl}/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
                             </v-content>
                     </v-layout>
                 </v-flex>
@@ -84,13 +86,15 @@ import axios from 'axios'
 import Suggestion from './partials/Suggestion.vue'
 import Map from './partials/Map.vue'
 import TwitterBadge from './partials/TwitterBadge.vue'
+import Attendee from './partials/Attendee.vue'
 
 export default {
   name: 'Conference',
   components: {
     'twitter-badge': TwitterBadge,
     'suggestion-aweconf': Suggestion,
-    'map-aweconf': Map
+    'map-aweconf': Map,
+    'attendee': Attendee
   },
   data () {
     return {
@@ -119,7 +123,7 @@ export default {
       this.showSpinner = true
 
       axios
-        .get('https://core.aweconf.com/api/conference/id/' + this.$route.params.id)
+        .get(this.$store.baseUrl + '/api/conference/id/' + this.$route.params.id)
         .then((resp) => {
           this.conference = resp.data.conference
           this.speakers = this.conference.speakers
