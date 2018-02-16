@@ -22,11 +22,17 @@ export default {
   },
   data () {
     return {
-      isAttendee: false
+      isAttendee: false,
+      isAuth: false,
+      username: ''
     }
   },
   created () {
-    this.checkUserIsAttendee()
+    this.isAuth = localStorage.getItem('isAuth')
+    if (this.isAuth) {
+      this.username = localStorage.getItem('username')
+      this.checkUserIsAttendee()
+    }
   },
   methods: {
     triggerAttending () {
@@ -35,7 +41,7 @@ export default {
         return alert('In order to add you as attendee, login first using twitter')
       }
 
-      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: localStorage.getItem('username'), withCredentials: true })
+      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.username, withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.isAttendee = resp.data.isAttending
@@ -46,9 +52,7 @@ export default {
         })
     },
     checkUserIsAttendee () {
-      if (this.$store.state.user) {
-        this.isAttendee = !(this.attendees.indexOf(this.$store.state.user.username) !== -1)
-      }
+      this.isAttendee = !(this.attendees.indexOf(this.username) !== -1)
     }
   }
 }
