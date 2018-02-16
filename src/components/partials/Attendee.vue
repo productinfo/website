@@ -45,7 +45,9 @@ export default {
         })
     },
     checkUserIsAttendee () {
-      this.isAttendee = !(this.attendees.indexOf(this.$store.state.user.username) !== -1)
+      if (this.$store.state.user) {
+        this.isAttendee = !(this.attendees.indexOf(this.$store.state.user.username) !== -1)
+      }
     }
   }
 }
