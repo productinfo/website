@@ -1,10 +1,10 @@
 <template>
     <v-card-text>
         <h2>Attendees</h2>
-        <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
+        <v-btn fab color="deep-purple" @click="triggerAttending()" v-if="isAttendee">
             <v-icon>remove</v-icon>
         </v-btn>
-        <v-btn outline fab color="deep-purple" @click="triggerAttending" v-else>
+        <v-btn outline fab color="deep-purple" @click="triggerAttending()" v-else>
             <v-icon>add</v-icon>
         </v-btn>
 
