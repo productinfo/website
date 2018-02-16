@@ -34,7 +34,7 @@ export default {
         return alert('In order to add you as attendee, login first using twitter')
       }
 
-      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.user.username, withCredentials: true })
+      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.state.user.username, withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.isAttendee = resp.data.isAttending
@@ -45,7 +45,7 @@ export default {
         })
     },
     checkUserIsAttendee () {
-      this.isAttendee = !(this.attendees.indexOf(this.$store.user.username) !== -1)
+      this.isAttendee = !(this.attendees.indexOf(this.$store.state.user.username) !== -1)
     }
   }
 }
