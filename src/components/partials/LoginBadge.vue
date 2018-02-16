@@ -1,5 +1,5 @@
 <template>
-    <v-btn small href="`${this.$store.baseUrl}`/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="$store.state.isAuthenticated === false">
+    <v-btn small href="`${this.$store.state.baseUrl}`/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="$store.state.isAuthenticated === false">
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     fetchData () {
-      axios.get(this.$store.baseUrl + '/auth/profile', { withCredentials: true })
+      axios.get(this.$store.state.baseUrl + '/auth/profile', { withCredentials: true })
         .then((resp) => {
           this.$store.state.isAuthenticated = resp.data.success
           if (this.$store.state.isAuthenticated) {

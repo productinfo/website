@@ -122,7 +122,7 @@ export default {
 
   methods: {
     fetchData () {
-      axios.post(this.$store.baseUrl + '/api/conference/city', { city: this.$route.params.city })
+      axios.post(this.$store.state.baseUrl + '/api/conference/city', { city: this.$route.params.city })
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false

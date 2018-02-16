@@ -58,7 +58,7 @@
             </v-layout>
         </v-container>
 
-        <suggestioncard-aweconf :url="`${this.$store.baseUrl}/api/conference/last/6`"></suggestioncard-aweconf>
+        <suggestioncard-aweconf :url="`${this.$store.state.baseUrl}/api/conference/last/6`"></suggestioncard-aweconf>
 
         <v-container grid-list-xl text-xs-left fluid fill-height>
             <v-layout row wrap>
@@ -187,7 +187,7 @@ export default {
     fetchData () {
       this.showSpinner = true
 
-      axios.get(this.$store.baseUrl + '/api/conference')
+      axios.get(this.$store.state.baseUrl + '/api/conference')
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.calculateTotals(this.conferences.length)

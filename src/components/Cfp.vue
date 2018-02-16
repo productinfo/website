@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     fetchData () {
-      axios.get(this.$store.baseUrl + '/api/conference/call-for-paper/open')
+      axios.get(this.$store.state.baseUrl + '/api/conference/call-for-paper/open')
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.showSpinner = false

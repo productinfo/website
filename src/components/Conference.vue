@@ -70,7 +70,7 @@
                                     </router-link>
                                     :
                                 </p>
-                                <suggestion-aweconf :url="`${this.$store.baseUrl}/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
+                                <suggestion-aweconf :url="`${this.$store.state.baseUrl}/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
                             </v-content>
                     </v-layout>
                 </v-flex>
@@ -123,7 +123,7 @@ export default {
       this.showSpinner = true
 
       axios
-        .get(this.$store.baseUrl + '/api/conference/id/' + this.$route.params.id)
+        .get(this.$store.state.baseUrl + '/api/conference/id/' + this.$route.params.id)
         .then((resp) => {
           this.conference = resp.data.conference
           this.speakers = this.conference.speakers

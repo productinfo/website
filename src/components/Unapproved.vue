@@ -129,7 +129,7 @@ export default {
   methods: {
     fetchData () {
       this.showSpinner = true
-      axios.get(this.$store.baseUrl + '/api/conference/not-approved')
+      axios.get(this.$store.state.baseUrl + '/api/conference/not-approved')
         .then((resp) => {
           if (resp.data.success === true) {
             this.conferences = resp.data.conferences
@@ -146,7 +146,7 @@ export default {
       return currentDate.toLocaleDateString()
     },
     deleteConf (id) {
-      axios.put(this.$store.baseUrl + '/api/conference/delete/', {
+      axios.put(this.$store.state.baseUrl + '/api/conference/delete/', {
         id: id,
         password: this.$data.password
       }).then((resp) => {
@@ -161,7 +161,7 @@ export default {
       })
     },
     approveConf (id) {
-      axios.put(this.$store.baseUrl + '/api/conference/approve/', {
+      axios.put(this.$store.state.baseUrl + '/api/conference/approve/', {
         id: id,
         password: this.$data.password,
         push: this.push,

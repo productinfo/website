@@ -97,7 +97,7 @@ export default {
   methods: {
     fetchData () {
       this.showSpinner = true
-      axios.get(this.$store.baseUrl + '/api/conference/category/' + this.$route.params.category)
+      axios.get(this.$store.state.baseUrl + '/api/conference/category/' + this.$route.params.category)
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.calculateTotals(this.conferences.length)

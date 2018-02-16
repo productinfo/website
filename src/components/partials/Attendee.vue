@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     triggerAttending () {
-      axios.post(this.$store.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.user.username, withCredentials: true })
+      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.user.username, withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.isAttendee = resp.data.isAttending
