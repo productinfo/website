@@ -4,7 +4,7 @@
         Login with Twitter
     </v-btn>
 
-    <v-menu v-else offset-y>
+    <v-menu v-else offset-y open-on-hover>
         <v-btn flat fab slot="activator">
             <v-avatar
                     :size="avatarSize"
