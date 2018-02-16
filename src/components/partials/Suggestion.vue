@@ -8,7 +8,7 @@
                             <v-chip color="deep-purple" text-color="white">{{ category }}</v-chip>
                         </router-link>
                     </span>
-                <router-link :to="`/conference/${conference._id}`">{{ conference.title }}</router-link>
+                <router-link :to="`/conference/${conference.slug}`">{{ conference.title }}</router-link>
             </li>
         </ul>
     </div>

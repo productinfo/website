@@ -5,7 +5,7 @@
         <vue-headful
                 :title="`${conference.title} / Awesome Conferences`"
                 :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
-                :url="`https://aweconf.com/#/conference/${$route.params.id}`"
+                :url="`https://aweconf.com/#/conference/${$route.params.slug}`"
         />
 
         <v-container fluid fill-height>
@@ -125,7 +125,7 @@ export default {
       this.showSpinner = true
 
       axios
-        .get(this.$store.state.baseUrl + '/api/conference/id/' + this.$route.params.id)
+        .get(this.$store.state.baseUrl + '/api/conference/slug/' + this.$route.params.slug)
         .then((resp) => {
           if (resp.data.success) {
             this.conference = resp.data.conference

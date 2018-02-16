@@ -44,7 +44,7 @@
                                         icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                                         :clickable="true"
                                         :draggable="false"
-                                        @click="$router.push({ path: '/conference/' + m.id })"
+                                        @click="$router.push({ path: '/conference/' + m.slug })"
                                 ></gmap-marker>
                             </google-cluster>
                         </gmap-map>
@@ -82,7 +82,7 @@
                             hide-actions
                     >
                         <template slot="items" slot-scope="props">
-                            <td><router-link :to="`/conference/${props.item._id}`">{{ props.item.title }}</router-link></td>
+                            <td><router-link :to="`/conference/${props.item.slug}`">{{ props.item.title }}</router-link></td>
                             <td>{{ props.item.city }}</td>
                             <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                             <td>{{ formatDate(props.item.date.start) }}</td>
@@ -171,7 +171,7 @@ export default {
             let lng = parseFloat(conf.lon)
             // generate marker
             const position = {
-              id: conf._id,
+              slug: conf.slug,
               position: { lat: lat, lng: lng }
             }
             // add to list
