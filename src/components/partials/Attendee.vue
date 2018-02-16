@@ -28,8 +28,8 @@ export default {
     }
   },
   created () {
-    this.isAuth = localStorage.getItem('isAuth')
-    if (this.isAuth) {
+    this.isAuth = (localStorage.getItem('isAuth') === true)
+    if (this.isAuth === true) {
       this.username = localStorage.getItem('username')
       this.checkUserIsAttendee()
     }
@@ -37,7 +37,7 @@ export default {
   methods: {
     triggerAttending () {
       console.log('attending')
-      if (!localStorage.getItem('isAuthenticated')) {
+      if (this.isAuth === false) {
         return alert('In order to add you as attendee, login first using twitter')
       }
 

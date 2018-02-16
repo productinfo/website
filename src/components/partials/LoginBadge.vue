@@ -33,7 +33,7 @@ export default {
     fetchData () {
       axios.get(this.$store.state.baseUrl + '/auth/profile', { withCredentials: true })
         .then((resp) => {
-          if (resp.data.success) {
+          if (resp.data.success && resp.data.action !== 'logout') {
             this.isAuth = true
             localStorage.setItem('isAuthenticated', true)
             this.username = resp.data.user.username

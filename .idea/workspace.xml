@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.8642f9b71ca0164733e4c3b8bec26065.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.8642f9b71ca0164733e4c3b8bec26065.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.b2422d0b9bd536da48d6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.b2422d0b9bd536da48d6.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.1221726dd0ab342f17ee.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.1221726dd0ab342f17ee.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.312d443cbe07105b5f9d.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.312d443cbe07105b5f9d.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.395893f71408ef136dd2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.395893f71408ef136dd2.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/partials/Attendee.vue" afterPath="$PROJECT_DIR$/src/components/partials/Attendee.vue" />
       <change beforePath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" afterPath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
     </list>
@@ -21,21 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginBadge.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginBadge.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
+            <state relative-caret-position="525">
+              <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Attendee.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Attendee.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="352">
+              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -137,8 +136,8 @@
         <option value="$PROJECT_DIR$/src/components/All.vue" />
         <option value="$PROJECT_DIR$/src/components/Conference.vue" />
         <option value="$PROJECT_DIR$/src/store/store.js" />
-        <option value="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/Attendee.vue" />
+        <option value="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
       </list>
     </option>
   </component>
@@ -367,22 +366,23 @@
       <workItem from="1518724089757" duration="903000" />
       <workItem from="1518726176344" duration="1221000" />
       <workItem from="1518731063408" duration="974000" />
-      <workItem from="1518772148792" duration="8282000" />
+      <workItem from="1518772148792" duration="8501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205926000" />
+    <option name="totallyTimeSpent" value="206145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16852792" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16852792" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2956381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -778,18 +778,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
+        <state relative-caret-position="352">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="525">
+          <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
           <folding />
         </state>
       </provider>
