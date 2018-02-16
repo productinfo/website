@@ -1,6 +1,6 @@
 <template>
     <v-card-text>
-        <h2>Attendees</h2>
+        <h3>Attendees</h3>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
                 <v-icon color="white">remove</v-icon>
