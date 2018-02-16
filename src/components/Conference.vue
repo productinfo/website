@@ -60,7 +60,6 @@
 
                             <attendees-aweconf :reload="fetchData" :conferenceId="conference.id" :attendees="attendees"></attendees-aweconf>
 
-
                         </v-card-text>
                     </v-card>
                     <v-layout>
@@ -124,8 +123,16 @@ export default {
     fetchData () {
       this.showSpinner = true
 
+      var url = '';
+
+      if (this.$route.params.slug) {
+        url = this.$store.state.baseUrl + '/api/conference/slug/' + this.$route.params.slug
+      } else if (this.$route.params.id) {
+        url = this.$store.state.baseUrl + '/api/conference/id/' + this.$route.params.id
+      }
+
       axios
-        .get(this.$store.state.baseUrl + '/api/conference/slug/' + this.$route.params.slug)
+        .get(url)
         .then((resp) => {
           if (resp.data.success) {
             this.conference = resp.data.conference
