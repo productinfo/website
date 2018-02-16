@@ -126,9 +126,12 @@ export default {
       axios
         .get(this.$store.state.baseUrl + '/api/conference/id/' + this.$route.params.id)
         .then((resp) => {
-          this.conference = resp.data.conference
-          this.speakers = this.conference.speakers
-          this.attendees = this.conference.attendees
+          if (resp.data.success) {
+            this.conference = resp.data.conference
+            this.speakers = this.conference.speakers
+            this.attendees = this.conference.attendees
+          }
+
           this.showSpinner = false
         })
         .catch((err) => {

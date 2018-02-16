@@ -14,7 +14,9 @@
                 <v-icon>add</v-icon>
             </v-btn>
         </template>
-        <twitter-badge v-for="attendee in attendees" :account="attendee" :key="attendee"></twitter-badge>
+        <template v-for="attendee in attendees">
+            <twitter-badge  :account="attendee" :key="attendee"></twitter-badge>
+        </template>
     </v-card-text>
 </template>
 
