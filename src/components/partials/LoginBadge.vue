@@ -60,6 +60,7 @@ export default {
     },
     logOut () {
       this.$session.destroy()
+      this.isAuth = false
     }
   }
 }
