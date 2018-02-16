@@ -36,7 +36,7 @@
                                 hide-actions
                         >
                             <template slot="items" slot-scope="props">
-                                <td><router-link :to="`/conference/${props.item.slug}`">{{ props.item.title }}</router-link></td>
+                                <td><router-link :to="`/c/${props.item.slug}`">{{ props.item.title }}</router-link></td>
                                 <td>{{ props.item.city }}</td>
                                 <td>{{ props.item.emojiflag }} {{ props.item.country }}</td>
                                 <td>{{ formatDate(props.item.date.start) }}</td>

@@ -5,7 +5,7 @@
         <vue-headful
                 :title="`${conference.title} / Awesome Conferences`"
                 :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
-                :url="`https://aweconf.com/#/conference/${$route.params.slug}`"
+                :url="`https://aweconf.com/#/c/${$route.params.slug}`"
         />
 
         <v-container fluid fill-height>

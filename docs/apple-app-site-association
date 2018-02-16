@@ -5,9 +5,9 @@
       {
         "appID": "F9FTQCB4H8.boostco.de.amc",
         "paths": [
-          "/conference/*",
-          "/#/conference/*",
-          "#/conference/*",
+          "/c/*",
+          "/#/c/*",
+          "#/c/*",
           "*"
         ]
       }

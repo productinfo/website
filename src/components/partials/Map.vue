@@ -12,7 +12,7 @@
                             icon="https://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                             :clickable="true"
                             :draggable="false"
-                            @click="$router.push({ path: '/conference/' + conference.slug })"
+                            @click="$router.push({ path: '/c/' + conference.slug })"
                     ></gmap-marker>
                 </google-cluster>
             </gmap-map>

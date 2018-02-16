@@ -2,7 +2,7 @@
     <v-container grid-list-xl text-xs-left fluid fill-height>
     <v-layout row wrap>
         <v-flex xs12 sm12 md4 xl4 v-for="conference in conferences" :key="conference.id" >
-            <v-card class="elevation-1" :to="`/conference/${conference.slug}`">
+            <v-card class="elevation-1" :to="`/c/${conference.slug}`">
                 <v-card-title>
                     <h2>{{ conference.title }}</h2>
                 </v-card-title>

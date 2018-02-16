@@ -47,8 +47,13 @@ export default new Router({
       component: Category
     },
     {
-      path: '/conference/:slug',
+      path: '/c/:slug',
       name: 'Conference',
+      component: Conference
+    },
+    {
+      path: '/conference/:id',
+      name: 'ConferenceId',
       component: Conference
     },
     {
