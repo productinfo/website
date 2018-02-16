@@ -59,8 +59,17 @@ export default {
         })
     },
     logOut () {
-      this.$session.destroy()
-      this.isAuth = false
+      axios.get(this.$store.state.baseUrl + '/auth/logout', { withCredentials: true })
+        .then((resp) => {
+          if (resp.data.success && resp.data.action === 'logout') {
+            this.$session.destroy()
+            this.isAuth = false
+          }
+        })
+        .catch((err) => {
+          this.$session.destroy()
+          console.log(err)
+        })
     }
   }
 }
