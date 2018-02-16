@@ -3,10 +3,10 @@
         <h2>Attendees</h2>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
-                <v-icon>remove</v-icon>
+                <v-icon color="white">remove</v-icon>
             </v-btn>
             <v-btn fab color="deep-purple" @click="triggerAttending" v-else>
-                <v-icon>add</v-icon>
+                <v-icon color="white">add</v-icon>
             </v-btn>
         </template>
         <template v-else>
@@ -14,7 +14,6 @@
                 <v-icon>add</v-icon>
             </v-btn>
         </template>
-
         <twitter-badge v-for="attendee in attendees" :account="attendee" :key="attendee"></twitter-badge>
     </v-card-text>
 </template>
@@ -36,8 +35,6 @@ export default {
   },
   created () {
     this.isAuth = (this.$session.get('isAuthenticated') === true)
-    console.log(this.$session.get('isAuthenticated'))
-    console.log(this.isAuth)
     if (this.isAuth === true) {
       this.username = this.$session.get('username')
       this.checkUserIsAttendee()
