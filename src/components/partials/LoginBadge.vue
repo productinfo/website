@@ -1,5 +1,5 @@
 <template>
-    <v-btn small href="https://core.aweconf.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="$store.state.isAuthenticated === false">
+    <v-btn small href="https://core.aweconf.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="!localStorage.getItem('isAuthenticated')">
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
@@ -31,9 +31,12 @@ export default {
     fetchData () {
       axios.get(this.$store.state.baseUrl + '/auth/profile', { withCredentials: true })
         .then((resp) => {
-          this.$store.state.isAuthenticated = resp.data.success
-          if (this.$store.state.isAuthenticated) {
-            this.$store.state.user = resp.data.user
+          if (resp.data.success) {
+            localStorage.setItem('isAuthenticated', true)
+            localStorage.setItem('username', resp.data.user.username)
+          } else {
+            localStorage.removeItem('isAuthenticated')
+            localStorage.removeItem('username')
           }
         })
         .catch((err) => {

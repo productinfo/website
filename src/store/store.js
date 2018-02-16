@@ -5,9 +5,6 @@ Vue.use(Vuex)
 
 export const Store = new Vuex.Store({
   state: {
-    isAuthenticated: false,
-    user: null,
-    token: '',
     baseUrl: 'https://core.aweconf.com',
     categories: [
       {

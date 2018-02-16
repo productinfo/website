@@ -31,11 +31,11 @@ export default {
   methods: {
     triggerAttending () {
       console.log('attending')
-      if (this.$store.state.isAuthenticated === false) {
+      if (!localStorage.getItem('isAuthenticated')) {
         return alert('In order to add you as attendee, login first using twitter')
       }
 
-      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.state.user.username, withCredentials: true })
+      axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: localStorage.getItem('username'), withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.isAttendee = resp.data.isAttending
