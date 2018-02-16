@@ -1,12 +1,19 @@
 <template>
     <v-card-text>
         <h2>Attendees</h2>
-        <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
-            <v-icon>remove</v-icon>
-        </v-btn>
-        <v-btn outline fab color="deep-purple" @click="triggerAttending" v-else>
-            <v-icon>add</v-icon>
-        </v-btn>
+        <template v-if="isAuth">
+            <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
+                <v-icon>remove</v-icon>
+            </v-btn>
+            <v-btn fab color="deep-purple" @click="triggerAttending" v-else>
+                <v-icon>add</v-icon>
+            </v-btn>
+        </template>
+        <template v-else>
+            <v-btn fab outline color="deep-purple" @click="triggerAttending" v-if="!isAttendee">
+                <v-icon>add</v-icon>
+            </v-btn>
+        </template>
 
         <twitter-badge v-for="attendee in attendees" :account="attendee" :key="attendee"></twitter-badge>
     </v-card-text>
