@@ -35,11 +35,11 @@ export default {
     }
   },
   created () {
-    this.isAuth = (localStorage.getItem('isAuthenticated') === true)
-    console.log(localStorage.getItem('isAuthenticated'))
+    this.isAuth = (this.$session.get('isAuthenticated') === 'true')
+    console.log(this.$session.get('isAuthenticated'))
     console.log(this.isAuth)
     if (this.isAuth === true) {
-      this.username = localStorage.getItem('username')
+      this.username = this.$session.get('username')
       this.checkUserIsAttendee()
     }
   },

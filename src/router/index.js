@@ -15,6 +15,7 @@ import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
 import Cfp from '@/components/Cfp'
+import VueSession from 'vue-session'
 
 // use
 Vue.use(Router)
@@ -25,6 +26,7 @@ Vue.use(VueGoogleMaps, {
     key: 'AIzaSyCqZUt0HuQwFtO1P8HN0wsZJohNaiifd4g'
   }
 })
+Vue.use(VueSession)
 
 //  component
 Vue.component('vue-headful', vueHeadful)

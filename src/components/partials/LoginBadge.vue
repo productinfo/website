@@ -35,17 +35,17 @@ export default {
         .then((resp) => {
           if (resp.data.success && resp.data.action !== 'logout') {
             this.isAuth = true
-            localStorage.setItem('isAuthenticated', true)
             this.username = resp.data.user.username
-            localStorage.setItem('username', resp.data.user.username)
+
+            this.$session.start()
+            this.$session.set('isAuthenticated', this.isAuth)
+            this.$session.set('username', this.username)
           } else {
-            this.isAuth = false
-            localStorage.removeItem('isAuthenticated')
-            localStorage.removeItem('username')
+            this.$session.destroy()
           }
         })
         .catch((err) => {
-          this.isAuth = false
+          this.$session.destroy()
           console.log(err)
         })
     }
