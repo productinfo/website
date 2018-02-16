@@ -30,6 +30,7 @@ export default {
   },
   methods: {
     triggerAttending (event) {
+      console.log('attending')
       if (this.$store.state.isAuthenticated === false) {
         return alert('In order to add you as attendee, login first using twitter')
       }
