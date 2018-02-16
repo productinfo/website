@@ -166,9 +166,9 @@ export default {
         // loop confs
         for (var conf of this.conferences) {
           // if lat has a value
-          if (conf.lat !== 0 && conf.lon !== 0) {
-            let lat = parseFloat(conf.lat)
-            let lng = parseFloat(conf.lon)
+          if (conf.geo.lat !== 0 && conf.geo.lng !== 0) {
+            let lat = parseFloat(conf.geo.lat)
+            let lng = parseFloat(conf.geo.lng)
             // generate marker
             const position = {
               slug: conf.slug,
