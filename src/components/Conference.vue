@@ -58,7 +58,7 @@
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.title }} Website</a></v-card-text>
 
-                            <attendee :attendees="conference.attendee"></attendee>
+                            <attendee :conferenceId="conference.id" :attendees="conference.attendee"></attendee>
 
                         </v-card-text>
                     </v-card>

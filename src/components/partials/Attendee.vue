@@ -16,7 +16,8 @@ import axios from 'axios'
 
 export default {
   props: {
-    attendees: []
+    attendees: [],
+    conferenceId: ''
   },
   data () {
     return {
@@ -28,10 +29,10 @@ export default {
   },
   methods: {
     triggerAttending () {
-      axios.post(this.$store.baseUrl + '', {})
+      axios.post(this.$store.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.$store.user.username, withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
-            this.isAttendee = this.conferences.length
+            this.isAttendee = resp.data.isAttending
           }
         })
         .catch((err) => {
