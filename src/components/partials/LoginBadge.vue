@@ -1,5 +1,5 @@
 <template>
-    <v-btn small href="`${$store.state.baseUrl}/auth/twitter`" color="light-blue" class="white--text hidden-xs-only" v-if="$store.state.isAuthenticated === false">
+    <v-btn small href="https://core.aweconf.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="$store.state.isAuthenticated === false">
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
