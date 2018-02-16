@@ -1,5 +1,5 @@
 <template>
-    <v-card-title>
+    <v-card-text>
         <h3>Attendees</h3>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
@@ -14,7 +14,8 @@
                 <v-icon>add</v-icon>
             </v-btn>
         </template>
-    </v-card-title>
+        <twitter-badge v-for="attendee in attendees" :account="attendee" :key="attendee"></twitter-badge>
+    </v-card-text>
 </template>
 
 <script>
@@ -22,6 +23,7 @@ import axios from 'axios'
 
 export default {
   props: {
+    attendees: [],
     conferenceId: ''
   },
   data () {
@@ -32,7 +34,11 @@ export default {
     }
   },
   created () {
+    console.log(this.attendees)
     this.isAuth = (this.$session.get('isAuthenticated') === true)
+  },
+  updated () {
+    console.log(this.attendees)
     if (this.isAuth === true) {
       this.username = this.$session.get('username')
       this.checkUserIsAttendee()
@@ -56,6 +62,7 @@ export default {
     },
     checkUserIsAttendee () {
       this.isAttendee = (this.attendees.indexOf(this.username) !== -1)
+      console.log(this.isAttendee)
     }
   }
 }
