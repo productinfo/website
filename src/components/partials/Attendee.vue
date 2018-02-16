@@ -1,5 +1,5 @@
 <template>
-    <v-card-text>
+    <div>
         <h3>Attendees</h3>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
@@ -17,16 +17,22 @@
         <template v-for="attendee in attendees">
             <twitter-badge :account="attendee" :key="attendee"></twitter-badge>
         </template>
-    </v-card-text>
+    </div>
+
 </template>
 
 <script>
 import axios from 'axios'
+import TwitterBadge from './TwitterBadge.vue'
 
 export default {
+  components: {
+    'twitter-badge': TwitterBadge
+  },
   props: {
-    attendees: [],
-    conferenceId: ''
+    attendees: Array,
+    conferenceId: String,
+    reload: Function
   },
   data () {
     return {
@@ -54,6 +60,7 @@ export default {
         .then((resp) => {
           if (resp.data.success === true) {
             this.isAttendee = resp.data.isAttending
+            this.reload()
           }
         })
         .catch((err) => {
