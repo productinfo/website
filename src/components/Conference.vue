@@ -58,7 +58,14 @@
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.title }} Website</a></v-card-text>
 
-                            <attendee :conferenceId="conference.id" :attendees="attendees"></attendee>
+                            <attendees-aweconf :conferenceId="conference.id"></attendees-aweconf>
+
+                            <v-card-text>
+                                <template v-for="attendee in attendees">
+                                    <twitter-badge  :account="attendee" :key="attendee"></twitter-badge>
+                                </template>
+                            </v-card-text>
+
 
                         </v-card-text>
                     </v-card>
@@ -87,6 +94,7 @@ import Suggestion from './partials/Suggestion.vue'
 import Map from './partials/Map.vue'
 import TwitterBadge from './partials/TwitterBadge.vue'
 import Attendee from './partials/Attendee.vue'
+import AttendeesAweconf from './partials/Attendee'
 
 export default {
   name: 'Conference',
@@ -94,7 +102,7 @@ export default {
     'twitter-badge': TwitterBadge,
     'suggestion-aweconf': Suggestion,
     'map-aweconf': Map,
-    'attendee': Attendee
+    'attendees-aweconf': Attendee
   },
   data () {
     return {
