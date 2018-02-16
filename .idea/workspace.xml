@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.d15791ebfbb1e83729321a449ecaa48b.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.d15791ebfbb1e83729321a449ecaa48b.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.e18a912997a437f7cf95.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.e18a912997a437f7cf95.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.9d8f80606e75f9e7526e.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.9d8f80606e75f9e7526e.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" afterPath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +46,8 @@
       <file leaf-file-name="LoginBadge.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+            <state relative-caret-position="240">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -364,12 +371,12 @@
       <workItem from="1518731063408" duration="974000" />
       <workItem from="1518772148792" duration="19753000" />
       <workItem from="1518804184443" duration="606000" />
-      <workItem from="1518808433966" duration="649000" />
+      <workItem from="1518808433966" duration="735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218652000" />
+    <option name="totallyTimeSpent" value="218738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1080" extended-state="0" />
@@ -768,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+        <state relative-caret-position="240">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding />
         </state>
       </provider>

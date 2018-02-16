@@ -14,8 +14,8 @@
             </v-avatar>
         </v-btn>
         <v-list>
-            <v-list-tile>
-                <v-list-tile-title :onclick="logOut">Logout</v-list-tile-title>
+            <v-list-tile @onclick="logOut">
+                <v-list-tile-title>Logout</v-list-tile-title>
             </v-list-tile>
         </v-list>
     </v-menu>
