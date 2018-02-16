@@ -55,18 +55,6 @@
 
         <template class="mt5">
             <v-flex xs6 offset-xs1>
-                <v-text-field
-                        name="input-10-1"
-                        label="Enter your password"
-                        v-model="password"
-                        min="8"
-                        :append-icon="e1 ? 'visibility' : 'visibility_off'"
-                        :append-icon-cb="() => (e1 = !e1)"
-                        :type="e1 ? 'password' : 'text'"
-                        counter
-                        required
-                        color="deep-purple"
-                ></v-text-field>
                 <v-checkbox
                         label="Publish on Twitter"
                         v-model="twitter"
@@ -93,8 +81,6 @@ export default {
       conferences: [],
       showSpinner: true,
       dialog: false,
-      password: '',
-      e1: false,
       remaining: 0,
       tmp: '',
       search: '',
@@ -158,8 +144,7 @@ export default {
     },
     deleteConf (id) {
       axios.put(this.$store.state.baseUrl + '/api/conference/delete/', {
-        id: id,
-        password: this.$data.password
+        id: id
       }, { withCredentials: true }).then((resp) => {
         if (resp.data.success === true) {
           this.fetchData()
@@ -174,7 +159,6 @@ export default {
     approveConf (id) {
       axios.put(this.$store.state.baseUrl + '/api/conference/approve/', {
         id: id,
-        password: this.$data.password,
         push: this.push,
         twitter: this.twitter
       }, { withCredentials: true })
