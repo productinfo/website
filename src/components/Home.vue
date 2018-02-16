@@ -114,7 +114,7 @@ export default {
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
-      quickLook: 'have a quick look at the last ⏰ conference added so far:',
+      quickLook: 'have a quick look at the next ⏰ upcoming conferences:',
       discoverMore: 'or 🧐 discover more browsing all...',
       conferences: [],
       lastConferences: [],
@@ -133,8 +133,8 @@ export default {
         },
         { text: 'City', sortable: false, align: 'left', value: 'city' },
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
-        { text: 'Start', value: 'startdate', align: 'left' },
-        { text: 'End', value: 'enddate', align: 'left' }
+        { text: 'Start', value: 'date.start', align: 'left' },
+        { text: 'End', value: 'date.end', align: 'left' }
       ]
     }
   },
