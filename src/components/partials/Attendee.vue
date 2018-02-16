@@ -28,7 +28,7 @@ export default {
     }
   },
   created () {
-    this.isAuth = (localStorage.getItem('isAuth') === true)
+    this.isAuth = (localStorage.getItem('isAuthenticated') === true)
     if (this.isAuth === true) {
       this.username = localStorage.getItem('username')
       this.checkUserIsAttendee()
