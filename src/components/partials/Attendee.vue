@@ -35,7 +35,7 @@ export default {
     }
   },
   created () {
-    this.isAuth = (this.$session.get('isAuthenticated') === 'true')
+    this.isAuth = (this.$session.get('isAuthenticated') === true)
     console.log(this.$session.get('isAuthenticated'))
     console.log(this.isAuth)
     if (this.isAuth === true) {
