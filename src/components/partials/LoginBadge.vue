@@ -30,6 +30,7 @@ export default {
     return {
       isAuth: false,
       username: '',
+      role: '',
       avatarSize: 32,
       user: null,
       success: false
@@ -45,10 +46,12 @@ export default {
           if (resp.data.success && resp.data.action !== 'logout') {
             this.isAuth = true
             this.username = resp.data.user.username
+            this.role = resp.data.user.role
 
             this.$session.start()
             this.$session.set('isAuthenticated', this.isAuth)
             this.$session.set('username', this.username)
+            this.$session.set('role', this.role)
           } else {
             this.$session.destroy()
           }

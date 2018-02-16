@@ -120,6 +120,14 @@ export default {
 
   created () {
     this.fetchData()
+
+    if (this.$session.get('isAuthenticated') === true) {
+      if (this.$session.get('role') !== 'Admin') {
+        this.redirect()
+      }
+    } else {
+      this.redirect()
+    }
   },
 
   watch: {
@@ -127,6 +135,9 @@ export default {
   },
 
   methods: {
+    redirect () {
+      this.$router.push('/')
+    },
     fetchData () {
       this.showSpinner = true
       axios.get(this.$store.state.baseUrl + '/api/conference/not-approved')
@@ -149,7 +160,7 @@ export default {
       axios.put(this.$store.state.baseUrl + '/api/conference/delete/', {
         id: id,
         password: this.$data.password
-      }).then((resp) => {
+      }, { withCredentials: true }).then((resp) => {
         if (resp.data.success === true) {
           this.fetchData()
           this.dialog = false
@@ -166,7 +177,7 @@ export default {
         password: this.$data.password,
         push: this.push,
         twitter: this.twitter
-      })
+      }, { withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.fetchData()
