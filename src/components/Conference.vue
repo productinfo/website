@@ -58,7 +58,7 @@
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.title }} Website</a></v-card-text>
 
-                            <attendees-aweconf @reload="fetchData" :conferenceId="conference.id" :attendees="attendees"></attendees-aweconf>
+                            <attendees-aweconf :reload="fetchData" :conferenceId="conference.id" :attendees="attendees"></attendees-aweconf>
 
 
                         </v-card-text>
