@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/partials/Attendee.vue" afterPath="$PROJECT_DIR$/src/components/partials/Attendee.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="Attendee.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="672">
+              <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -359,12 +360,12 @@
       <workItem from="1518724089757" duration="903000" />
       <workItem from="1518726176344" duration="1221000" />
       <workItem from="1518731063408" duration="974000" />
-      <workItem from="1518772148792" duration="9201000" />
+      <workItem from="1518772148792" duration="9788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206845000" />
+    <option name="totallyTimeSpent" value="207432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1080" extended-state="0" />
@@ -781,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="672">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
           <folding />
         </state>
       </provider>

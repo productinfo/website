@@ -36,6 +36,7 @@ export default {
   },
   created () {
     this.isAuth = (localStorage.getItem('isAuthenticated') === true)
+    console.log(this.isAuth)
     if (this.isAuth === true) {
       this.username = localStorage.getItem('username')
       this.checkUserIsAttendee()
@@ -44,7 +45,7 @@ export default {
   methods: {
     triggerAttending () {
       if (this.isAuth === false) {
-        return alert('In order to add you as attendee, login first using twitter')
+        return alert('In order to add you as attendee, login first using Twitter.')
       }
 
       axios.post(this.$store.state.baseUrl + '/api/attending', { id: this.conferenceId, twitter: this.username, withCredentials: true })
@@ -58,7 +59,7 @@ export default {
         })
     },
     checkUserIsAttendee () {
-      this.isAttendee = !(this.attendees.indexOf(this.username) !== -1)
+      this.isAttendee = (this.attendees.indexOf(this.username) !== -1)
     }
   }
 }
