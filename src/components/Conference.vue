@@ -5,7 +5,7 @@
         <vue-headful
                 :title="`${conference.title} / Awesome Conferences`"
                 :description="`Discover more about ${conference.title} conference in ${conference.city} ${conference.country}`"
-                :url="`https://aweconf.com/#/c/${$route.params.slug}`"
+                :url="`https://aweconf.com/#/c/${conferece.slug}`"
         />
 
         <v-container fluid fill-height>
@@ -123,11 +123,13 @@ export default {
     fetchData () {
       this.showSpinner = true
 
-      var url = '';
+      var url = ''
 
       if (this.$route.params.slug) {
         url = this.$store.state.baseUrl + '/api/conference/slug/' + this.$route.params.slug
-      } else if (this.$route.params.id) {
+      }
+
+      if (this.$route.params.id) {
         url = this.$store.state.baseUrl + '/api/conference/id/' + this.$route.params.id
       }
 

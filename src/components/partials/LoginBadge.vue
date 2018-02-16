@@ -3,14 +3,23 @@
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
-    <v-btn v-else flat fab>
-        <v-avatar
-                :size="avatarSize"
-                class="grey lighten-4"
-        >
-            <img :src="`https://avatars.io/twitter/${username}`" :alt="username" :title="username">
-        </v-avatar>
-    </v-btn>
+
+    <v-menu v-else offset-y>
+        <v-btn flat fab slot="activator">
+            <v-avatar
+                    :size="avatarSize"
+                    class="grey lighten-4"
+            >
+                <img :src="`https://avatars.io/twitter/${username}`" :alt="username" :title="username">
+            </v-avatar>
+        </v-btn>
+        <v-list>
+            <v-list-tile>
+                <v-list-tile-title :onclick="logOut">Logout</v-list-tile-title>
+            </v-list-tile>
+        </v-list>
+    </v-menu>
+
 </template>
 
 <script>
@@ -48,6 +57,9 @@ export default {
           this.$session.destroy()
           console.log(err)
         })
+    },
+    logOut () {
+      this.$session.destroy()
     }
   }
 }
