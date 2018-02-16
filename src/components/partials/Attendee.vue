@@ -1,10 +1,10 @@
 <template>
     <v-card-text>
         <h2>Attendees</h2>
-        <v-btn fab color="deep-purple" @click="triggerAttending()" v-if="isAttendee">
+        <v-btn fab color="deep-purple" v-on:click="triggerAttending" v-if="isAttendee">
             <v-icon>remove</v-icon>
         </v-btn>
-        <v-btn outline fab color="deep-purple" @click="triggerAttending()" v-else>
+        <v-btn outline fab color="deep-purple" v-on:click="triggerAttending" v-else>
             <v-icon>add</v-icon>
         </v-btn>
 
@@ -29,7 +29,7 @@ export default {
     this.checkUserIsAttendee()
   },
   methods: {
-    triggerAttending () {
+    triggerAttending (event) {
       if (this.$store.state.isAuthenticated === false) {
         return alert('In order to add you as attendee, login first using twitter')
       }
