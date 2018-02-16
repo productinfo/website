@@ -1,5 +1,5 @@
 <template>
-    <v-btn small href="https://core.aweconf.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="isAuth">
+    <v-btn small href="https://core.aweconf.com/auth/twitter" color="light-blue" class="white--text hidden-xs-only" v-if="!isAuth">
         <v-icon left small dark>fab fa-twitter</v-icon>
         Login with Twitter
     </v-btn>
@@ -39,11 +39,13 @@ export default {
             this.username = resp.data.user.username
             localStorage.setItem('username', resp.data.user.username)
           } else {
+            this.isAuth = false
             localStorage.removeItem('isAuthenticated')
             localStorage.removeItem('username')
           }
         })
         .catch((err) => {
+          this.isAuth = false
           console.log(err)
         })
     }

@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     triggerAttending () {
-      console.log('attending')
       if (this.isAuth === false) {
         return alert('In order to add you as attendee, login first using twitter')
       }
