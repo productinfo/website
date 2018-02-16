@@ -14,7 +14,9 @@
                 <v-icon>add</v-icon>
             </v-btn>
         </template>
-        <twitter-badge v-for="attendee in attendees" :account="attendee" :key="attendee"></twitter-badge>
+        <template v-for="attendee in attendees">
+            <twitter-badge :account="attendee" :key="attendee"></twitter-badge>
+        </template>
     </v-card-text>
 </template>
 
@@ -34,11 +36,9 @@ export default {
     }
   },
   created () {
-    console.log(this.attendees)
     this.isAuth = (this.$session.get('isAuthenticated') === true)
   },
   updated () {
-    console.log(this.attendees)
     if (this.isAuth === true) {
       this.username = this.$session.get('username')
       this.checkUserIsAttendee()
