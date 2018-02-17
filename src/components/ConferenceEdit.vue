@@ -395,7 +395,7 @@ export default {
               end: resp.data.conference.date.end
             }
 
-            this.categories = resp.data.conference.categories
+            this.categories = resp.data.conference.category
             this.where = resp.data.conference.where
             this.city = resp.data.conference.city
             this.twitter = resp.data.conference.twitter
