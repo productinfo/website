@@ -28,8 +28,8 @@
                                 hide-actions
                         >
                             <template slot="items" slot-scope="props">
-                                <td><a :href="`/c/${props.item.slug}`">{{ props.item.slug }}</a></td>
-                                <td>{{ props.item.user }}</td>
+                                <td><a :to="`/c/${props.item.slug}`">{{ props.item.slug }}</a></td>
+                                <td><a :href="`https://twitter.com/${props.item.user}`">{{ props.item.user }}</a></td>
                                 <td>
                                     <v-btn fab small color="green" dark @click.native="approveRight(props.item._id)">👍</v-btn>
                                     <v-btn fab small color="red" dark @click.native="deleteRight(props.item._id)">👎</v-btn>
