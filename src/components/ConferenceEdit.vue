@@ -291,7 +291,7 @@
                 There was an error, try again or contact using twitter <a href="https://twitter.com/aweconf">@aweconf</a>.
             </v-alert>
 
-            <v-btn @click="updateData" color="deep-purple" dark class="mb-5 mt-4">submit</v-btn>
+            <v-btn @click="updateData" color="deep-purple" dark class="mb-5 mt-4">update</v-btn>
 
         </template>
     </div>
