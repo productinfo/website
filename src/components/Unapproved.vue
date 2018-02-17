@@ -97,7 +97,7 @@ export default {
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'date.start', align: 'left' },
         { text: 'End', value: 'date.end', align: 'left' },
-        { text: 'Manage', sortable: false, align: 'left' }
+        { text: 'Manage', sortable: false, align: 'right' }
       ]
     }
   },

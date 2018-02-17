@@ -11,7 +11,7 @@
                     <v-card class="elevation-12">
                         <v-toolbar dark color="deep-purple">
                             <v-toolbar-title class="capitalized">
-                                😱 {{ remaining }} to be approved
+                                😱 {{ remaining }} requesting rights
                             </v-toolbar-title>
                             <v-spacer></v-spacer>
                         </v-toolbar>
