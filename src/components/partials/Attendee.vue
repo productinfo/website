@@ -45,6 +45,8 @@ export default {
     this.isAuth = (this.$session.get('isAuthenticated') === true)
   },
   updated () {
+    this.isAuth = (this.$session.get('isAuthenticated') === true)
+
     if (this.isAuth === true) {
       this.username = this.$session.get('username')
       this.checkUserIsAttendee()
