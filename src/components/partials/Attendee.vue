@@ -79,6 +79,8 @@ export default {
     },
     checkUserIsAttendee () {
       this.isAttendee = (this.attendees.indexOf(this.username) !== -1)
+      console.log('check attendee')
+      console.log(this.isAttendee)
     }
   }
 }
