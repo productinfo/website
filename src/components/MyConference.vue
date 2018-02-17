@@ -96,7 +96,7 @@ export default {
     },
     fetchData () {
       this.showSpinner = true
-      axios.get(this.$store.state.baseUrl + '/api/conference/mine')
+      axios.get(this.$store.state.baseUrl + '/api/conference/mine', { withCredentials: true })
         .then((resp) => {
           this.conferences = resp.data.conferences
           this.calculateTotals(this.conferences.length)
