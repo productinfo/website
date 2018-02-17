@@ -399,7 +399,7 @@ export default {
             this.where = resp.data.conference.where
             this.city = resp.data.conference.city
             this.twitter = resp.data.conference.twitter
-            this.url = resp.data.conference.url
+            this.url = resp.data.conference.homepage
             this.name = resp.data.conference.title
             this.country = resp.data.conference.country
             this.chips = resp.data.conference.speakers
