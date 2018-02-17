@@ -10,6 +10,7 @@ import Home from '@/components/Home'
 import Category from '@/components/Category'
 import City from '@/components/City'
 import Conference from '@/components/Conference'
+import ConferenceEdit from '@/components/ConferenceEdit'
 import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
@@ -50,6 +51,11 @@ export default new Router({
       path: '/c/:slug',
       name: 'Conference',
       component: Conference
+    },
+    {
+      path: '/c/:slug/edit',
+      name: 'ConferenceEdit',
+      component: ConferenceEdit
     },
     {
       path: '/conference/:id',

@@ -105,14 +105,10 @@ export default {
   },
 
   created () {
-    this.fetchData()
-
-    if (this.$session.get('isAuthenticated') === true) {
-      if (this.$session.get('role') !== 'Admin') {
-        this.redirect()
-      }
-    } else {
+    if (this.$store.state.isAdmin === false) {
       this.redirect()
+    } else {
+      this.fetchData()
     }
   },
 

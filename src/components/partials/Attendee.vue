@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3> <b v-if="attendees.length > 0">{{ attendee.length }}</b> Attendees</h3>
-        <template v-if="isAuth">
+        <template v-if="$store.state.isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
                 <v-icon color="white">remove</v-icon>
             </v-btn>
@@ -37,22 +37,18 @@ export default {
   data () {
     return {
       isAttendee: false,
-      isAuth: false,
       username: ''
     }
   },
-  created () {
-    this.isAuth = (this.$session.get('isAuthenticated') === true)
-  },
   updated () {
-    if (this.isAuth === true) {
+    if (this.$store.state.isAuth === true) {
       this.username = this.$session.get('username')
       this.checkUserIsAttendee()
     }
   },
   methods: {
     triggerAttending () {
-      if (this.isAuth === false) {
+      if (this.$store.state.isAuth === false) {
         return alert('In order to add you as attendee, login first using Twitter.')
       }
 

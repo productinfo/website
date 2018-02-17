@@ -16,6 +16,8 @@
                             <v-toolbar-title>
                                 {{ conference.title }}
                             </v-toolbar-title>
+                            <v-spacer></v-spacer>
+                            <editbadge-aweconf :owner="conference.owner" :slug="conference.slug"></editbadge-aweconf>
                         </v-toolbar>
                         <v-card-text>
                             <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
@@ -87,14 +89,19 @@ import Suggestion from './partials/Suggestion.vue'
 import Map from './partials/Map.vue'
 import TwitterBadge from './partials/TwitterBadge.vue'
 import Attendee from './partials/Attendee.vue'
+import EditBadge from './partials/EditBadge.vue'
+import EditbadgeAweconf from "./partials/EditBadge";
 
 export default {
   name: 'Conference',
   components: {
-    'twitter-badge': TwitterBadge,
+      EditbadgeAweconf,
+      'twitter-badge': TwitterBadge,
     'suggestion-aweconf': Suggestion,
     'map-aweconf': Map,
-    'attendees-aweconf': Attendee
+    'attendees-aweconf': Attendee,
+    'editbadge-aweconf': EditBadge
+
   },
   data () {
     return {
