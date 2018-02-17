@@ -379,10 +379,15 @@ export default {
           this.showSpinner = false
           if (resp.data.success) {
             this.id = resp.data.conference.id
-            this.cfp = {
-              start: resp.data.conference.cfp.start,
-              end: resp.data.conference.cfp.end
+
+            if (resp.data.conference.cfp.start) {
+              this.cfp.start = resp.data.conference.cfp.start
             }
+
+            if (resp.data.conference.cfp.end) {
+              this.cfp.end = resp.data.conference.cfp.end
+            }
+
             this.date = {
               start: resp.data.conference.date.start,
               end: resp.data.conference.date.end
