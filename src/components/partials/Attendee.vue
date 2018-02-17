@@ -45,6 +45,8 @@ export default {
     this.isAuth = (this.$session.get('isAuthenticated') === true)
   },
   updated () {
+    console.log(this.attendees)
+
     this.isAuth = (this.$session.get('isAuthenticated') === true)
 
     if (this.isAuth === true) {

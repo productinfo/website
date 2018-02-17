@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -36,21 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Submit.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Unapproved.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="124">
-              <caret line="81" column="20" lean-forward="true" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+              <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -59,8 +49,8 @@
       <file leaf-file-name="Attendee.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="445">
+              <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -377,12 +367,12 @@
       <workItem from="1518772148792" duration="19753000" />
       <workItem from="1518804184443" duration="606000" />
       <workItem from="1518808433966" duration="6004000" />
-      <workItem from="1518873077445" duration="9162000" />
+      <workItem from="1518873077445" duration="9588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233169000" />
+    <option name="totallyTimeSpent" value="233595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1080" extended-state="0" />
@@ -746,18 +736,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/TwitterBadge.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -775,23 +773,15 @@
     <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="81" column="20" lean-forward="true" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Conference.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/Attendee.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="445">
+          <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
           <folding />
         </state>
       </provider>
