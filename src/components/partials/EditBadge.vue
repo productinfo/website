@@ -1,5 +1,5 @@
 <template>
-    <v-btn outline @click="redirectEdit">Edit</v-btn>
+    <v-btn outline v-if="canEdit" @click="redirectEdit">Edit</v-btn>
 </template>
 
 <script>
