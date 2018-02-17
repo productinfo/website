@@ -440,7 +440,7 @@ export default {
         speakers: this.chips
       }
 
-      axios.put(this.$store.state.baseUrl + '/api/conference/edit', content, { withCredentials: true })
+      axios.post(this.$store.state.baseUrl + '/api/conference/edit', content, { withCredentials: true })
         .then((resp) => {
           this.submitSuccess = true
           this.showSpinner = false
