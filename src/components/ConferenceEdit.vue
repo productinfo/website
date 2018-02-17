@@ -380,12 +380,14 @@ export default {
           if (resp.data.success) {
             this.id = resp.data.conference.id
 
-            if (resp.data.conference.cfp.start) {
-              this.cfp.start = resp.data.conference.cfp.start
-            }
+            if (resp.data.conference.cfp) {
+              if (resp.data.conference.cfp.start) {
+                this.cfp.start = resp.data.conference.cfp.start
+              }
 
-            if (resp.data.conference.cfp.end) {
-              this.cfp.end = resp.data.conference.cfp.end
+              if (resp.data.conference.cfp.end) {
+                this.cfp.end = resp.data.conference.cfp.end
+              }
             }
 
             this.date = {
