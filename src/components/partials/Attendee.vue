@@ -1,6 +1,6 @@
 <template>
     <v-card-text>
-        <h3> <b v-if="attendees.length > 0">{{ attendee.length }}</b> Attendees</h3>
+        <h3> <b v-if="attendees.length > 0">{{ attendees.length }}</b> Attendees</h3>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
                 <v-icon color="white">remove</v-icon>
@@ -14,8 +14,8 @@
                 <v-icon>add</v-icon>
             </v-btn>
         </template>
-        <template v-for="attendee in attendees">
-            <twitter-badge :account="attendee" :key="attendee"></twitter-badge>
+        <template v-for="att in attendees">
+            <twitter-badge :account="att" :key="att"></twitter-badge>
         </template>
     </v-card-text>
 </template>
@@ -25,6 +25,7 @@ import axios from 'axios'
 import TwitterBadge from './TwitterBadge.vue'
 
 export default {
+  name: 'Attendee',
   components: {
     'twitter-badge': TwitterBadge
   },
@@ -46,16 +47,8 @@ export default {
   updated () {
     this.isAuth = (this.$session.get('isAuthenticated') === true)
 
-    console.log('attendees')
-    console.log(this.attendees)
-    console.log('auth')
-    console.log(this.isAuth)
-
     if (this.isAuth === true) {
       this.username = this.$session.get('username')
-      console.log('username')
-      console.log(this.username)
-
       this.checkUserIsAttendee()
     }
   },
@@ -78,8 +71,6 @@ export default {
     },
     checkUserIsAttendee () {
       this.isAttendee = (this.attendees.indexOf(this.username) !== -1)
-      console.log('check attendee')
-      console.log(this.isAttendee)
     }
   }
 }

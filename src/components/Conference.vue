@@ -90,12 +90,10 @@ import Map from './partials/Map.vue'
 import TwitterBadge from './partials/TwitterBadge.vue'
 import Attendee from './partials/Attendee.vue'
 import EditBadge from './partials/EditBadge.vue'
-import EditbadgeAweconf from './partials/EditBadge'
 
 export default {
   name: 'Conference',
   components: {
-    EditbadgeAweconf,
     'twitter-badge': TwitterBadge,
     'suggestion-aweconf': Suggestion,
     'map-aweconf': Map,
