@@ -13,7 +13,7 @@ export default {
   },
 
   created () {
-    if (this.$session.get('role') === 'Admin') {
+    if (this.$session.get('role') !== 'Admin') {
       this.redirect()
     } else {
       // this.fetchData()

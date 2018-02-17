@@ -104,12 +104,6 @@ export const Store = new Vuex.Store({
       return state.categories.map(function (item) {
         return item.title
       })
-    },
-    isAdmin: state => {
-      if (state.$session.get('isAuthenticated') === false) {
-        return false
-      }
-      return (state.$session.get('role') === 'Admin')
     }
   }
 })
