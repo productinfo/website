@@ -382,17 +382,17 @@ export default {
 
             if (resp.data.conference.cfp) {
               if (resp.data.conference.cfp.start) {
-                this.cfp.start = resp.data.conference.cfp.start
+                this.cfp.start = resp.data.conference.cfp.start.toISOString().substring(0, 10)
               }
 
               if (resp.data.conference.cfp.end) {
-                this.cfp.end = resp.data.conference.cfp.end
+                this.cfp.end = resp.data.conference.cfp.end.toISOString().substring(0, 10)
               }
             }
 
             this.date = {
-              start: resp.data.conference.date.start,
-              end: resp.data.conference.date.end
+              start: resp.data.conference.date.start.toISOString().substring(0, 10),
+              end: resp.data.conference.date.end.toISOString().substring(0, 10)
             }
 
             this.categories = resp.data.conference.category

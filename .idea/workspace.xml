@@ -16,9 +16,11 @@
       <file leaf-file-name="ConferenceEdit.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="397" column="59" lean-forward="false" selection-start-line="397" selection-start-column="59" selection-end-line="397" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="527">
+              <caret line="393" column="83" lean-forward="false" selection-start-line="393" selection-start-column="83" selection-end-line="393" selection-end-column="83" />
+              <folding>
+                <element signature="e#12369#12375#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -327,12 +329,12 @@
       <workItem from="1518772148792" duration="19753000" />
       <workItem from="1518804184443" duration="606000" />
       <workItem from="1518808433966" duration="6004000" />
-      <workItem from="1518873077445" duration="5382000" />
+      <workItem from="1518873077445" duration="5871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229389000" />
+    <option name="totallyTimeSpent" value="229878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1080" extended-state="0" />
@@ -740,9 +742,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="397" column="59" lean-forward="false" selection-start-line="397" selection-start-column="59" selection-end-line="397" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="527">
+          <caret line="393" column="83" lean-forward="false" selection-start-line="393" selection-start-column="83" selection-end-line="393" selection-end-column="83" />
+          <folding>
+            <element signature="e#12369#12375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
