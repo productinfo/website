@@ -68,7 +68,7 @@ export default {
         })
     },
     myconf () {
-      this.$router.push('/my-conferences')
+      this.$router.push('/my-conference')
     },
     unapproved () {
       this.$router.push('/unapproved')
