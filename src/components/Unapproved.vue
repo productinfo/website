@@ -41,9 +41,9 @@
                                 <td>{{ formatDate(props.item.date.start) }}</td>
                                 <td>{{ formatDate(props.item.date.end) }}</td>
                                 <td>
-                                    <v-btn color="blue" dark @click.native="editConf(props.item.slug)">✏️</v-btn>
-                                    <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">👍</v-btn>
-                                    <v-btn color="red" dark @click.native="deleteConf(props.item._id)">👎</v-btn>
+                                    <v-btn fab small color="blue" dark @click.native="editConf(props.item.slug)">✏️</v-btn>
+                                    <v-btn fab small color="green" dark @click.native="approveConf(props.item._id)">👍</v-btn>
+                                    <v-btn fab small color="red" dark @click.native="deleteConf(props.item._id)">👎</v-btn>
                                 </td>
                             </template>
                         </v-data-table>
