@@ -33,7 +33,7 @@ export default {
       this.$router.push('/c/' + this.slug + '/edit')
     },
     requestEditing () {
-      if (this.$session.get('isAuthenticated') === false) {
+      if (this.$session.get('isAuthenticated') !== true) {
         alert('In order to add you as attendee, login first using Twitter.')
       } else {
         const content = {
