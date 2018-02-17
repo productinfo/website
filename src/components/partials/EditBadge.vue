@@ -43,7 +43,7 @@ export default {
         axios.post(this.$store.state.baseUrl + '/api/request/rights', content, { withCredentials: true })
           .then((resp) => {
             if (resp.data.success === true) {
-              // TODO
+              alert('Your request has been submitted, a reviewer will get in touch sooner with you')
             }
           })
           .catch((err) => {
