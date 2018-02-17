@@ -1,5 +1,10 @@
 <template>
     <div class="unapproved">
+        <vue-headful
+                title="Request Rights / Awesome Conferences"
+                url="https://aweconf.com/#/request/rights"
+                :image="undefined"
+        />
         <v-container fluid fill-height>
             <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
                 <v-flex xs12 sm12 md10 xl10>

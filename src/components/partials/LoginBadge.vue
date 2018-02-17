@@ -74,7 +74,7 @@ export default {
       this.$router.push('/request/rights')
     },
     myconf () {
-      this.$router.push('/my-conference')
+      this.$router.push('/my/conference')
     },
     unapproved () {
       this.$router.push('/unapproved')

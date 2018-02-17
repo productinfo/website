@@ -1,10 +1,10 @@
 <template>
-    <div class="all">
+    <div class="myconference">
 
         <vue-headful
-                title="All / Awesome Conferences"
+                title="My Conference / Awesome Conferences"
                 description="All the best conferences around the world"
-                url="https://aweconf.com/#/all"
+                url="https://aweconf.com/#/my-conference"
                 :image="undefined"
         />
 
@@ -14,7 +14,7 @@
                     <v-card class="elevation-12">
                         <v-toolbar dark color="deep-purple">
                             <v-toolbar-title class="capitalized">
-                                🕶 {{ total }} upcoming Conferences
+                                🕶 {{ total }} My Conferences
                             </v-toolbar-title>
                             <v-spacer></v-spacer>
                         </v-toolbar>
@@ -50,12 +50,6 @@
                 </v-flex>
             </v-layout>
         </v-container>
-
-        <template class="mt5">
-            <router-link :to="`/submit`">
-                <v-btn block color="deep-purple" dark>📮 Submit a new Conference in {{ $route.params.category }} category</v-btn>
-            </router-link>
-        </template>
 
     </div>
 </template>
