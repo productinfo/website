@@ -12,6 +12,7 @@ import City from '@/components/City'
 import Conference from '@/components/Conference'
 import ConferenceEdit from '@/components/ConferenceEdit'
 import MyConference from '@/components/MyConference'
+import RequestRights from '@/components/RequestRights'
 import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
@@ -102,6 +103,11 @@ export default new Router({
       path: '/my/conference',
       name: 'MyConference',
       component: MyConference
+    },
+    {
+      path: '/request/rights',
+      name: 'RequestRights',
+      component: RequestRights
     }
   ]
 })
