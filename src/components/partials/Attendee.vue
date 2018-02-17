@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-card-text>
         <h3> <b v-if="attendees.length > 0">{{ attendee.length }}</b> Attendees</h3>
         <template v-if="isAuth">
             <v-btn fab color="deep-purple" @click="triggerAttending" v-if="isAttendee">
@@ -17,8 +17,7 @@
         <template v-for="attendee in attendees">
             <twitter-badge :account="attendee" :key="attendee"></twitter-badge>
         </template>
-    </div>
-
+    </v-card-text>
 </template>
 
 <script>
