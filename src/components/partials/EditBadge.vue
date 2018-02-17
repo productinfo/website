@@ -1,8 +1,11 @@
 <template>
     <v-btn outline v-if="canEdit" @click="redirectEdit">Edit</v-btn>
+    <v-btn outline v-else @click="requestEditing">Request Editing</v-btn>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   props: {
     owner: String,
@@ -28,6 +31,25 @@ export default {
     },
     redirectEdit () {
       this.$router.push('/c/' + this.slug + '/edit')
+    },
+    requestEditing () {
+      if (this.$session.get('isAuthenticated') === false) {
+        alert('In order to add you as attendee, login first using Twitter.')
+      } else {
+        const content = {
+          slug: this.slug
+        }
+
+        axios.post(this.$store.state.baseUrl + '/api/request/rights', content, { withCredentials: true })
+          .then((resp) => {
+            if (resp.data.success === true) {
+              // TODO
+            }
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      }
     }
   }
 }

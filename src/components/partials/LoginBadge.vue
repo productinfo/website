@@ -20,6 +20,9 @@
             <v-list-tile @click="unapproved" v-if="this.role === 'Admin'">
                 <v-list-tile-title>Unapproved</v-list-tile-title>
             </v-list-tile>
+            <v-list-tile @click="editingrights" v-if="this.role === 'Admin'">
+                <v-list-tile-title>Rights Requests</v-list-tile-title>
+            </v-list-tile>
             <v-list-tile @click="logOut">
                 <v-list-tile-title>Logout</v-list-tile-title>
             </v-list-tile>
@@ -66,6 +69,9 @@ export default {
           this.$session.destroy()
           console.log(err)
         })
+    },
+    editingrights () {
+      this.$router.push('/request/rights')
     },
     myconf () {
       this.$router.push('/my-conference')
