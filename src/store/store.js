@@ -105,9 +105,6 @@ export const Store = new Vuex.Store({
         return item.title
       })
     },
-    isAuth: state => {
-      return (state.$session.get('isAuthenticated') === true)
-    },
     isAdmin: state => {
       if (state.$session.get('isAuthenticated') === false) {
         return false

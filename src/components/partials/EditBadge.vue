@@ -20,9 +20,9 @@ export default {
   methods: {
     checkAuth () {
       this.isOwner = (this.$session.get('username') === this.owner)
-      this.canEdit = (this.$store.state.isAuth === true) && (this.isOwner === true)
+      this.canEdit = (this.$session.get('isAuthenticated') === true) && (this.isOwner === true)
 
-      if (this.$store.state.isAdmin === true) {
+      if (this.$session.get('role') === 'Admin') {
         this.canEdit = true
       }
     },

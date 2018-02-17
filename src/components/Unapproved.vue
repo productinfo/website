@@ -105,7 +105,7 @@ export default {
   },
 
   created () {
-    if (this.$store.state.isAdmin === false) {
+    if (this.$session.get('role') === 'Admin') {
       this.redirect()
     } else {
       this.fetchData()
