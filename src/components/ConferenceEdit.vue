@@ -444,7 +444,6 @@ export default {
         .then((resp) => {
           this.submitSuccess = true
           this.showSpinner = false
-          this.$refs.form.reset()
         }).catch((err) => {
           this.submitFail = true
           this.showSpinner = false

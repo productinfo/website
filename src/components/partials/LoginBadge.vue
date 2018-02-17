@@ -14,6 +14,9 @@
             </v-avatar>
         </v-btn>
         <v-list>
+            <v-list-tile @click="myconf">
+                <v-list-tile-title>My Conferences</v-list-tile-title>
+            </v-list-tile>
             <v-list-tile @click="unapproved" v-if="this.role === 'Admin'">
                 <v-list-tile-title>Unapproved</v-list-tile-title>
             </v-list-tile>
@@ -63,6 +66,9 @@ export default {
           this.$session.destroy()
           console.log(err)
         })
+    },
+    myconf () {
+      this.$router.push('/my-conferences')
     },
     unapproved () {
       this.$router.push('/unapproved')

@@ -11,6 +11,7 @@ import Category from '@/components/Category'
 import City from '@/components/City'
 import Conference from '@/components/Conference'
 import ConferenceEdit from '@/components/ConferenceEdit'
+import MyConference from '@/components/MyConference'
 import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
@@ -96,6 +97,11 @@ export default new Router({
       path: '/call-for-paper/open',
       name: 'Cfp',
       component: Cfp
+    },
+    {
+      path: '/my/conference',
+      name: 'MyConference',
+      component: MyConference
     }
   ]
 })
