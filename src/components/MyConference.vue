@@ -84,13 +84,20 @@ export default {
   },
 
   created () {
-    this.fetchData()
+    if (this.$session.get('isAuthenticated') !== true) {
+      this.redirect()
+    } else {
+      this.fetchData()
+    }
   },
 
   watch: {
     '$route': 'fetchData'
   },
   methods: {
+    redirect () {
+      this.$router.push('/')
+    },
     editConf (slug) {
       this.$router.push('/c/' + slug + '/edit')
     },
