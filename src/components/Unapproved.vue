@@ -41,10 +41,9 @@
                                 <td>{{ formatDate(props.item.date.start) }}</td>
                                 <td>{{ formatDate(props.item.date.end) }}</td>
                                 <td>
-                                    <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">Approve</v-btn>
-                                </td>
-                                <td>
-                                    <v-btn color="red" dark @click.native="deleteConf(props.item._id)">Delete</v-btn>
+                                    <v-btn color="blue" dark @click.native="editConf(props.item.slug)">✏️</v-btn>
+                                    <v-btn color="deep-purple" dark @click.native="approveConf(props.item._id)">👍</v-btn>
+                                    <v-btn color="red" dark @click.native="deleteConf(props.item._id)">👎</v-btn>
                                 </td>
                             </template>
                         </v-data-table>
@@ -98,8 +97,7 @@ export default {
         { text: 'Country', sortable: false, align: 'left', value: 'country' },
         { text: 'Start', value: 'date.start', align: 'left' },
         { text: 'End', value: 'date.end', align: 'left' },
-        { text: 'Approve', sortable: false, align: 'left' },
-        { text: 'Delete', sortable: false, align: 'left' }
+        { text: 'Manage', sortable: false, align: 'left' },
       ]
     }
   },
@@ -137,6 +135,9 @@ export default {
     formatDate (date) {
       const currentDate = new Date(date)
       return currentDate.toLocaleDateString()
+    },
+    editConf (slug) {
+      this.$router.push('/c/' + slug + '/edit')
     },
     deleteConf (id) {
       axios.put(this.$store.state.baseUrl + '/api/conference/delete/', {

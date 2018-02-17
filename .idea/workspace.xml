@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConferenceEdit.vue" afterPath="$PROJECT_DIR$/src/components/ConferenceEdit.vue" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.c12e5498916ff1a6c8908db690fd5671.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.c12e5498916ff1a6c8908db690fd5671.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.786622244b6d73197634.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.786622244b6d73197634.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.52e49f2204150eba9e4f.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.52e49f2204150eba9e4f.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Unapproved.vue" afterPath="$PROJECT_DIR$/src/components/Unapproved.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConferenceEdit.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConferenceEdit.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="293" column="88" lean-forward="false" selection-start-line="293" selection-start-column="88" selection-end-line="293" selection-end-column="88" />
+            <state relative-caret-position="68">
+              <caret line="264" column="24" lean-forward="false" selection-start-line="264" selection-start-column="24" selection-end-line="264" selection-end-column="24" />
               <folding>
                 <element signature="e#12369#12375#0" expanded="true" />
               </folding>
@@ -31,6 +38,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="742">
               <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Unapproved.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="43" column="105" lean-forward="false" selection-start-line="43" selection-start-column="105" selection-end-line="43" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -113,9 +130,9 @@
         <option value="$PROJECT_DIR$/src/components/partials/Attendee.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/EditBadge.vue" />
         <option value="$PROJECT_DIR$/src/store/store.js" />
-        <option value="$PROJECT_DIR$/src/components/Unapproved.vue" />
         <option value="$PROJECT_DIR$/src/components/Submit.vue" />
         <option value="$PROJECT_DIR$/src/components/ConferenceEdit.vue" />
+        <option value="$PROJECT_DIR$/src/components/Unapproved.vue" />
       </list>
     </option>
   </component>
@@ -340,12 +357,12 @@
       <workItem from="1518772148792" duration="19753000" />
       <workItem from="1518804184443" duration="606000" />
       <workItem from="1518808433966" duration="6004000" />
-      <workItem from="1518873077445" duration="7669000" />
+      <workItem from="1518873077445" duration="8038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231676000" />
+    <option name="totallyTimeSpent" value="232045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1080" extended-state="0" />
@@ -717,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="112" column="4" lean-forward="true" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
@@ -753,11 +762,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="293" column="88" lean-forward="false" selection-start-line="293" selection-start-column="88" selection-end-line="293" selection-end-column="88" />
+        <state relative-caret-position="68">
+          <caret line="264" column="24" lean-forward="false" selection-start-line="264" selection-start-column="24" selection-end-line="264" selection-end-column="24" />
           <folding>
             <element signature="e#12369#12375#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Unapproved.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="43" column="105" lean-forward="false" selection-start-line="43" selection-start-column="105" selection-end-line="43" selection-end-column="105" />
+          <folding />
         </state>
       </provider>
     </entry>
