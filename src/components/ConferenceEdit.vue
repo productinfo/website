@@ -442,7 +442,11 @@ export default {
 
       axios.post(this.$store.state.baseUrl + '/api/conference/edit', content, { withCredentials: true })
         .then((resp) => {
-          this.submitSuccess = true
+          if (resp.data.success === true) {
+            this.submitSuccess = true
+          } else {
+            this.submitFail = true
+          }
           this.showSpinner = false
         }).catch((err) => {
           this.submitFail = true
