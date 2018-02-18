@@ -284,7 +284,7 @@
             <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
 
             <v-alert v-if="submitSuccess" outline color="success" icon="check_circle" :value="true">
-                Event submitted, it will be reviewed and shortly published.
+                Event updated.
             </v-alert>
 
             <v-alert v-if="submitFail" outline color="error" icon="warning" :value="true">
