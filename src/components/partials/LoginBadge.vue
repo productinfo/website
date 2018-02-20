@@ -15,13 +15,13 @@
         </v-btn>
         <v-list>
             <v-list-tile @click="myconf">
-                <v-list-tile-title>My Conferences</v-list-tile-title>
+                <v-list-tile-title><b v-if="numbers.mine > 0">{{numbers.mine}}</b> My Conferences</v-list-tile-title>
             </v-list-tile>
             <v-list-tile @click="unapproved" v-if="this.role === 'Admin'">
-                <v-list-tile-title>Unapproved</v-list-tile-title>
+                <v-list-tile-title><b v-if="numbers.unapproved > 0">{{numbers.unapproved}}</b> Unapproved</v-list-tile-title>
             </v-list-tile>
             <v-list-tile @click="editingrights" v-if="this.role === 'Admin'">
-                <v-list-tile-title>Rights Requests</v-list-tile-title>
+                <v-list-tile-title><b v-if="numbers.rights > 0">{{numbers.rights}}</b> Rights Requests</v-list-tile-title>
             </v-list-tile>
             <v-list-tile @click="logOut">
                 <v-list-tile-title>Logout</v-list-tile-title>
@@ -42,7 +42,12 @@ export default {
       role: '',
       avatarSize: 32,
       user: null,
-      success: false
+      success: false,
+      numbers: {
+        mine: 0,
+        unapproved: 0,
+        rights: 0
+      }
     }
   },
   created () {
@@ -56,6 +61,7 @@ export default {
             this.isAuth = true
             this.username = resp.data.user.username
             this.role = resp.data.user.role
+            this.numbers = resp.data.numbers
 
             this.$session.start()
             this.$session.set('isAuthenticated', this.isAuth)
