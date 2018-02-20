@@ -3,6 +3,46 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.39ae737217fe17b4d987989e8aead84f.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.39ae737217fe17b4d987989e8aead84f.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-144x144.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-192x192.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-36x36.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-48x48.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-72x72.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-96x96.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-114x114.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-120x120.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-144x144.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-152x152.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-180x180.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-57x57.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-60x60.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-72x72.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-76x76.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-precomposed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/browserconfig.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-16x16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-32x32.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-96x96.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/manifest.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-144x144.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-150x150.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-310x310.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-70x70.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/0.61aced32489dba7f7b99.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/0.61aced32489dba7f7b99.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/1.f6901acd72475fdabf53.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/1.f6901acd72475fdabf53.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.a983680df6b5e131b2ea.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.a983680df6b5e131b2ea.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.ab95ed917dde91cd4def.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.ab95ed917dde91cd4def.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.8b581f40c61460e9d7e9.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.8b581f40c61460e9d7e9.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" afterPath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +67,8 @@
       <file leaf-file-name="LoginBadge.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+            <state relative-caret-position="233">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="562">
-              <caret line="380" column="25" lean-forward="true" selection-start-line="380" selection-start-column="25" selection-end-line="380" selection-end-column="25" />
+              <caret line="380" column="25" lean-forward="false" selection-start-line="380" selection-start-column="25" selection-end-line="380" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -158,7 +198,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
+    <option name="x" value="1100" />
     <option name="width" value="1280" />
     <option name="height" value="1080" />
   </component>
@@ -373,27 +413,28 @@
       <workItem from="1518965930386" duration="1853000" />
       <workItem from="1519057390070" duration="152000" />
       <workItem from="1519119557599" duration="619000" />
-      <workItem from="1519121755738" duration="11000" />
+      <workItem from="1519121755738" duration="360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246358000" />
+    <option name="totallyTimeSpent" value="246707000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="0" width="1280" height="1080" extended-state="0" />
+    <frame x="1100" y="0" width="1280" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34006462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16852792" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34006462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16852792" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -402,7 +443,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -759,15 +799,15 @@
     <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
-          <caret line="380" column="25" lean-forward="true" selection-start-line="380" selection-start-column="25" selection-end-line="380" selection-end-column="25" />
+          <caret line="380" column="25" lean-forward="false" selection-start-line="380" selection-start-column="25" selection-end-line="380" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+        <state relative-caret-position="233">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -15,13 +15,13 @@
         </v-btn>
         <v-list>
             <v-list-tile @click="myconf">
-                <v-list-tile-title><b v-if="totals.mine > 0">{{totals.mine}}</b> My Conferences</v-list-tile-title>
+                <v-list-tile-title><b v-if="totals.mine > 0">{{ totals.mine }}</b> My Conferences</v-list-tile-title>
             </v-list-tile>
-            <v-list-tile @click="unapproved" v-if="this.role === 'Admin'">
-                <v-list-tile-title><b v-if="totals.unapproved > 0">{{totals.unapproved}}</b> Unapproved</v-list-tile-title>
+            <v-list-tile @click="unapproved" v-if="role === 'Admin'">
+                <v-list-tile-title><b v-if="totals.pending > 0">{{ totals.pending }}</b> Unapproved</v-list-tile-title>
             </v-list-tile>
             <v-list-tile @click="editingrights" v-if="this.role === 'Admin'">
-                <v-list-tile-title><b v-if="totals.rights > 0">{{totals.rights}}</b> Rights Requests</v-list-tile-title>
+                <v-list-tile-title><b v-if="totals.rights > 0">{{ totals.rights }}</b> Rights Requests</v-list-tile-title>
             </v-list-tile>
             <v-list-tile @click="logOut">
                 <v-list-tile-title>Logout</v-list-tile-title>
@@ -43,11 +43,7 @@ export default {
       avatarSize: 32,
       user: null,
       success: false,
-      totals: {
-        mine: 0,
-        unapproved: 0,
-        rights: 0
-      }
+      totals: {}
     }
   },
   created () {
