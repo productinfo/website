@@ -400,7 +400,7 @@ export default {
 
             // workaround to have all cats first uppercased
             const camelCats = []
-            resp.data.categor.forEach(function (cat) {
+            resp.data.conference.category.forEach(function (cat) {
               camelCats.push(capitalize(cat))
             })
 

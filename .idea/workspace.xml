@@ -3,45 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.1ccc1040b8384323a7b53674053f732f.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/app.1ccc1040b8384323a7b53674053f732f.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-192x192.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-36x36.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-48x48.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-72x72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/android-icon-96x96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-114x114.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-120x120.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-152x152.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-180x180.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-57x57.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-60x60.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-72x72.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-76x76.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon-precomposed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/apple-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/browserconfig.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-16x16.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-32x32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon-96x96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-144x144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-150x150.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-310x310.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/favicon/ms-icon-70x70.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/0.61aced32489dba7f7b99.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/0.61aced32489dba7f7b99.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/1.f6901acd72475fdabf53.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/1.f6901acd72475fdabf53.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.47693529a7597cc0e31e.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.47693529a7597cc0e31e.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.8bd79a4cb26668e80bee.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.8bd79a4cb26668e80bee.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.f1f63f2c2b260092271f.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/vendor.f1f63f2c2b260092271f.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/ConferenceEdit.vue" afterPath="$PROJECT_DIR$/src/components/ConferenceEdit.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +47,8 @@
       <file leaf-file-name="ConferenceEdit.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="402" column="30" lean-forward="false" selection-start-line="402" selection-start-column="30" selection-end-line="402" selection-end-column="30" />
+            <state relative-caret-position="464">
+              <caret line="411" column="7" lean-forward="false" selection-start-line="411" selection-start-column="7" selection-end-line="411" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -434,12 +395,12 @@
       <workItem from="1519119557599" duration="619000" />
       <workItem from="1519121755738" duration="640000" />
       <workItem from="1519125492269" duration="130000" />
-      <workItem from="1519141402325" duration="845000" />
+      <workItem from="1519141402325" duration="1164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247962000" />
+    <option name="totallyTimeSpent" value="248281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1100" y="0" width="1280" height="1080" extended-state="0" />
@@ -828,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="402" column="30" lean-forward="false" selection-start-line="402" selection-start-column="30" selection-end-line="402" selection-end-column="30" />
+        <state relative-caret-position="464">
+          <caret line="411" column="7" lean-forward="false" selection-start-line="411" selection-start-column="7" selection-end-line="411" selection-end-column="7" />
           <folding />
         </state>
       </provider>
