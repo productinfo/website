@@ -374,6 +374,9 @@ export default {
     },
     fetchData () {
       this.showSpinner = true
+
+      const capitalize = ([first, ...rest]) => first.toUpperCase() + rest.join('').toLowerCase()
+
       axios.get(this.$store.state.baseUrl + '/api/conference/slug/' + this.$route.params.slug)
         .then((resp) => {
           this.showSpinner = false
@@ -395,7 +398,13 @@ export default {
               end: resp.data.conference.date.end.substring(0, 10)
             }
 
-            this.categories = resp.data.conference.category
+            // workaround to have all cats first uppercased
+            const camelCats = []
+            resp.data.categories.forEach(function (cat) {
+              camelCats.push(capitalize(cat))
+            })
+
+            this.categories = camelCats
             this.where = resp.data.conference.where
             this.city = resp.data.conference.city
             this.twitter = resp.data.conference.twitter
