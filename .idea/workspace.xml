@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" afterPath="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.39489bb811ecf7fc45d897b2100ea764.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.39489bb811ecf7fc45d897b2100ea764.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.d63febca3ad4f086969b.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.d63febca3ad4f086969b.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.51701b97c4b02d34aa74.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.51701b97c4b02d34aa74.js.map" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +30,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginBadge.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginBadge.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+            <state relative-caret-position="351">
+              <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Submit.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="742">
+              <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -352,12 +378,12 @@
       <workItem from="1518962379798" duration="31000" />
       <workItem from="1518965930386" duration="1853000" />
       <workItem from="1519057390070" duration="152000" />
-      <workItem from="1519119557599" duration="128000" />
+      <workItem from="1519119557599" duration="332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245856000" />
+    <option name="totallyTimeSpent" value="246060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="0" width="1280" height="1080" extended-state="0" />
@@ -635,20 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/All.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -743,8 +755,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/LoginBadge.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        <state relative-caret-position="351">
+          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Submit.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="392" column="86" lean-forward="false" selection-start-line="392" selection-start-column="86" selection-end-line="392" selection-end-column="86" />
           <folding />
         </state>
       </provider>
