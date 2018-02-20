@@ -1,6 +1,6 @@
 <template>
     <v-btn outline v-if="canEdit" @click="redirectEdit">Edit</v-btn>
-    <v-btn outline v-else @click="requestEditing">Request Editing</v-btn>
+    <v-btn outline v-else @click="requestEditing">I want to edit this</v-btn>
 </template>
 
 <script>
