@@ -51,6 +51,11 @@
                     </template>
                 </v-flex>
 
+                <v-flex xs12 sm12 md10 xl10 class="mt-2">
+                    <h3>{{ browseCats }}</h3>
+                    <categories-badge :categories="$store.state.categories"></categories-badge>
+                </v-flex>
+
                 <v-flex xs12 sm12 md10 xl10 class="mt-2" v-if="dates.length > 0">
                     <h3>{{ browseDate }}</h3>
                     <month-badge></month-badge>
@@ -105,10 +110,12 @@
 import axios from 'axios'
 import SuggestionCard from './partials/SuggestionCard.vue'
 import MonthBadge from './partials/MonthBadge'
+import CategoriesList from './partials/CategoriesList'
 
 export default {
   name: 'Home',
   components: {
+    'categories-badge': CategoriesList,
     'month-badge': MonthBadge,
     'suggestioncard-aweconf': SuggestionCard
   },
@@ -121,6 +128,7 @@ export default {
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
+      browseCats: 'find your ❤️ conference by category:',
       browseDate: 'browse conferences by month 🗓:',
       quickLook: 'have a quick look at the next ⏰ upcoming conferences:',
       discoverMore: 'or 🧐 discover more browsing all...',
