@@ -51,6 +51,11 @@
                     </template>
                 </v-flex>
 
+                <v-flex xs12 sm12 md10 xl10 class="mt-2" v-if="dates.length > 0">
+                    <h3>{{ browseDate }}</h3>
+                    <month-badge></month-badge>
+                </v-flex>
+
                 <v-flex xs12 sm12 md10 xl10 class="mt-2">
                     <h3>{{ quickLook }}</h3>
                 </v-flex>
@@ -99,10 +104,12 @@
 <script>
 import axios from 'axios'
 import SuggestionCard from './partials/SuggestionCard.vue'
+import MonthBadge from './partials/MonthBadge'
 
 export default {
   name: 'Home',
   components: {
+    'month-badge': MonthBadge,
     'suggestioncard-aweconf': SuggestionCard
   },
   data () {
@@ -114,6 +121,7 @@ export default {
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
+      browseDate: 'browse conferences by month 🗓:',
       quickLook: 'have a quick look at the next ⏰ upcoming conferences:',
       discoverMore: 'or 🧐 discover more browsing all...',
       conferences: [],
@@ -123,6 +131,7 @@ export default {
       total: '',
       center: { lat: 20, lng: 32 },
       markers: [],
+      dates: [],
       search: '',
       headers: [
         {
@@ -194,6 +203,14 @@ export default {
 
           this.showSpinner = false
           this.populateMaps()
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+
+      axios.get(this.$store.state.baseUrl + '/api/conference/dates')
+        .then((resp) => {
+          this.dates = resp.data.dates
         })
         .catch((err) => {
           console.log(err)
