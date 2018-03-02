@@ -8,8 +8,8 @@
         </v-tooltip>
 
         <v-menu offset-y class="moveup">
-            <v-btn icon slot="activator">
-                🔽
+            <v-btn flat slot="activator">
+                🔽 Categories
             </v-btn>
             <v-list>
                 <v-list-tile v-for="item in items" :key="item.tag" :to="item.url">

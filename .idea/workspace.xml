@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/partials/CategoriesList.vue" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.vue" afterPath="$PROJECT_DIR$/src/components/Home.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/partials/CategoriesList.vue" afterPath="$PROJECT_DIR$/src/components/partials/CategoriesList.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/partials/MenuHeader.vue" afterPath="$PROJECT_DIR$/src/components/partials/MenuHeader.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="MenuHeader.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/partials/MenuHeader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="80" />
+            <state relative-caret-position="150">
+              <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="CategoriesList.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/CategoriesList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+            <state relative-caret-position="90">
+              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -141,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/components/MyConference.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
         <option value="$PROJECT_DIR$/src/components/ConferenceEdit.vue" />
-        <option value="$PROJECT_DIR$/src/components/partials/MenuHeader.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/MonthBadge.vue" />
         <option value="$PROJECT_DIR$/src/components/MonthYear.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
@@ -149,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/components/partials/EditBadge.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/Categories.vue" />
         <option value="$PROJECT_DIR$/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/src/components/partials/MenuHeader.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/CategoriesList.vue" />
       </list>
     </option>
@@ -403,12 +403,12 @@
       <workItem from="1519948703932" duration="33000" />
       <workItem from="1519948806233" duration="25000" />
       <workItem from="1519985169424" duration="4050000" />
-      <workItem from="1520003822964" duration="770000" />
+      <workItem from="1520003822964" duration="960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263537000" />
+    <option name="totallyTimeSpent" value="263727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="0" width="1296" height="900" extended-state="0" />
@@ -775,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/partials/MenuHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -793,10 +785,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/partials/MenuHeader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/partials/CategoriesList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        <state relative-caret-position="90">
+          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding />
         </state>
       </provider>
