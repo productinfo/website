@@ -17,6 +17,7 @@ import Country from '@/components/Country'
 import Submit from '@/components/Submit'
 import About from '@/components/About'
 import Unapproved from '@/components/Unapproved'
+import MonthYear from '@/components/MonthYear'
 import Cfp from '@/components/Cfp'
 import VueSession from 'vue-session'
 
@@ -108,6 +109,11 @@ export default new Router({
       path: '/request/rights',
       name: 'RequestRights',
       component: RequestRights
+    },
+    {
+      path: '/when/:year/:month',
+      name: 'MonthYear',
+      component: MonthYear
     }
   ]
 })

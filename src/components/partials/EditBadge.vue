@@ -40,7 +40,7 @@ export default {
           slug: this.slug
         }
 
-        axios.post(this.$store.state.baseUrl + '/api/request/rights', content, { withCredentials: true })
+        axios.post(this.$store.state.baseUrl + '/api/right/request', content, { withCredentials: true })
           .then((resp) => {
             if (resp.data.success === true) {
               alert('Your request has been submitted, a reviewer will get in touch sooner with you')

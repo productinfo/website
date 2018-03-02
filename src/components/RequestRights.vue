@@ -95,7 +95,7 @@ export default {
     },
     fetchData () {
       this.showSpinner = true
-      axios.get(this.$store.state.baseUrl + '/api/list/rights')
+      axios.get(this.$store.state.baseUrl + '/api/rights', { withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.rights = resp.data.rights
@@ -108,10 +108,30 @@ export default {
         })
     },
     approveRight (id) {
-
+      this.showSpinner = true
+      axios.post(this.$store.state.baseUrl + '/api/right/approve', {id: id}, { withCredentials: true })
+        .then((resp) => {
+          if (resp.data.success === true) {
+            this.fetchData()
+          }
+          this.showSpinner = false
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     },
     deleteRight (id) {
-
+      this.showSpinner = true
+      axios.post(this.$store.state.baseUrl + '/api/rights/delete', {id: id} , { withCredentials: true })
+        .then((resp) => {
+          if (resp.data.success === true) {
+            this.fetchData()
+          }
+          this.showSpinner = false
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   }
 }
