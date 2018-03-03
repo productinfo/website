@@ -8,9 +8,9 @@
                 :url="`https://aweconf.com/#/c/${conference.slug}`"
         />
 
-            <template v-if="conference.geo">
-                <map-aweconf :conference="conference"></map-aweconf>
-            </template>
+        <template v-if="conference.geo">
+            <map-aweconf :conference="conference"></map-aweconf>
+        </template>
 
         <v-container fluid fill-height>
             <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
@@ -45,9 +45,9 @@
                                 </v-card-text>
                             </template>
 
-                                <v-card-text v-if="conference.callforpaper">
-                                    At this very moment 🎤 call for paper is open, feel free to submit your talk.
-                                </v-card-text>
+                            <v-card-text v-if="conference.callforpaper">
+                                At this very moment 🎤 call for paper is open, feel free to submit your talk.
+                            </v-card-text>
 
                             <v-card-text v-if="speakers.length > 0">
                                 <p>You will be able to meet and listen to the 🎤 talks of:</p>
@@ -64,15 +64,15 @@
                         </v-card-text>
                     </v-card>
                     <v-layout>
-                            <v-content class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left mt-2 mb-4">
-                                <p v-if="totalCountryConf > 0">
-                                    Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
-                                    <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
-                                    </router-link>
-                                    :
-                                </p>
-                                <suggestion-aweconf :url="`${this.$store.state.baseUrl}/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
-                            </v-content>
+                        <v-content class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left mt-2 mb-4">
+                            <p v-if="totalCountryConf > 0">
+                                Discover <b>{{ limit }}</b> more 🔥🔥 conferences in
+                                <router-link :to="`/country/${conference.country}`">{{ conference.emojiflag }} {{ conference.country }}
+                                </router-link>
+                                :
+                            </p>
+                            <suggestion-aweconf :url="`${this.$store.state.baseUrl}/api/conference/country/${conference.country}`" :exclude="conference._id" :limit="limit" @totalConferenceUpdated="totalCountryConf = $event"></suggestion-aweconf>
+                        </v-content>
                     </v-layout>
                 </v-flex>
             </v-layout>
@@ -89,10 +89,12 @@ import Map from './partials/Map.vue'
 import TwitterBadge from './partials/TwitterBadge.vue'
 import Attendee from './partials/Attendee.vue'
 import EditBadge from './partials/EditBadge.vue'
+import ImageFlickr from './partials/ImageFlickr'
 
 export default {
   name: 'Conference',
   components: {
+    'image-flickr': ImageFlickr,
     'twitter-badge': TwitterBadge,
     'suggestion-aweconf': Suggestion,
     'map-aweconf': Map,
