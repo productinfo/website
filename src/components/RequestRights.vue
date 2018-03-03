@@ -122,7 +122,7 @@ export default {
     },
     deleteRight (id) {
       this.showSpinner = true
-      axios.post(this.$store.state.baseUrl + '/api/rights/delete', {id: id} , { withCredentials: true })
+      axios.post(this.$store.state.baseUrl + '/api/rights/delete', {id: id}, { withCredentials: true })
         .then((resp) => {
           if (resp.data.success === true) {
             this.fetchData()

@@ -8,6 +8,10 @@
                 :url="`https://aweconf.com/#/c/${conference.slug}`"
         />
 
+            <template v-if="conference.geo">
+                <map-aweconf :conference="conference"></map-aweconf>
+            </template>
+
         <v-container fluid fill-height>
             <v-layout align-center justify-center class="text-xl-left text-md-left text-lg-left text-sm-left text-xs-left">
                 <v-flex xs12 sm12 md10 xl10>
@@ -22,7 +26,7 @@
                         <v-card-text>
                             <v-progress-circular indeterminate color="deep-purple" v-if="showSpinner"></v-progress-circular>
                             <v-card-text>
-                                is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
+                                It is a conference about <b>{{ commaSeparated(conference.category) }}</b>.
                             </v-card-text>
 
                             <template v-if="conference.date">
@@ -41,21 +45,16 @@
                                 </v-card-text>
                             </template>
 
-                            <template v-if="conference.callforpaper">
-                                <v-card-text>At this very moment 🎤 call for paper is open, feel free to submit your talk.</v-card-text>
-                            </template>
-                            <template v-else>
-                                <v-card-text>
-                                    <p v-if="speakers.length > 0">You will be able to meet and listen to the 🎤 talks of:</p>
-                                    <template v-for="speaker in speakers">
-                                        <twitter-badge :account="speaker" :key="speaker"></twitter-badge>
-                                    </template>
+                                <v-card-text v-if="conference.callforpaper">
+                                    At this very moment 🎤 call for paper is open, feel free to submit your talk.
                                 </v-card-text>
-                            </template>
 
-                            <template v-if="conference.geo">
-                                <map-aweconf :conference="conference"></map-aweconf>
-                            </template>
+                            <v-card-text v-if="speakers.length > 0">
+                                <p>You will be able to meet and listen to the 🎤 talks of:</p>
+                                <template v-for="speaker in speakers">
+                                    <twitter-badge :account="speaker" :key="speaker"></twitter-badge>
+                                </template>
+                            </v-card-text>
 
                             <v-card-text>For further details: 🔗 <a :href="addReferralTo(conference.homepage)" target="_blank">{{
                                 conference.title }} Website</a></v-card-text>
@@ -160,11 +159,18 @@ export default {
     commaSeparated: function (categories) {
       var cats = ''
       if (categories) {
+        const that = this
         categories.forEach(function (category) {
-          cats += category + ', '
+          const emoji = that.getEmojiForCat(category)
+          cats += emoji + ' ' + category + ', '
         })
       }
       return cats.substr(0, cats.length - 2)
+    },
+    getEmojiForCat (category) {
+      return this.$store.state.categories.filter(function (cat) {
+        return cat.title.toLowerCase() === category.toLowerCase()
+      })[0].emoji
     },
     addReferralTo (url) {
       return url + '?ref=aweconf'
