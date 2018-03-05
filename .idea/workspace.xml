@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/CategoriesList.vue" afterPath="$PROJECT_DIR$/src/components/partials/CategoriesList.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -467,12 +466,12 @@
       <workItem from="1519985169424" duration="4050000" />
       <workItem from="1520003822964" duration="1700000" />
       <workItem from="1520109699886" duration="3555000" />
-      <workItem from="1520267401035" duration="120000" />
+      <workItem from="1520267401035" duration="316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268142000" />
+    <option name="totallyTimeSpent" value="268338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="0" width="1296" height="900" extended-state="0" />
