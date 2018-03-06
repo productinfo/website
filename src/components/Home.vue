@@ -14,7 +14,7 @@
                 <v-flex xs12 sm12 md4 xl4>
                     <p class="hint-left" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
                     <div class="mt-1 pa-2">
-                        <h1>{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
+                        <h1 class="main-title">{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
                         <p class="mt-4">{{ introMsg }}</p>
                     </div>
                     <div class="pa-5 centerize">
@@ -52,17 +52,17 @@
                 </v-flex>
 
                 <v-flex xs12 sm12 md10 xl10 class="mt-2">
-                    <h3>{{ browseCats }}</h3>
+                    <h1 class="title">{{ browseCats }}</h1>
                     <categories-badge :categories="$store.state.categories"></categories-badge>
                 </v-flex>
 
                 <v-flex xs12 sm12 md10 xl10 class="mt-2" v-if="dates.length > 0">
-                    <h3>{{ browseDate }}</h3>
+                    <h1 class="title">{{ browseDate }}</h1>
                     <month-badge></month-badge>
                 </v-flex>
 
                 <v-flex xs12 sm12 md10 xl10 class="mt-2">
-                    <h3>{{ quickLook }}</h3>
+                    <h1 class="title">{{ quickLook }}</h1>
                 </v-flex>
 
             </v-layout>
@@ -73,7 +73,7 @@
         <v-container grid-list-xl text-xs-left fluid fill-height>
             <v-layout row wrap>
                 <v-flex xs12 sm12 md12 xl12 class="mt-4">
-                    <h3>{{ discoverMore }}</h3>
+                    <h1 class="title">{{ discoverMore }}</h1>
                     <v-card-title>
                         <v-text-field
                                 append-icon="search"
@@ -231,6 +231,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    .main-title {
+        font-size: 35px;
+    }
 h1, h2 {
   font-weight: normal;
 }
