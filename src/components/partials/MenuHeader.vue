@@ -7,6 +7,8 @@
             <span>Home</span>
         </v-tooltip>
 
+        <v-spacer></v-spacer>
+
         <v-menu offset-y class="moveup">
             <v-btn flat slot="activator">
                 🔽 Categories
@@ -31,8 +33,6 @@
             </v-btn>
             <span>Submit Conference</span>
         </v-tooltip>
-
-        <v-spacer></v-spacer>
 
         <login-badge></login-badge>
 
