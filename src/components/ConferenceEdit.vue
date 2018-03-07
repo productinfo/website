@@ -380,6 +380,9 @@ export default {
             this.id = resp.data.conference.id
 
             const isOwner = (this.$session.get('username') === resp.data.conference.owner)
+            console.log(isOwner)
+            console.log(resp.data.conference.owner)
+            console.log(this.$session.get('username'))
             const isAdmin = this.$session.get('role') !== 'Admin'
 
             if (isAdmin === false || isOwner === false) {
