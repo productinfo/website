@@ -380,8 +380,9 @@ export default {
             this.id = resp.data.conference.id
 
             const isOwner = (this.$session.get('username') === resp.data.conference.owner)
+            const isAdmin = this.$session.get('role') !== 'Admin'
 
-            if (this.$session.get('role') !== 'Admin' || isOwner === false) {
+            if (isAdmin === false || isOwner === false) {
               this.redirect()
             }
 
