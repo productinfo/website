@@ -379,42 +379,42 @@ export default {
           if (resp.data.success) {
             this.id = resp.data.conference.id
 
-            const isOwner = (this.$session.get('username') === resp.data.conference.owner)
             const isAdmin = this.$session.get('role') === 'Admin'
+            const isOwner = (this.$session.get('username') === resp.data.conference.owner)
 
-            if (isAdmin === false || isOwner === false) {
+            if (isAdmin === true || isOwner === true) {
+              if (resp.data.conference.cfp) {
+                if (resp.data.conference.cfp.start) {
+                  this.cfp.start = resp.data.conference.cfp.start.substring(0, 10)
+                }
+
+                if (resp.data.conference.cfp.end) {
+                  this.cfp.end = resp.data.conference.cfp.end.substring(0, 10)
+                }
+              }
+
+              this.date = {
+                start: resp.data.conference.date.start.substring(0, 10),
+                end: resp.data.conference.date.end.substring(0, 10)
+              }
+
+              // workaround to have all cats first uppercased
+              const camelCats = []
+              resp.data.conference.category.forEach(function (cat) {
+                camelCats.push(capitalize(cat))
+              })
+
+              this.categories = camelCats
+              this.where = resp.data.conference.where
+              this.city = resp.data.conference.city
+              this.twitter = resp.data.conference.twitter
+              this.url = resp.data.conference.homepage
+              this.name = resp.data.conference.title
+              this.country = resp.data.conference.country
+              this.chips = resp.data.conference.speakers
+            } else {
               this.redirect()
             }
-
-            if (resp.data.conference.cfp) {
-              if (resp.data.conference.cfp.start) {
-                this.cfp.start = resp.data.conference.cfp.start.substring(0, 10)
-              }
-
-              if (resp.data.conference.cfp.end) {
-                this.cfp.end = resp.data.conference.cfp.end.substring(0, 10)
-              }
-            }
-
-            this.date = {
-              start: resp.data.conference.date.start.substring(0, 10),
-              end: resp.data.conference.date.end.substring(0, 10)
-            }
-
-            // workaround to have all cats first uppercased
-            const camelCats = []
-            resp.data.conference.category.forEach(function (cat) {
-              camelCats.push(capitalize(cat))
-            })
-
-            this.categories = camelCats
-            this.where = resp.data.conference.where
-            this.city = resp.data.conference.city
-            this.twitter = resp.data.conference.twitter
-            this.url = resp.data.conference.homepage
-            this.name = resp.data.conference.title
-            this.country = resp.data.conference.country
-            this.chips = resp.data.conference.speakers
           }
         }).catch((err) => {
           this.showSpinner = false
