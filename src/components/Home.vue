@@ -125,9 +125,9 @@ export default {
   data () {
     return {
       welcomeMsg: 'Discover 🔎 ',
-      welcomeMsg2: '+ 🔥🔥 awesome conferences around the 🌍 world.',
+      welcomeMsg2: '+ 🔥 awesome conferences around the 🌍 world.',
       introMsg: 'Awesome Conference is a web and mobile application built to help developers, markerters, designers in finding the best conference around the world in an unique place.',
-      instructionMsg1: '👆 You can navigate conferences by categories️.',
+      instructionMsg1: '👇 Easily search 🔍 for the best conference by date or country️. 👇',
       mapMsg: '👇 Navigate the 🗺, click to 🔍 and open single conference page 👇',
       mobileMsg: '👇 Stay always updated using our 📱 application 👇',
       submitMsg: 'Support the project suggesting a 🆕 conference:',
