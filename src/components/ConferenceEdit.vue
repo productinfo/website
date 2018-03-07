@@ -353,11 +353,7 @@ export default {
   },
 
   created () {
-    if (this.$session.get('role') !== 'Admin') {
-      this.redirect()
-    } else {
-      this.fetchData()
-    }
+    this.fetchData()
   },
 
   watch: {
@@ -382,6 +378,12 @@ export default {
           this.showSpinner = false
           if (resp.data.success) {
             this.id = resp.data.conference.id
+
+            const isOwner = (this.$session.get('username') === resp.data.conference.owner)
+
+            if (this.$session.get('role') !== 'Admin' || isOwner === false) {
+              this.redirect()
+            }
 
             if (resp.data.conference.cfp) {
               if (resp.data.conference.cfp.start) {
