@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.dc9e2c5ec759f0848456.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/app.dc9e2c5ec759f0848456.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.3f525e0be8d254c379d6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.3f525e0be8d254c379d6.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/DatePicker.vue" afterPath="$PROJECT_DIR$/src/components/partials/DatePicker.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/partials/EditBadge.vue" afterPath="$PROJECT_DIR$/src/components/partials/EditBadge.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,17 +43,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditBadge.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EditBadge.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/partials/EditBadge.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+            <state relative-caret-position="390">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatePicker.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatePicker.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/partials/DatePicker.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="517">
@@ -69,11 +63,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MyConference.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MyConference.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ConferenceEdit.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
-              <caret line="260" column="63" lean-forward="true" selection-start-line="260" selection-start-column="63" selection-end-line="260" selection-end-column="87" />
+              <caret line="260" column="63" lean-forward="false" selection-start-line="260" selection-start-column="63" selection-end-line="260" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -160,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/components/partials/LoginBadge.vue" />
         <option value="$PROJECT_DIR$/src/components/ConferenceEdit.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/MonthBadge.vue" />
-        <option value="$PROJECT_DIR$/src/components/partials/EditBadge.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/Categories.vue" />
         <option value="$PROJECT_DIR$/src/components/partials/Map.vue" />
         <option value="$PROJECT_DIR$/src/components/RequestRights.vue" />
@@ -176,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/components/Home.vue" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/partials/DatePicker.vue" />
+        <option value="$PROJECT_DIR$/src/components/partials/EditBadge.vue" />
       </list>
     </option>
   </component>
@@ -485,12 +489,12 @@
       <workItem from="1520417392805" duration="5067000" />
       <workItem from="1520431041013" duration="1167000" />
       <workItem from="1520461731710" duration="118000" />
-      <workItem from="1520461939912" duration="485000" />
+      <workItem from="1520461939912" duration="1319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277579000" />
+    <option name="totallyTimeSpent" value="278413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1260" y="18" width="1296" height="900" extended-state="0" />
@@ -639,13 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyConference.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -869,18 +866,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/partials/EditBadge.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="260" column="63" lean-forward="true" selection-start-line="260" selection-start-column="63" selection-end-line="260" selection-end-column="87" />
+          <caret line="260" column="63" lean-forward="false" selection-start-line="260" selection-start-column="63" selection-end-line="260" selection-end-column="87" />
           <folding />
         </state>
       </provider>
@@ -889,6 +878,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
           <caret line="52" column="120" lean-forward="false" selection-start-line="52" selection-start-column="120" selection-end-line="52" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MyConference.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/partials/EditBadge.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding />
         </state>
       </provider>
