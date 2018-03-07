@@ -15,16 +15,7 @@
                     <p class="hint-left" v-if="firstRun">{{ instructionMsg1 }}<br/></p>
                     <div class="mt-1 pa-2">
                         <h1 class="main-title">{{ welcomeMsg }} <b>{{ total }}</b>{{ welcomeMsg2}}</h1>
-                        <p class="mt-4">{{ introMsg }}</p>
-                    </div>
-                    <div class="pa-5 centerize">
-                        <p class="hint" v-if="firstRun">{{ mobileMsg }}</p>
-                        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
-                            <img src="../assets/download-on-the-app-store.png" />
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
-                            <img src="../assets/google-play-badge.png" />
-                        </a>
+                        <date-picker></date-picker>
                     </div>
                 </v-flex>
 
@@ -103,6 +94,14 @@
             </v-layout>
         </v-container>
 
+        <v-container grid-list-xl text-xs-left fluid fill-height>
+            <v-layout row wrap>
+                <v-flex xs12 sm12 md10 xl10>
+                    <mobile-banner></mobile-banner>
+                </v-flex>
+            </v-layout>
+        </v-container>
+
     </div>
 </template>
 
@@ -111,13 +110,17 @@ import axios from 'axios'
 import SuggestionCard from './partials/SuggestionCard.vue'
 import MonthBadge from './partials/MonthBadge'
 import CategoriesList from './partials/CategoriesList'
+import DatePickerBadge from './partials/DatePicker'
+import MobileBanner from './partials/MobileBanner'
 
 export default {
   name: 'Home',
   components: {
     'categories-badge': CategoriesList,
     'month-badge': MonthBadge,
-    'suggestioncard-aweconf': SuggestionCard
+    'suggestioncard-aweconf': SuggestionCard,
+    'date-picker': DatePickerBadge,
+    'mobile-banner': MobileBanner
   },
   data () {
     return {
@@ -229,11 +232,7 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .main-title {
-        font-size: 35px;
-    }
 h1, h2 {
   font-weight: normal;
 }
@@ -254,8 +253,5 @@ a {
 .hint-left {
     color: darkgray;
     text-align: left;
-}
-.centerize {
-    text-align: center !important;
 }
 </style>

@@ -12,6 +12,17 @@
                     <p>Conferences are a great place to 🤓 share knowledge, 🤯 learn new stuff and ☃️ meet new people.</p>
                     <p>If you think this too, follow this project, I will do the best and with your precious help, we
                         can only improve this.</p>
+                    <h2 class="mt-3">Mobile Applications</h2>
+                    <p>Feel free to download our official application to keep track of the 🔥 conferences:</p>
+                    <p>
+                        <a href="https://itunes.apple.com/us/app/awesome-mobile-conferences/id1289255473?mt=8">
+                            <img src="../assets/download-on-the-app-store.png" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
+                            <img src="../assets/google-play-badge.png" />
+                        </a>
+                    </p>
+
                     <h2 class="mt-3">How to participate</h2>
                     <p>Participation is pretty easy, you can:</p>
                     <ul class="mt-3">

@@ -20,6 +20,7 @@ import Unapproved from '@/components/Unapproved'
 import MonthYear from '@/components/MonthYear'
 import Cfp from '@/components/Cfp'
 import VueSession from 'vue-session'
+import Search from '@/components/Search'
 
 // use
 Vue.use(Router)
@@ -114,6 +115,11 @@ export default new Router({
       path: '/when/:year/:month',
       name: 'MonthYear',
       component: MonthYear
+    },
+    {
+      path: '/search/:from/:to/:where',
+      name: 'Search',
+      component: Search
     }
   ]
 })
