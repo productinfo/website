@@ -47,11 +47,6 @@
                     <categories-badge :categories="$store.state.categories"></categories-badge>
                 </v-flex>
 
-                <v-flex xs12 sm12 md10 xl10 class="mt-2" v-if="dates.length > 0">
-                    <h1 class="title">{{ browseDate }}</h1>
-                    <month-badge></month-badge>
-                </v-flex>
-
                 <v-flex xs12 sm12 md10 xl10 class="mt-2">
                     <h1 class="title">{{ quickLook }}</h1>
                 </v-flex>
@@ -142,7 +137,6 @@ export default {
       total: '',
       center: { lat: 20, lng: 32 },
       markers: [],
-      dates: [],
       search: '',
       headers: [
         {
@@ -214,14 +208,6 @@ export default {
 
           this.showSpinner = false
           this.populateMaps()
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-
-      axios.get(this.$store.state.baseUrl + '/api/conference/dates')
-        .then((resp) => {
-          this.dates = resp.data.dates
         })
         .catch((err) => {
           console.log(err)
