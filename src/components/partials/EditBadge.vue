@@ -27,11 +27,8 @@ export default {
   methods: {
     checkAuth () {
       this.isOwner = (this.$session.get('username') === this.owner)
-      console.log(this.isOwner)
       this.isAuth = (this.$session.get('isAuthenticated') === true)
-      console.log(this.isAuth)
       this.canEdit = this.isAuth && this.isOwner
-      console.log(this.canEdit)
 
       if (this.$session.get('role') === 'Admin') {
         this.canEdit = true
