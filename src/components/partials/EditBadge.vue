@@ -23,6 +23,8 @@ export default {
   },
   methods: {
     checkAuth () {
+      console.log(this.owner)
+      console.log(this.$session.get('username'))
       this.isOwner = (this.$session.get('username') === this.owner)
       console.log(this.isOwner)
       this.isAuth = (this.$session.get('isAuthenticated') === true)
