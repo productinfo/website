@@ -21,6 +21,9 @@ export default {
   created () {
     this.checkAuth()
   },
+  watch: {
+    'owner': 'checkAuth'
+  },
   methods: {
     checkAuth () {
       console.log(this.owner)

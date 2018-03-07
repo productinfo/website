@@ -22,6 +22,7 @@
                                 label="Start Date"
                                 v-model="startdate"
                                 prepend-icon="event"
+                                color="deep-purple"
                                 readonly
                         ></v-text-field>
                         <v-date-picker v-model="startdate" no-title scrollable color="deep-purple">
@@ -48,6 +49,7 @@
                                 label="End Date"
                                 v-model="enddate"
                                 prepend-icon="event"
+                                color="deep-purple"
                                 readonly
                         ></v-text-field>
                         <v-date-picker v-model="enddate" no-title scrollable color="deep-purple" :picker-date="startdate">
