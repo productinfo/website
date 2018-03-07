@@ -76,8 +76,8 @@
       <file leaf-file-name="ConferenceEdit.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="382" column="7" lean-forward="false" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
+            <state relative-caret-position="271">
+              <caret line="381" column="90" lean-forward="false" selection-start-line="381" selection-start-column="90" selection-end-line="381" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -489,12 +489,12 @@
       <workItem from="1520417392805" duration="5067000" />
       <workItem from="1520431041013" duration="1167000" />
       <workItem from="1520461731710" duration="118000" />
-      <workItem from="1520461939912" duration="2170000" />
+      <workItem from="1520461939912" duration="2263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279264000" />
+    <option name="totallyTimeSpent" value="279357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1260" y="18" width="1296" height="900" extended-state="0" />
@@ -893,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ConferenceEdit.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="382" column="7" lean-forward="false" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
+        <state relative-caret-position="271">
+          <caret line="381" column="90" lean-forward="false" selection-start-line="381" selection-start-column="90" selection-end-line="381" selection-end-column="90" />
           <folding />
         </state>
       </provider>
