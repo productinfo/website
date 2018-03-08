@@ -196,7 +196,7 @@ export default {
     },
     formatDate (date) {
       const currentDate = new Date(date)
-      return currentDate.toLocaleDateString()
+      return currentDate.toDateString()
     },
     fetchData () {
       this.showSpinner = true
