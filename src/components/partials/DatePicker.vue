@@ -52,7 +52,7 @@
                                 color="deep-purple"
                                 readonly
                         ></v-text-field>
-                        <v-date-picker v-model="enddate" no-title scrollable color="deep-purple" :picker-date="startdate">
+                        <v-date-picker v-model="enddate" no-title scrollable color="deep-purple">
                             <v-spacer></v-spacer>
                             <v-btn flat color="deep-purple" @click="menuend = false">Cancel</v-btn>
                             <v-btn flat color="deep-purple" @click="$refs.menuend.save(enddate)">OK</v-btn>
