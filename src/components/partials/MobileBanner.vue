@@ -8,6 +8,10 @@
         <a href="https://play.google.com/store/apps/details?id=conference.mobile.awesome.boostco.de.amc">
             <img src="../../assets/google-play-badge.png" />
         </a>
+        <v-btn small href="tg://resolve?domain=aweconf_bot" color="light-blue" class="white--text hidden-xs-only">
+            <v-icon left small dark>fab fa-telegram</v-icon>
+            Telegram Bot
+        </v-btn>
     </div>
 </template>
 

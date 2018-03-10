@@ -6,6 +6,7 @@ import router from './router'
 import VueAnalytics from 'vue-analytics'
 import('babel-polyfill')
 import('../node_modules/vuetify/dist/vuetify.min.css')
+
 // eslint-disable-next-line
 import { Store } from './store/store'
 
