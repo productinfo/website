@@ -42,6 +42,14 @@
                     </template>
                 </v-flex>
 
+                <v-container grid-list-xl text-xs-left fluid fill-height>
+                    <v-layout row wrap>
+                        <v-flex xs12 sm12 md10 xl10>
+                            <mobile-banner></mobile-banner>
+                        </v-flex>
+                    </v-layout>
+                </v-container>
+
                 <v-flex xs12 sm12 md10 xl10 class="mt-2">
                     <h1 class="title">{{ browseCats }}</h1>
                     <categories-badge :categories="$store.state.categories"></categories-badge>
@@ -85,14 +93,6 @@
                             <td>{{ formatDate(props.item.date.end) }}</td>
                         </template>
                     </v-data-table>
-                </v-flex>
-            </v-layout>
-        </v-container>
-
-        <v-container grid-list-xl text-xs-left fluid fill-height>
-            <v-layout row wrap>
-                <v-flex xs12 sm12 md10 xl10>
-                    <mobile-banner></mobile-banner>
                 </v-flex>
             </v-layout>
         </v-container>
