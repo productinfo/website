@@ -99,7 +99,7 @@ export default {
       if (this.enddate === null) {
         this.enddate = 'none'
       }
-      if (this.country === '') {
+      if (this.country === '' || this.country === null) {
         this.country = 'none'
       }
       this.$router.push('/search/' + this.startdate + '/' + this.enddate + '/' + this.country)

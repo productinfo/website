@@ -106,6 +106,10 @@ export default {
         this.title += ' in ' + this.$route.params.where
       }
 
+      var params = this.$route.params
+      params.limit = -1
+      params.category = 'none'
+
       axios.post(this.$store.state.baseUrl + '/api/conference/search/', this.$route.params)
         .then((resp) => {
           this.conferences = resp.data.conferences
