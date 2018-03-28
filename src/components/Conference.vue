@@ -156,7 +156,7 @@ export default {
     },
     formatDate (date) {
       const currentDate = new Date(date)
-      return currentDate.toDateString()// .toLocaleDateString()
+      return currentDate.toDateString()
     },
     commaSeparated: function (categories) {
       var cats = ''
