@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="20548478-554d-4819-9c54-af31cd792dab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.166e03822a1b48ba4405ff3e112525fb.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/css/app.166e03822a1b48ba4405ff3e112525fb.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.ec2ae7509451e23720b5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/app.ec2ae7509451e23720b5.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/docs/static/js/manifest.a91a280e382552ed9c3c.js.map" afterPath="$PROJECT_DIR$/docs/static/js/manifest.a91a280e382552ed9c3c.js.map" />
       <change beforePath="$PROJECT_DIR$/src/components/Conference.vue" afterPath="$PROJECT_DIR$/src/components/Conference.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -409,12 +415,12 @@
       <workItem from="1520864716694" duration="190000" />
       <workItem from="1520951227195" duration="320000" />
       <workItem from="1522196199675" duration="183000" />
-      <workItem from="1522229262975" duration="365000" />
+      <workItem from="1522229262975" duration="443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288014000" />
+    <option name="totallyTimeSpent" value="288092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
