@@ -155,8 +155,8 @@ export default {
         })
     },
     formatDate (date) {
-      const currentDate = new Date(date)
-      return currentDate.toDateString()
+      const currentDate = date.substring(0, 10).split('-')
+      return currentDate[2] + '/' + currentDate[1] + '/' + currentDate[0]
     },
     commaSeparated: function (categories) {
       var cats = ''
