@@ -78,8 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/api/conference</find>
-      <find>this.$store</find>
       <find>this.$store.baseUrl</find>
       <find>this.$store.</find>
       <find>${$s</find>
@@ -98,7 +96,7 @@
       <find>this.$session.get</find>
       <find>alert</find>
       <find>fab</find>
-      <find />
+      <find>() =&gt;</find>
       <find>vuetify.</find>
       <find>quickLook</find>
       <find>this.$route</find>
@@ -108,6 +106,8 @@
       <find>toLocale</find>
       <find>welcomeMsg2</find>
       <find>toLocaleDateString</find>
+      <find>console.log</find>
+      <find>var</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
