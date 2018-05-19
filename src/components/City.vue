@@ -145,7 +145,6 @@ export default {
                 this.markers.push(position)
               }
             }
-            console.log(this.markers)
           }
         })
         .catch((err) => {

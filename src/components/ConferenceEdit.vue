@@ -381,8 +381,6 @@ export default {
 
             const isAdmin = this.$session.get('role') === 'Admin'
             const isOwner = (this.$session.get('username') === resp.data.conference.owner)
-            console.log(isAdmin)
-            console.log(isOwner)
 
             if (isAdmin === true || isOwner === true) {
               if (resp.data.conference.cfp) {
