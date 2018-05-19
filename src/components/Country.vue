@@ -131,7 +131,7 @@ export default {
             this.title = this.conferences[0].emojiflag + ' ' + this.conferences[0].country
 
             // loop confs
-            for (var conf of this.conferences) {
+            for (let conf of this.conferences) {
               // if lat has a value
               if (conf.lat !== 0 && conf.lon !== 0) {
                 let lat = isNaN(parseFloat(conf.geo.lat)) ? 0.0 : parseFloat(conf.geo.lat)

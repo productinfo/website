@@ -178,7 +178,7 @@ export default {
     populateMaps () {
       if (this.conferences.length > 0) {
         // loop confs
-        for (var conf of this.conferences) {
+        for (let conf of this.conferences) {
           // if lat has a value
           if (conf.geo.lat !== 0 && conf.geo.lng !== 0) {
             let lat = parseFloat(conf.geo.lat)
